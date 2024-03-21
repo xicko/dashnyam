@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
           <Link
             target="_blank"
             aria-label="Instagram"
-            href="https://www.instagram.com/thexicko"
+            href="https://www.instagram.com/dashnyima"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
