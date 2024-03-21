@@ -1,7 +1,7 @@
 import { Client } from 'pg';
 
 const dbConfig = {
-  connectionString: process.env.POSTGRES_URL,
+  connectionString: process.env.POSTGRES_URL ,
   ssl: {
     rejectUnauthorized: false,
   },
