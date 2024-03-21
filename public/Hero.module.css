@@ -1,0 +1,8 @@
+.fadeIn {
+  opacity: 1;
+  transition: opacity 0.5s ease-in;
+}
+
+.text {
+  /* Add any initial styles for the text element here */
+}
