@@ -22,7 +22,7 @@ const SplashScreen = () => {
       className={`fixed top-0 left-0 w-full h-full flex items-center justify-center transition-opacity duration-1000 ease-in-out ${
         showSplash ? "opacity-100" : "opacity-0 pointer-events-none"
       }`}
-      style={{ backgroundColor: "#0e1126", zIndex: 9999 }}
+      style={{ backgroundColor: "#0f0f11", zIndex: 9999 }}
     >
       <div hidden className="text-white">
         {/* Your splash screen content goes here */}

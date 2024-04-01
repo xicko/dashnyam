@@ -23,7 +23,7 @@ const Customers: React.FC = () => {
   return (
     <section className="flex justify-center overflow-x-visible">
       <div className="mb-8 md:mx-[140px] mx-[30px] bg-white text-black bg-opacity-90 rounded-3xl md:p-20 p-8 md:w-[1200px] ">
-        <p className="md:text-2xl text-xl font-bold text-center flex justify-center  mb-4 mt-2">
+        <p className="font-[CalSans] md:text-3xl text-xl font-bold text-center flex justify-center  mb-4 mt-2">
           I&apos;ve helped some of Mongolia&apos;s most innovative and
           forward-thinking companies to develop stronger bonds with their
           audiences.

@@ -9,6 +9,7 @@ import Hero from "@components/Hero";
 import dynamic from "next/dynamic";
 import AnimatedComponent from "@components/AnimatedComponent";
 import PhotoCarousel from "@components/PhotoCarousel";
+import Particles from "@components/particles";
 
 const CustomScroll = dynamic(() => import("@components/CustomScroll"), { ssr: false });
 
@@ -59,16 +60,22 @@ export default function Home() {
       altText: "Hanbok",
     },
     {
-      photoSource: "/thumbnails/webp/tengri.webp",
+      photoSource: "/thumbnails/webp/berserk.webp",
       subText: "Concept Filter",
-      topText: "Tengri",
-      altText: "Tengri",
+      topText: "Berserk",
+      altText: "Berserk",
     },
     {
       photoSource: "/thumbnails/webp/haayachgesen.webp",
       subText: "Filter for EMPR",
       topText: "Haaya ch gesen",
       altText: "Haaya ch gesen",
+    },
+    {
+      photoSource: "/thumbnails/webp/tengri.webp",
+      subText: "Concept Filter",
+      topText: "Tengri",
+      altText: "Tengri",
     },
     {
       photoSource: "/thumbnails/webp/nextgroup.webp",
@@ -97,8 +104,9 @@ export default function Home() {
   ];
 
   return (
-    <main className="scroll-smooth">
+    <main className="scroll-smooth ">
       
+      <Particles quantity={300} className="absolute inset-0 -z-10 animate-fade-in"/>
 
       <Hero />
 
@@ -113,7 +121,7 @@ export default function Home() {
       <WhyAR />
 
       <AnimatedComponent>
-        <p className="md:text-[46px] text-[34px] mx-[30px] text-center animate-glow font-bold mb-10 mt-14">
+        <p className="font-[CalSans] md:text-[46px] text-[34px] mx-[30px] text-center animate-glow font-bold mb-10 mt-14">
           Are we going to work together?
         </p>
         <div className="flex md:flex-row flex-col place-content-center mt-8 md:mb-20">

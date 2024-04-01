@@ -64,7 +64,7 @@ const WorkTogether = () => {
       <div className="text-white md:px-20 px-8 my-[10px] font-semibold ">
         <p
           hidden
-          className="md:text-[34px] text-3xl text-center animate-glow font-semibold md:-mt-8 -mt-14 opacity-0"
+          className="font-[CalSans] md:text-[34px] text-3xl text-center animate-glow font-semibold md:-mt-8 -mt-14 opacity-0"
         >
           Are we going to work together?
         </p>

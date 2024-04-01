@@ -7,6 +7,7 @@ import Image from "next/image";
 import Footer from "@components/Footer";
 import Head from "next/head";
 import AnimatedComponent from "@components/AnimatedComponent";
+import Particles from "@components/particles";
 
 export const metadata: Metadata = {
   title: "Assets - Dashnyam Batbayar",
@@ -119,9 +120,13 @@ const GraphicAssetsPage: React.FC = () => {
       </Head>
 
       <div className="container md:mx-auto pt-[128px]">
-        <h1 className="text-3xl font-bold ml-10 mb-8 animate-glow">
-          Graphic Assets
-        </h1>
+        <AnimatedComponent>
+          <h1 className="font-[CalSans] text-3xl font-bold ml-10 mb-8 animate-glow">
+            Graphic Assets
+          </h1>
+        </AnimatedComponent>
+
+        <Particles quantity={100} className="absolute inset-0 -z-10 animate-fade-in"/>
 
         <div className="grid grid-cols-1 mx-10 md:grid-cols-2 lg:grid-cols-3 gap-8 md:mb-[400px] mb-[150px]">
           {graphicAssets.map((asset) => (
@@ -145,7 +150,7 @@ const GraphicAssetsPage: React.FC = () => {
                   />
                 </div>
 
-                <h2 className="text-xl text-black font-bold mt-3 px-4">
+                <h2 className="font-[CalSans] text-xl text-black font-bold mt-3 px-4">
                   {asset.title}
                 </h2>
 

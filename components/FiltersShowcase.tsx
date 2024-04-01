@@ -32,7 +32,7 @@ const FiltersShowcase: React.FC<FiltersShowcaseProps> = ({
           </div>
 
           <div className="p-10 sm:text-white md:text-black lg:text-black xl:text-black">
-            <h2 className="text-3xl font-bold mb-2">{title}</h2>
+            <h2 className="font-[CalSans] text-3xl font-bold mb-2">{title}</h2>
             <p className="xl:text-[16px] 2xl:text-xl lg:text-[18px] md:text-[20px] sm:text-[18px] text-[18px] pb-4">{description}</p>
             <Link href={buttonLink} className="bg-sky-500 text-white px-4 py-2 rounded-lg hover:bg-sky-600 transition-colors">
                 Try Effect

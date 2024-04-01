@@ -78,7 +78,7 @@ const Hero = () => {
           style={imageSpring}
           ref={imageRef}
         >
-          <h1 className="md:text-[58px] text-[36px] font-medium text-start animate-glow md:mt-0 mt-4">
+          <h1 className="font-[CalSans] md:text-[60px] text-[36px] font-medium text-start animate-glow md:mt-0 mt-4">
             HIGH END <br></br>
             <span className="font-extrabold md:text-[74px] text-[36px]">
               AUGMENTED REALITY
