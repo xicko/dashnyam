@@ -125,7 +125,7 @@ const GraphicAssetsPage: React.FC = () => {
 
         <div className="grid grid-cols-1 mx-10 md:grid-cols-2 lg:grid-cols-3 gap-8 md:mb-[400px] mb-[150px]">
           {graphicAssets.map((asset) => (
-            <AnimatedComponent>
+            <AnimatedComponent key={asset.id}>
             <div
               key={asset.id}
               className="bg-white bg-opacity-[0.9]  pb-4 rounded-3xl shadow-md hover:cursor-pointer">
