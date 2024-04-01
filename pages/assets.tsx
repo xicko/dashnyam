@@ -6,6 +6,7 @@ import Modal from "react-modal";
 import Image from "next/image";
 import Footer from "@components/Footer";
 import Head from "next/head";
+import AnimatedComponent from "@components/AnimatedComponent";
 
 export const metadata: Metadata = {
   title: "Assets - Dashnyam Batbayar",
@@ -22,6 +23,16 @@ const GraphicAssetsPage: React.FC = () => {
     // { id: '6', title: 'Graphic 6', previewUrl: '/null.webp', shortDescription:'Description 6', fullDescription: 'Description 6', downloadUrl: '/pathto4' },
     // { id: '5', title: 'Graphic 5', previewUrl: '/null.webp', shortDescription:'Description 5', fullDescription: 'Description 5', downloadUrl: '/pathto4' },
     // { id: '4', title: 'Graphic 4', previewUrl: '/null.webp', shortDescription:'Description 4', fullDescription: 'Description 4', downloadUrl: '/pathto4' },
+    {
+      id: "5",
+      title: "ColorLUTs Pack #3",
+      previewImg: "/assets/lutpack3.webp",
+      fullImg: "/assets/fullimg/lutpack3.webp",
+      shortDescription: "Color Look-Up Tables",
+      fullDescription:
+        "Contains 1x LUT Template for Spark AR, a shader patch, and 10x Color Look-up Table(LUT) Pack for color grading your AR effect. How to Use: Extract all files and import to your Spark AR project, turn off compression and set texture filtering to none, create a rectangle that is stretched to fit the whole filter, drag the LUT shader and the ColorLUT of your choice into the patch editor, connect your camera texture and ColorLUT to the shader patch, then connect the output to the rectangle material.",
+      downloadUrl: "https://dl.dashnyam.com/lutpack3-dashnyam.zip",
+    },
     {
       id: "4",
       title: "ColorLUTs Pack #2",
@@ -114,10 +125,10 @@ const GraphicAssetsPage: React.FC = () => {
 
         <div className="grid grid-cols-1 mx-10 md:grid-cols-2 lg:grid-cols-3 gap-8 md:mb-[400px] mb-[150px]">
           {graphicAssets.map((asset) => (
+            <AnimatedComponent>
             <div
               key={asset.id}
-              className="bg-white bg-opacity-[0.9]  pb-4 rounded-3xl shadow-md hover:cursor-pointer"
-            >
+              className="bg-white bg-opacity-[0.9]  pb-4 rounded-3xl shadow-md hover:cursor-pointer">
               <div onClick={() => openModal(asset)}>
                 <div
                   onClick={() => openModal(asset)}
@@ -141,6 +152,7 @@ const GraphicAssetsPage: React.FC = () => {
                 <p className="text-gray-800 px-4">{asset.shortDescription}</p>
               </div>
             </div>
+            </AnimatedComponent>
           ))}
         </div>
 
