@@ -120,15 +120,15 @@ const portfolio = () => {
 
         <AnimatedComponent>
           <FiltersShowcase
-            title={"Tengri"}
+            title={"Berserk"}
             description={
-              'Users appear with glowing white eyes and black tears. On the left cheek, ancient Mongol/Xiongnu symbols for Fire, Sun, and Moon are displayed, while the phrase "Eternal Blue Sky" in traditional Mongolian script glows with volumetric light effect. In the background, a quote from the Middle Mongol era in traditional script.'
+              'This filter uses skin segmentation to apply a virtual tattoo design to the user\'s entire body, including a selection of facial tattoos. The tattoo artwork is applied realistically to the user\'s skin tone and movement.'
             }
-            buttonLink={"https://www.instagram.com/ar/1368282557107974/"}
-            videoSource={"/videos/tengri.mp4"}
+            buttonLink={"https://www.instagram.com/ar/906922696576707/"}
+            videoSource={"/videos/berserk.mp4"}
             subText={""}
             topText={""}
-            placeHolder={"/thumbnails/webp/tengri.webp"}
+            placeHolder={"/thumbnails/webp/berserk.webp"}
           />
         </AnimatedComponent>
 
@@ -143,6 +143,20 @@ const portfolio = () => {
             subText={""}
             topText={"EMPR"}
             placeHolder={"/thumbnails/webp/haayachgesen.webp"}
+          />
+        </AnimatedComponent>
+
+        <AnimatedComponent>
+          <FiltersShowcase
+            title={"Tengri"}
+            description={
+              'Users appear with glowing white eyes and black tears. On the left cheek, ancient Mongol/Xiongnu symbols for Fire, Sun, and Moon are displayed, while the phrase "Eternal Blue Sky" in traditional Mongolian script glows with volumetric light effect. In the background, a quote from the Middle Mongol era in traditional script.'
+            }
+            buttonLink={"https://www.instagram.com/ar/1368282557107974/"}
+            videoSource={"/videos/tengri.mp4"}
+            subText={""}
+            topText={""}
+            placeHolder={"/thumbnails/webp/tengri.webp"}
           />
         </AnimatedComponent>
 
