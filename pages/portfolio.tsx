@@ -18,8 +18,9 @@ const portfolio = () => {
       </Head>
 
       <section className="flex justify-center flex-shrink">
-      <ParticlesContainer/>
-        <div className=" grid sm:grid-cols-1 md:grid-cols-1 lg_md:grid-cols-2 xl:grid-cols-2 md:gap-x-20 md:gap-y-20 gap-y-20 pt-28 my-10 ">
+        <ParticlesContainer/>
+
+        <div className=" grid sm:grid-cols-1 md:grid-cols-1 lg_md:grid-cols-2 xl:grid-cols-2 md:gap-x-20 md:gap-y-20 gap-y-20 pt-28 md:my-10">
         <AnimatedComponent>
           <FiltersShowcase
             title={"This Or That?"}
