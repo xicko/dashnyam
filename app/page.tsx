@@ -106,7 +106,7 @@ export default function Home() {
   return (
     <main className="scroll-smooth ">
       
-      <Particles quantity={300} className="absolute inset-0 -z-10 animate-fade-in"/>
+      <Particles quantity={300} className="fixed inset-0 -z-10 animate-fade-in"/>
 
       <Hero />
 
