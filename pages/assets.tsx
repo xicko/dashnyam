@@ -128,7 +128,7 @@ const GraphicAssetsPage: React.FC = () => {
 
         <ParticlesContainer/>
 
-        <div className="grid grid-cols-1 mx-10 md:grid-cols-2 lg:grid-cols-3 gap-8 md:mb-[400px] mb-[150px]">
+        <div className="grid grid-cols-1 mx-10 md:grid-cols-2 lg:grid-cols-3 gap-12 md:mb-[400px] mb-[150px]">
           {graphicAssets.map((asset) => (
             <AnimatedComponent key={asset.id}>
             <div
@@ -150,11 +150,11 @@ const GraphicAssetsPage: React.FC = () => {
                   />
                 </div>
 
-                <h2 className="font-[CalSans] text-xl text-black font-bold mt-3 px-4">
+                <h2 className="font-[CalSans] md:text-[26px] text-xl text-black font-bold md:mt-4 mt-3 px-6">
                   {asset.title}
                 </h2>
 
-                <p className="text-gray-800 px-4">{asset.shortDescription}</p>
+                <p className="text-gray-800 md:text-lg px-6">{asset.shortDescription}</p>
               </div>
             </div>
             </AnimatedComponent>
