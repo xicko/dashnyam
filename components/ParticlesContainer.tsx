@@ -2,12 +2,13 @@
 
 import React from 'react'
 import Particles from '@components/particles'
-import MediaQuery from "react-responsive";
+import { useMediaQuery } from "react-responsive";
 
 const ParticlesContainer = () => {
-    const isMobile = MediaQuery({ query: "(max-width: 768px)" });
+    const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
 
     const quantity = isMobile ? 10 : 300;
+
     return (
     <Particles quantity={quantity} className="md:absolute fixed inset-0 -z-10 animate-fade-in"/>
   )
