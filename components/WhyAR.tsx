@@ -92,7 +92,7 @@ const WhyAR = () => {
           animate={controls1}
           initial={{ opacity: 0, transform: "translateX(-10%)" }}
           transition={{ duration: 0.7, ease: "easeOut" }}
-          className="bg-[#e8f4fc] bg-opacity-90 bg-cover md:w-[700px] rounded-3xl text-black p-10 mt-10"
+          className="bg-[#e8f4fc] bg-opacity-100 bg-cover md:w-[700px] rounded-3xl text-black p-10 mt-10"
         >
           <div className="">
             <div className="font-[CalSans] md:text-[54px] text-[44px] font-semibold">Why AR?</div>
@@ -113,7 +113,7 @@ const WhyAR = () => {
           animate={controls2}
           initial={{ opacity: 0, transform: "translateX(15%)" }}
           transition={{ duration: 0.7, ease: "easeOut" }}
-          className="bg-lime-100 bg-opacity-90 bg-cover md:w-[450px] rounded-3xl mt-10 text-black"
+          className="bg-lime-100 bg-opacity-100 bg-cover md:w-[450px] rounded-3xl mt-10 text-black"
         >
           <div
             className=""
@@ -165,7 +165,7 @@ const WhyAR = () => {
             transform: isMobile() ? "translateX(20%)" : "translateX(-15%)",
           }}
           transition={{ duration: 0.7, ease: "easeOut" }}
-          className="bg-orange-100 bg-opacity-90 md:w-[450px] rounded-3xl text-black mt-10"
+          className="bg-orange-100 bg-opacity-100 md:w-[450px] rounded-3xl text-black mt-10"
         >
           <div className="">
             <div className="md:text-2xl pt-8 px-10 pb-6">
@@ -185,7 +185,7 @@ const WhyAR = () => {
             transform: isMobile() ? "translateX(-20%)" : "translateX(10%)",
           }}
           transition={{ duration: 0.7, ease: "easeOut" }}
-          className="bg-[#ffd4e4] bg-opacity-90 md:w-[700px] rounded-3xl text-black p-10 mt-10"
+          className="bg-[#ffd4e4] bg-opacity-100 md:w-[700px] rounded-3xl text-black p-10 mt-10"
         >
           <div className="">
             <div hidden className="text-[40px] font-semibold">

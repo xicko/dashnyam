@@ -7,7 +7,7 @@ import Image from "next/image";
 import Footer from "@components/Footer";
 import Head from "next/head";
 import AnimatedComponent from "@components/AnimatedComponent";
-import Particles from "@components/particles";
+import ParticlesContainer from "@components/ParticlesContainer";
 
 export const metadata: Metadata = {
   title: "Assets - Dashnyam Batbayar",
@@ -126,7 +126,7 @@ const GraphicAssetsPage: React.FC = () => {
           </h1>
         </AnimatedComponent>
 
-        <Particles quantity={100} className="absolute inset-0 -z-10 animate-fade-in"/>
+        <ParticlesContainer/>
 
         <div className="grid grid-cols-1 mx-10 md:grid-cols-2 lg:grid-cols-3 gap-8 md:mb-[400px] mb-[150px]">
           {graphicAssets.map((asset) => (
