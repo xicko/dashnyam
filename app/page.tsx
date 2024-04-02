@@ -10,15 +10,11 @@ import dynamic from "next/dynamic";
 import AnimatedComponent from "@components/AnimatedComponent";
 import PhotoCarousel from "@components/PhotoCarousel";
 import Particles from "@components/particles";
-import { useMediaQuery } from 'react-responsive';
+import ParticlesContainer from "@components/particlesContainer";
 
 const CustomScroll = dynamic(() => import("@components/CustomScroll"), { ssr: false });
 
 export default function Home() {
-
-  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
-
-  const quantity = isMobile ? 100 : 300;
 
   const photos = [
     {
@@ -111,7 +107,7 @@ export default function Home() {
   return (
     <main className="scroll-smooth ">
       
-      <Particles quantity={quantity} className="md:absolute fixed inset-0 -z-10 animate-fade-in"/>
+      <ParticlesContainer/>
 
       <Hero />
 
