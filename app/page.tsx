@@ -9,8 +9,7 @@ import Hero from "@components/Hero";
 import dynamic from "next/dynamic";
 import AnimatedComponent from "@components/AnimatedComponent";
 import PhotoCarousel from "@components/PhotoCarousel";
-import Particles from "@components/particles";
-import ParticlesContainer from "@components/particlesContainer";
+import ParticlesContainer from "@components/ParticlesContainer";
 
 const CustomScroll = dynamic(() => import("@components/CustomScroll"), { ssr: false });
 

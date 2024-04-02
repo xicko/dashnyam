@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react'
-import Particles from './particles'
+import Particles from '@components/particles'
 import MediaQuery from "react-responsive";
 
 const ParticlesContainer = () => {
