@@ -10,7 +10,7 @@ const ParticlesContainer = () => {
     const quantity = isMobile ? 60 : 300;
 
     return (
-    <Particles quantity={quantity} className="md:fixed fixed inset-0 -z-10 animate-fade-in"/>
+    <Particles quantity={quantity} className="md:absolute fixed inset-0 -z-10 animate-fade-in"/>
   )
 }
 

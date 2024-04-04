@@ -5,6 +5,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import dynamic from "next/dynamic";
 import SplashScreen from "@components/SplashScreen";
+import ParticlesContainer from "@components/ParticlesContainer";
 
 const CustomScroll = dynamic(() => import("@components/CustomScroll"), { ssr: false });
 
@@ -26,7 +27,11 @@ export default function RootLayout({
       </head>
       <body className='customfont'>
         <SplashScreen/>
+
+        <ParticlesContainer/>
+
         <Navbar />
+
         <CustomScroll>
           {children}
           <Analytics />

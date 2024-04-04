@@ -6,6 +6,7 @@ import '@app/locomotive-scroll.css';
 import dynamic from "next/dynamic";
 
 import NavBar from '@components/NavBar';
+import ParticlesContainer from '@components/ParticlesContainer';
 
 const CustomScroll = dynamic(() => import("@components/CustomScroll"), { ssr: false });
 
@@ -18,7 +19,15 @@ function MyApp({ Component, pageProps }: AppProps) {
     logPageView();
   }, []);
 
-  return <div><NavBar/><CustomScroll><Component {...pageProps}/></CustomScroll></div>;
+  return <div>
+          <NavBar/>
+          
+          <ParticlesContainer/>
+
+          <CustomScroll>
+            <Component {...pageProps}/>
+          </CustomScroll>
+        </div>;
 }
 
 export default MyApp;
