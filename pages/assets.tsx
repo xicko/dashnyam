@@ -24,6 +24,16 @@ const GraphicAssetsPage: React.FC = () => {
     // { id: '5', title: 'Graphic 5', previewUrl: '/null.webp', shortDescription:'Description 5', fullDescription: 'Description 5', downloadUrl: '/pathto4' },
     // { id: '4', title: 'Graphic 4', previewUrl: '/null.webp', shortDescription:'Description 4', fullDescription: 'Description 4', downloadUrl: '/pathto4' },
     {
+      id: "6",
+      title: "Volumetric Light Template",
+      previewImg: "/assets/volumetriclight.webp",
+      fullImg: "/assets/fullimg/volumetriclight.webp",
+      shortDescription: "Spark AR Template",
+      fullDescription:
+        "Contains 1x Volumetric Light Template for Spark AR, and three variations of 3D plane model, each having different plane count. How to Use: Download the .zip file, open the .arprojpkg file in Spark AR, and modify the template to your liking. The template includes three plane models with 32, 64, and 128 planes respectively. The quality of the volumetric light is better with more plane count, but comes at a cost of performance lag on low-end devices, therefore 64 planes is recommended.",
+      downloadUrl: "https://dl.dashnyam.com/VolumetricLight-dashnyam.zip",
+    },
+    {
       id: "5",
       title: "ColorLUTs Pack #3",
       previewImg: "/assets/lutpack3.webp",
@@ -173,6 +183,7 @@ const GraphicAssetsPage: React.FC = () => {
                   <img
                     src={selectedAsset.fullImg}
                     alt={selectedAsset.title}
+                    draggable={false}
                     className="mb-4 rounded-xl md:w-[300px] md:h-[200px]"
                   />
 
