@@ -18,11 +18,19 @@ export const metadata: Metadata = {
 const GraphicAssetsPage: React.FC = () => {
   // Sample data for graphic assets
   const graphicAssets = [
-    // { id: '8', title: 'Graphic 8', previewUrl: '/null.webp', shortDescription:'Description 8', fullDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', downloadUrl: '/pathto4' },
-    // { id: '7', title: 'Graphic 7', previewUrl: '/null.webp', shortDescription:'Description 7', fullDescription: 'Description 7', downloadUrl: '/pathto4' },
-    // { id: '6', title: 'Graphic 6', previewUrl: '/null.webp', shortDescription:'Description 6', fullDescription: 'Description 6', downloadUrl: '/pathto4' },
-    // { id: '5', title: 'Graphic 5', previewUrl: '/null.webp', shortDescription:'Description 5', fullDescription: 'Description 5', downloadUrl: '/pathto4' },
-    // { id: '4', title: 'Graphic 4', previewUrl: '/null.webp', shortDescription:'Description 4', fullDescription: 'Description 4', downloadUrl: '/pathto4' },
+    
+
+
+    {
+      id: "7",
+      title: "Texture Distortion Template",
+      previewImg: "/assets/TextureDistortion.webp",
+      fullImg: "/assets/fullimg/texturedistortion.webp",
+      shortDescription: "Spark AR Template",
+      fullDescription:
+        "Contains 1x Texture Distortion Template for Spark AR, 1x Texture Distortion Patch, alongside with a Demo Texture. How to Use: Download the .zip file, open the .arprojpkg file in Spark AR, and modify the template to your liking. Replace the demo texture (REPLACEME.png) with your own texture.",
+      downloadUrl: "https://dl.dashnyam.com/TextureDistortion-dashnyam.zip",
+    },
     {
       id: "6",
       title: "Volumetric Light Template",
@@ -157,11 +165,11 @@ const GraphicAssetsPage: React.FC = () => {
                   />
                 </div>
 
-                <h2 className="font-[CalSans] md:text-[26px] text-xl text-black font-bold md:mt-4 mt-3 px-6">
+                <h2 className="font-[CalSans] md:text-[26px] text-xl text-black font-bold md:mt-4 mt-3 md:px-6 px-5">
                   {asset.title}
                 </h2>
 
-                <p className="text-gray-800 md:text-lg px-6">{asset.shortDescription}</p>
+                <p className="text-gray-800 md:text-lg md:px-6 px-5">{asset.shortDescription}</p>
               </div>
             </div>
             </AnimatedComponent>
