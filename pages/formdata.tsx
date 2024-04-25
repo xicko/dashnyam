@@ -20,40 +20,41 @@ interface FormSubmission {
 
 const SubmissionsPage: React.FC<{ submissions: FormSubmission[] }> = ({ submissions }) => {
   return (
-<section className='flex justify-center'>
-    <div className='mt-20 pt-20 mx-8'>
-      <h1>Form Submissions</h1>
+<section className="flex justify-center mt-[120px]">
+  <div className='bg-white text-black rounded-3xl px-12 py-12 mx-4 overflow-x-auto'>
+    <h1 className='md:text-4xl text-xl mb-4 font-semibold'>Form Submissions</h1>
 
-      <table>
-        <thead>
-          <tr>
-            <th className='pr-2'>ID</th>
-            <th className='px-2'>Name</th>
-            <th className='px-2'>Organization</th>
-            <th className='px-2'>Ideas</th>
-            <th className='px-2'>Budget</th>
-            <th className='px-2'>Filter Reason</th>
-            <th className='px-2'>Other Reason</th>
-            <th className='pl-2'>Contact Info</th>
+    <table className='md:text-2xl text-md'>
+      <thead>
+        <tr>
+          <th className='md:pr-8 pr-4'>ID</th>
+          <th className='md:pr-8 pr-4'>Name</th>
+          <th className='md:pr-8 pr-4'>Organization</th>
+          <th className='md:pr-8 pr-4'>Ideas</th>
+          <th className='md:pr-8 pr-4'>Budget</th>
+          <th className='md:pr-8 pr-4'>Filter Reason</th>
+          <th className='md:pr-8 pr-4'>Other Reason</th>
+          <th className='md:pr-8 pr-4'>Contact Info</th>
+        </tr>
+      </thead>
+      <tbody>
+        {submissions.map((submission) => (
+          <tr key={submission.id}>
+            <td className='md:pr-8 pr-4'>{submission.id}</td>
+            <td className='md:pr-8 pr-4'>{submission.name}</td>
+            <td className='md:pr-8 pr-4'>{submission.organization}</td>
+            <td className='md:pr-8 pr-4'>{submission.ideas}</td>
+            <td className='md:pr-8 pr-4'>{submission.budget}</td>
+            <td className='md:pr-8 pr-4'>{submission.filter_reason}</td>
+            <td className='md:pr-8 pr-4'>{submission.other_reason}</td>
+            <td className='md:pr-8 pr-4'>{submission.contact_info}</td>
           </tr>
-        </thead>
-        <tbody>
-          {submissions.map((submission) => (
-            <tr key={submission.id}>
-              <td className='pr-2'>{submission.id}</td>
-              <td className='px-2'>{submission.name}</td>
-              <td className='px-2'>{submission.organization}</td>
-              <td className='px-2'>{submission.ideas}</td>
-              <td className='px-2'>{submission.budget}</td>
-              <td className='px-2'>{submission.filter_reason}</td>
-              <td className='px-2'>{submission.other_reason}</td>
-              <td className='pl-2'>{submission.contact_info}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
+        ))}
+      </tbody>
+    </table>
+  </div>
 </section>
+
   );
 };
 
