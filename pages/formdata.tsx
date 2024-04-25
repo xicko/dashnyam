@@ -20,37 +20,40 @@ interface FormSubmission {
 
 const SubmissionsPage: React.FC<{ submissions: FormSubmission[] }> = ({ submissions }) => {
   return (
-    <div>
+<section className='flex justify-center'>
+    <div className='mt-20 pt-20 mx-8'>
       <h1>Form Submissions</h1>
+
       <table>
         <thead>
           <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Organization</th>
-            <th>Ideas</th>
-            <th>Budget</th>
-            <th>Filter Reason</th>
-            <th>Other Reason</th>
-            <th>Contact Info</th>
+            <th className='pr-2'>ID</th>
+            <th className='px-2'>Name</th>
+            <th className='px-2'>Organization</th>
+            <th className='px-2'>Ideas</th>
+            <th className='px-2'>Budget</th>
+            <th className='px-2'>Filter Reason</th>
+            <th className='px-2'>Other Reason</th>
+            <th className='pl-2'>Contact Info</th>
           </tr>
         </thead>
         <tbody>
           {submissions.map((submission) => (
             <tr key={submission.id}>
-              <td>{submission.id}</td>
-              <td>{submission.name}</td>
-              <td>{submission.organization}</td>
-              <td>{submission.ideas}</td>
-              <td>{submission.budget}</td>
-              <td>{submission.filter_reason}</td>
-              <td>{submission.other_reason}</td>
-              <td>{submission.contact_info}</td>
+              <td className='pr-2'>{submission.id}</td>
+              <td className='px-2'>{submission.name}</td>
+              <td className='px-2'>{submission.organization}</td>
+              <td className='px-2'>{submission.ideas}</td>
+              <td className='px-2'>{submission.budget}</td>
+              <td className='px-2'>{submission.filter_reason}</td>
+              <td className='px-2'>{submission.other_reason}</td>
+              <td className='pl-2'>{submission.contact_info}</td>
             </tr>
           ))}
         </tbody>
       </table>
     </div>
+</section>
   );
 };
 
