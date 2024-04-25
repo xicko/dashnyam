@@ -34,7 +34,7 @@ const SubmissionsPage: React.FC<{ submissions: FormSubmission[] }> = ({
           Form Submissions
         </h1>
 
-        <table className="md:text-2xl text-xl">
+        <table className="md:text-2xl text-lg">
           <thead>
             <tr className='align-top text-left'>
               <th className="pr-8 border-r border-gray-500 border-opacity-40">ID</th>
