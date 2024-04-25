@@ -34,7 +34,7 @@ const SubmissionsPage: React.FC<{ submissions: FormSubmission[] }> = ({
           Form Submissions
         </h1>
 
-        <table className="md:text-2xl text-lg">
+        <table className="md:text-2xl text-[16px] md:leading-[52px] leading-7">
           <thead>
             <tr className='align-top text-left'>
               <th className="pr-8 border-r border-gray-500 border-opacity-40">ID</th>
@@ -44,7 +44,7 @@ const SubmissionsPage: React.FC<{ submissions: FormSubmission[] }> = ({
               <th className="pr-8 pl-2 border-r border-gray-500 border-opacity-40">Budget</th>
               <th className="pr-8 pl-2 border-r border-gray-500 border-opacity-40">Filter Reason</th>
               <th className="pr-8 pl-2 border-r border-gray-500 border-opacity-40">Other Reason</th>
-              <th className="pr-8 pl-2 border-r border-gray-500 border-opacity-40">Contact Info</th>
+              <th className="pr-8 pl-2">Contact Info</th>
             </tr>
           </thead>
           <tbody>
@@ -57,7 +57,7 @@ const SubmissionsPage: React.FC<{ submissions: FormSubmission[] }> = ({
                 <td className="pr-8 pl-2 border-r border-gray-500 border-opacity-40">{submission.budget}</td>
                 <td className="pr-8 pl-2 border-r border-gray-500 border-opacity-40">{submission.filter_reason}</td>
                 <td className="pr-8 pl-2 border-r border-gray-500 border-opacity-40">{submission.other_reason}</td>
-                <td className="pr-8 pl-2 border-r border-gray-500 border-opacity-40">{submission.contact_info}</td>
+                <td className="pr-8 pl-2">{submission.contact_info}</td>
               </tr>
             ))}
           </tbody>
