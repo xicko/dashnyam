@@ -30,7 +30,7 @@ const SubmissionsPage: React.FC<{ submissions: FormSubmission[] }> = ({
       </Head>
 
       <div className="bg-white text-black rounded-3xl px-12 py-12 mx-4 overflow-x-auto">
-        <h1 className="md:text-4xl text-2xl mb-4 font-bold">
+        <h1 className="md:text-4xl text-2xl mb-8 font-bold">
           Form Submissions
         </h1>
 
