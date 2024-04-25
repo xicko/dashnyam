@@ -77,7 +77,7 @@ const WorkTogether = () => {
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                className="w-full font-normal bg-opacity-30 rounded-lg border border-gray-300 bg-black p-2 text-white text-lg  ease-linear duration-150 transition shadow-[0_0px_30px_-15px_rgba(186,230,253,0)] hover:shadow-[0_0px_30px_-15px_rgba(186,230,253,1)] focus:shadow-[0_0px_30px_-15px_rgba(186,230,253,1)]"
+                className="w-full font-normal bg-opacity-30 rounded-lg border border-gray-300 bg-black p-2 text-white text-lg  ease-linear duration-150 transition shadow-[0_0px_30px_-15px_rgba(197,227,242,0)] md:hover:shadow-[0_0px_30px_-15px_rgba(197,227,242,1)] hover:shadow-[0_0px_30px_-12px_rgba(197,227,242,1)] md:focus:shadow-[0_0px_30px_-15px_rgba(197,227,242,1)] focus:shadow-[0_0px_30px_-12px_rgba(197,227,242,1)]"
                 required
                 placeholder="Your name"
               />
@@ -92,7 +92,7 @@ const WorkTogether = () => {
                 name="organization"
                 value={formData.organization}
                 onChange={handleChange}
-                className="w-full font-normal bg-opacity-30 rounded-lg border border-gray-300 bg-black p-2 text-white text-lg  ease-linear duration-150 transition shadow-[0_0px_30px_-15px_rgba(186,230,253,0)] hover:shadow-[0_0px_30px_-15px_rgba(186,230,253,1)] focus:shadow-[0_0px_30px_-15px_rgba(186,230,253,1)]"
+                className="w-full font-normal bg-opacity-30 rounded-lg border border-gray-300 bg-black p-2 text-white text-lg  ease-linear duration-150 transition shadow-[0_0px_30px_-15px_rgba(197,227,242,0)] md:hover:shadow-[0_0px_30px_-15px_rgba(197,227,242,1)] hover:shadow-[0_0px_30px_-12px_rgba(197,227,242,1)] md:focus:shadow-[0_0px_30px_-15px_rgba(197,227,242,1)] focus:shadow-[0_0px_30px_-12px_rgba(197,227,242,1)]"
                 placeholder="Company"
               />
             </div>
@@ -103,7 +103,7 @@ const WorkTogether = () => {
             name="ideas"
             value={formData.ideas}
             onChange={handleChange}
-            className="w-full font-normal bg-opacity-30 rounded-lg border border-gray-300 bg-black p-2 mb-4 text-white text-lg  ease-linear duration-150 transition shadow-[0_0px_30px_-15px_rgba(186,230,253,0)] hover:shadow-[0_0px_30px_-15px_rgba(186,230,253,1)] focus:shadow-[0_0px_30px_-15px_rgba(186,230,253,1)]"
+            className="w-full font-normal bg-opacity-30 rounded-lg border border-gray-300 bg-black p-2 mb-4 text-white text-lg  ease-linear duration-150 transition shadow-[0_0px_30px_-15px_rgba(197,227,242,0)] md:hover:shadow-[0_0px_30px_-15px_rgba(197,227,242,1)] hover:shadow-[0_0px_30px_-12px_rgba(197,227,242,1)] md:focus:shadow-[0_0px_30px_-15px_rgba(197,227,242,1)] focus:shadow-[0_0px_30px_-12px_rgba(197,227,242,1)]"
             rows={4}
             placeholder="Describe your ideas"
           ></textarea>
@@ -114,7 +114,7 @@ const WorkTogether = () => {
             name="budget"
             value={formData.budget}
             onChange={handleChange}
-            className="w-[200px] font-normal bg-opacity-30 rounded-lg border border-gray-300 bg-black p-2 mb-4 text-white text-lg  ease-linear duration-150 transition shadow-[0_0px_30px_-15px_rgba(186,230,253,0)] hover:shadow-[0_0px_30px_-15px_rgba(186,230,253,1)] focus:shadow-[0_0px_30px_-15px_rgba(186,230,253,1)]"
+            className="w-[200px] font-normal bg-opacity-30 rounded-lg border border-gray-300 bg-black p-2 mb-4 text-white text-lg  ease-linear duration-150 transition shadow-[0_0px_30px_-15px_rgba(197,227,242,0)] md:hover:shadow-[0_0px_30px_-15px_rgba(197,227,242,1)] hover:shadow-[0_0px_30px_-12px_rgba(197,227,242,1)] md:focus:shadow-[0_0px_30px_-15px_rgba(197,227,242,1)] focus:shadow-[0_0px_30px_-12px_rgba(197,227,242,1)]"
             placeholder="What's your budget?"
           />
 
@@ -126,7 +126,7 @@ const WorkTogether = () => {
             value={formData.filterReason}
             onChange={handleChange}
             aria-label="What is the filter for?"
-            className="w-[300px] font-normal bg-opacity-30 rounded-lg border border-gray-300 bg-black p-2 mb-4 text-white text-lg  ease-linear duration-150 transition shadow-[0_0px_30px_-15px_rgba(186,230,253,0)] hover:shadow-[0_0px_30px_-15px_rgba(186,230,253,1)] focus:shadow-[0_0px_30px_-15px_rgba(186,230,253,1)]"
+            className="w-[300px] font-normal bg-opacity-30 rounded-lg border border-gray-300 bg-black p-2 mb-4 text-white text-lg  ease-linear duration-150 transition shadow-[0_0px_30px_-15px_rgba(197,227,242,0)] md:hover:shadow-[0_0px_30px_-15px_rgba(197,227,242,1)] hover:shadow-[0_0px_30px_-12px_rgba(197,227,242,1)] md:focus:shadow-[0_0px_30px_-15px_rgba(197,227,242,1)] focus:shadow-[0_0px_30px_-12px_rgba(197,227,242,1)]"
           >
             <option value="">Select an option</option>
             <option value="advertisement">
@@ -144,7 +144,7 @@ const WorkTogether = () => {
                 name="otherReason"
                 value={formData.otherReason}
                 onChange={handleChange}
-                className="w-full font-normal bg-opacity-30 rounded-lg border border-gray-300 bg-black p-2 mb-4 text-white text-lg  ease-linear duration-150 transition shadow-[0_0px_30px_-15px_rgba(186,230,253,0)] hover:shadow-[0_0px_30px_-15px_rgba(186,230,253,1)] focus:shadow-[0_0px_30px_-15px_rgba(186,230,253,1)]"
+                className="w-full font-normal bg-opacity-30 rounded-lg border border-gray-300 bg-black p-2 mb-4 text-white text-lg  ease-linear duration-150 transition shadow-[0_0px_30px_-15px_rgba(197,227,242,0)] md:hover:shadow-[0_0px_30px_-15px_rgba(197,227,242,1)] hover:shadow-[0_0px_30px_-12px_rgba(197,227,242,1)] md:focus:shadow-[0_0px_30px_-15px_rgba(197,227,242,1)] focus:shadow-[0_0px_30px_-12px_rgba(197,227,242,1)]"
                 placeholder="Other"
               />
             </>
@@ -158,7 +158,7 @@ const WorkTogether = () => {
             name="contactInfo"
             value={formData.contactInfo}
             onChange={handleChange}
-            className="w-full font-normal bg-opacity-30 rounded-lg border border-gray-300 bg-black p-2 mb-4 text-white text-lg ease-linear duration-150 transition shadow-[0_0px_30px_-15px_rgba(186,230,253,0)] hover:shadow-[0_0px_30px_-15px_rgba(186,230,253,1)] focus:shadow-[0_0px_30px_-15px_rgba(186,230,253,1)]" // Black text
+            className="w-full font-normal bg-opacity-30 rounded-lg border border-gray-300 bg-black p-2 mb-6 text-white text-lg ease-linear duration-150 transition shadow-[0_0px_30px_-15px_rgba(197,227,242,0)] md:hover:shadow-[0_0px_30px_-15px_rgba(197,227,242,1)] hover:shadow-[0_0px_30px_-12px_rgba(197,227,242,1)] md:focus:shadow-[0_0px_30px_-15px_rgba(197,227,242,1)] focus:shadow-[0_0px_30px_-12px_rgba(197,227,242,1)]" // Black text
             required
             placeholder="What's your email address?"
           />
@@ -166,7 +166,7 @@ const WorkTogether = () => {
           <div className="flex justify-center">
             <button
               type="submit"
-              className="bg-slate-50 text-slate-700 py-2.5 px-5 rounded-lg ease-linear duration-150 transition shadow-[0_5px_60px_-15px_rgba(186,230,253,0)] hover:shadow-[0_5px_60px_-15px_rgba(186,230,253,1)]"
+              className="bg-slate-50 text-slate-700 py-2.5 px-5 rounded-lg ease-linear duration-150 transition shadow-[0_5px_60px_-15px_rgba(197,227,242,0)] hover:shadow-[0_5px_60px_-15px_rgba(197,227,242,1)]"
             >
               Submit
             </button>
@@ -174,7 +174,7 @@ const WorkTogether = () => {
         </form>
 
         {notification && (
-          <div className="text-white text-center mt-6">
+          <div className="text-white md:max-w-[432px] max-w-full text-lg bg-zinc-800 bg-opacity-30 rounded-lg text-center mt-6 px-4 py-4">
             <p>{notification}</p>
           </div>
         )}
