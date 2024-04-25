@@ -30,34 +30,34 @@ const SubmissionsPage: React.FC<{ submissions: FormSubmission[] }> = ({
       </Head>
 
       <div className="bg-white text-black rounded-3xl px-12 py-12 mx-4 overflow-x-auto">
-        <h1 className="md:text-4xl text-xl mb-4 font-semibold">
+        <h1 className="md:text-4xl text-2xl mb-4 font-bold">
           Form Submissions
         </h1>
 
-        <table className="md:text-2xl text-md">
+        <table className="md:text-2xl text-xl">
           <thead>
-            <tr>
-              <th className="md:pr-8 pr-4">ID</th>
-              <th className="md:pr-8 pr-4">Name</th>
-              <th className="md:pr-8 pr-4">Organization</th>
-              <th className="md:pr-8 pr-4">Ideas</th>
-              <th className="md:pr-8 pr-4">Budget</th>
-              <th className="md:pr-8 pr-4">Filter Reason</th>
-              <th className="md:pr-8 pr-4">Other Reason</th>
-              <th className="md:pr-8 pr-4">Contact Info</th>
+            <tr className='align-top text-left'>
+              <th className="pr-8 border-r border-gray-500 border-opacity-40">ID</th>
+              <th className="pr-8 pl-2 border-r border-gray-500 border-opacity-40">Name</th>
+              <th className="pr-8 pl-2 border-r border-gray-500 border-opacity-40">Organization</th>
+              <th className="pr-8 pl-2 border-r border-gray-500 border-opacity-40">Ideas</th>
+              <th className="pr-8 pl-2 border-r border-gray-500 border-opacity-40">Budget</th>
+              <th className="pr-8 pl-2 border-r border-gray-500 border-opacity-40">Filter Reason</th>
+              <th className="pr-8 pl-2 border-r border-gray-500 border-opacity-40">Other Reason</th>
+              <th className="pr-8 pl-2 border-r border-gray-500 border-opacity-40">Contact Info</th>
             </tr>
           </thead>
           <tbody>
             {submissions.map((submission) => (
               <tr key={submission.id}>
-                <td className="md:pr-8 pr-4">{submission.id}</td>
-                <td className="md:pr-8 pr-4">{submission.name}</td>
-                <td className="md:pr-8 pr-4">{submission.organization}</td>
-                <td className="md:pr-8 pr-4">{submission.ideas}</td>
-                <td className="md:pr-8 pr-4">{submission.budget}</td>
-                <td className="md:pr-8 pr-4">{submission.filter_reason}</td>
-                <td className="md:pr-8 pr-4">{submission.other_reason}</td>
-                <td className="md:pr-8 pr-4">{submission.contact_info}</td>
+                <td className="pr-8 border-r border-gray-500 border-opacity-40">{submission.id}</td>
+                <td className="pr-8 pl-2 border-r border-gray-500 border-opacity-40">{submission.name}</td>
+                <td className="pr-8 pl-2 border-r border-gray-500 border-opacity-40">{submission.organization}</td>
+                <td className="pr-8 pl-2 border-r border-gray-500 border-opacity-40">{submission.ideas}</td>
+                <td className="pr-8 pl-2 border-r border-gray-500 border-opacity-40">{submission.budget}</td>
+                <td className="pr-8 pl-2 border-r border-gray-500 border-opacity-40">{submission.filter_reason}</td>
+                <td className="pr-8 pl-2 border-r border-gray-500 border-opacity-40">{submission.other_reason}</td>
+                <td className="pr-8 pl-2 border-r border-gray-500 border-opacity-40">{submission.contact_info}</td>
               </tr>
             ))}
           </tbody>
