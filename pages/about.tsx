@@ -124,7 +124,7 @@ const About = () => {
   }, [controls8, inView8]);
 
   return (
-    <div className="font-[Manrope] animate-glow">
+    <div className="customfontbase animate-glow">
       <Head>
         <title>About - Dashnyam Batbayar</title>
       </Head>

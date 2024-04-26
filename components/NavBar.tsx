@@ -52,7 +52,7 @@ const NavBar: React.FC = () => {
           <div className="flex md:space-x-12 space-x-8">
             <Link
               href="/"
-              className="transform duration-500 hover:scale-[1.15] ease"
+              className="transform duration-500 hover:scale-[1.10] ease"
             >
               Home
             </Link>
@@ -60,21 +60,21 @@ const NavBar: React.FC = () => {
             <Link
               hidden
               href="about"
-              className="transform duration-500 hover:scale-[1.15] ease"
+              className="transform duration-500 hover:scale-[1.10] ease"
             >
               About
             </Link>
 
             <Link
               href="portfolio"
-              className="transform duration-500 hover:scale-[1.15] ease"
+              className="transform duration-500 hover:scale-[1.10] ease"
             >
               Portfolio
             </Link>
 
             <Link
               href="assets"
-              className="transform duration-500 hover:scale-[1.15] ease"
+              className="transform duration-500 hover:scale-[1.10] ease"
             >
               Assets
             </Link>
@@ -82,7 +82,7 @@ const NavBar: React.FC = () => {
             <Link
               hidden
               href="https://inxta.dashnyam.com"
-              className="transform duration-500 hover:scale-[1.15] ease"
+              className="transform duration-500 hover:scale-[1.10] ease"
             >
               Inxta
             </Link>

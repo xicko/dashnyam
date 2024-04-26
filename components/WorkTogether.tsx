@@ -62,12 +62,6 @@ const WorkTogether = () => {
   return (
     <section className="flex justify-center mb-8">
       <div className="text-white md:px-20 px-8 my-[10px] font-semibold ">
-        <p
-          hidden
-          className="font-[CalSans] md:text-[34px] text-3xl text-center animate-glow font-semibold md:-mt-8 -mt-14 opacity-0"
-        >
-          Are we going to work together?
-        </p>
         <form onSubmit={handleSubmit} className="mt-0">
           <div className="flex justify-start space-x-8  mb-0">
             <div className="md:w-[200px] w-[145px] mb-4 md:mb-4">

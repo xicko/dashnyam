@@ -28,9 +28,15 @@ body {
   font-family: 'Manrope', sans-serif;
 }
 
-.customfont {
+/* Custom Font */
+.customfonttitle {
+  font-family: 'CalSans', sans-serif;
+}
+
+.customfontbase {
   font-family: 'Manrope', sans-serif;
 }
+/* Custom Font */
 
 .pagetitletext {
   font-size: 48px;

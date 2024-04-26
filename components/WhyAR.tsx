@@ -95,7 +95,7 @@ const WhyAR = () => {
           className="bg-[#e8f4fc] bg-opacity-100 bg-cover md:w-[700px] rounded-3xl text-black p-10 mt-10"
         >
           <div className="">
-            <div className="font-[CalSans] md:text-[54px] text-[44px] font-semibold">Why AR?</div>
+            <div className="customfonttitle md:text-[54px] text-[44px] font-semibold">Why AR?</div>
             <div className="md:text-2xl py-4">
               AR brings brands to life with strategy and design.
             </div>

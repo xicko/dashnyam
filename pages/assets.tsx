@@ -131,14 +131,14 @@ const GraphicAssetsPage: React.FC = () => {
 
   // Render the component
   return (
-    <main className="customfont">
+    <main className="customfontbase">
       <Head>
         <title>Assets - Dashnyam Batbayar</title>
       </Head>
 
       <div className="container md:mx-auto pt-[128px]">
         <AnimatedComponent>
-          <h1 className="font-[CalSans] text-3xl font-bold ml-10 mb-8 animate-glow">
+          <h1 className="customfonttitle text-3xl font-bold ml-10 mb-8 animate-glow">
             Graphic Assets
           </h1>
         </AnimatedComponent>
@@ -165,7 +165,7 @@ const GraphicAssetsPage: React.FC = () => {
                   />
                 </div>
 
-                <h2 className="font-[CalSans] md:text-[26px] text-xl text-black font-bold md:mt-4 mt-3 md:px-6 px-5">
+                <h2 className="customfonttitle md:text-[26px] text-xl text-black font-bold md:mt-4 mt-3 md:px-6 px-5">
                   {asset.title}
                 </h2>
 

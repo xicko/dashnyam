@@ -25,7 +25,7 @@ export default function RootLayout({
       <head>
         <meta property="og:image" content="/ogimage.jpg" />
       </head>
-      <body className='customfont'>
+      <body className='customfontbase'>
         <SplashScreen/>
 
         <ParticlesContainer/>
