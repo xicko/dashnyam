@@ -65,7 +65,7 @@ const WorkTogether = () => {
         <form onSubmit={handleSubmit} className="mt-0">
           <div className="flex justify-start space-x-8  mb-0">
             <div className="md:w-[200px] w-[145px] mb-4 md:mb-4">
-              <label className="block customfonttitle tracking-wider text-xl text-gray-200 mb-2">Name</label>
+              <label className="block text-xl text-gray-200 mb-2">Name</label>
               <input
                 type="text"
                 name="name"
@@ -78,7 +78,7 @@ const WorkTogether = () => {
             </div>
 
             <div className="md:w-[200px] w-[145px]">
-              <label className="block customfonttitle tracking-wider text-xl text-gray-200 mb-2">
+              <label className="block text-xl text-gray-200 mb-2">
                 Organization
               </label>
               <input
@@ -92,7 +92,7 @@ const WorkTogether = () => {
             </div>
           </div>
 
-          <label className="block customfonttitle tracking-wider text-xl text-gray-200 mb-2">Ideas</label>
+          <label className="block text-xl text-gray-200 mb-2">Ideas</label>
           <textarea
             name="ideas"
             value={formData.ideas}
@@ -102,7 +102,7 @@ const WorkTogether = () => {
             placeholder="Describe your ideas"
           ></textarea>
 
-          <label className="block customfonttitle tracking-wider text-xl text-gray-200 mb-2">Budget</label>
+          <label className="block text-xl text-gray-200 mb-2">Budget</label>
           <input
             type="text"
             name="budget"
@@ -112,7 +112,7 @@ const WorkTogether = () => {
             placeholder="What's your budget?"
           />
 
-          <label className="block customfonttitle tracking-wider text-xl text-gray-200 mb-2">
+          <label className="block text-xl text-gray-200 mb-2">
             What is the filter for?
           </label>
           <select
@@ -132,7 +132,7 @@ const WorkTogether = () => {
 
           {formData.filterReason === "other" && (
             <>
-              <label className="block customfonttitle tracking-wider text-xl text-gray-200 mb-2">Other</label>
+              <label className="block text-xl text-gray-200 mb-2">Other</label>
               <input
                 type="text"
                 name="otherReason"
@@ -144,7 +144,7 @@ const WorkTogether = () => {
             </>
           )}
 
-          <label className="block customfonttitle tracking-wider text-xl text-gray-200 mb-2">
+          <label className="block text-xl text-gray-200 mb-2">
             Email Address
           </label>
           <input

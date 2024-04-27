@@ -33,7 +33,7 @@ const Customers: React.FC = () => {
             <div
               key={customer.name}
               className="flex items-center flex-col justify-center">
-              <div className="md:w-[150px] md:h-[150px] w-[130px] h-[130px]">
+              <div className="md:w-[170px] md:h-[170px] w-[130px] h-[130px]">
                 <Image
                   src={customer.logo}
                   alt={customer.name}

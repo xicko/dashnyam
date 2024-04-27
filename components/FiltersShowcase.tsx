@@ -32,9 +32,9 @@ const FiltersShowcase: React.FC<FiltersShowcaseProps> = ({
           </div>
 
           <div className="p-10 sm:text-white md:text-black lg:text-black xl:text-black">
-            <h2 className="customfonttitle text-3xl font-bold mb-2">{title}</h2>
+            <h2 className="customfonttitle tracking-[0.03em] text-3xl font-bold mb-2">{title}</h2>
             <p className="xl:text-[16px] 2xl:text-xl lg:text-[18px] md:text-[20px] sm:text-[18px] text-[18px] pb-4">{description}</p>
-            <Link href={buttonLink} className="bg-[#4879F4] text-white px-4 py-2 rounded-md hover:bg-[#3359E9] transition-colors">
+            <Link href={buttonLink} className="bg-[#88d0ff] text-black px-4 py-2 rounded-md hover:bg-[#5fbfff] transition-colors">
                 Try Effect
             </Link>
           </div>
