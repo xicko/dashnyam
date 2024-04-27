@@ -4,7 +4,6 @@ import Footer from "@components/Footer";
 import React, { ReactNode } from "react";
 import Customers from "@components/Customers";
 import WorkTogether from "@components/WorkTogether";
-import FaqComponent from "@components/FaqComponent";
 import Hero from "@components/Hero";
 import dynamic from "next/dynamic";
 import AnimatedComponent from "@components/AnimatedComponent";
