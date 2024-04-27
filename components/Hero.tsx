@@ -118,10 +118,11 @@ const Hero = () => {
         >
           <div className="mt-[25px] mb-0 flex justify-center">
             <Link
-              className="bg-slate-200 text-slate-800 font-semibold border-1 p-[15px] rounded-lg text-[20px] border-slate-200 hover:shadow-[0_5px_60px_-15px_rgba(186,230,253,1)] shadow-[0px_0px_50px_-15px_rgba(186,230,253,0.4)] transition ease duration-700"
+              className="flex items-center space-x-[6px] w-fit bg-slate-200 text-slate-800 font-semibold border-1 p-[15px] rounded-lg text-[20px] border-slate-200 hover:shadow-[0_5px_60px_-15px_rgba(186,230,253,1)] shadow-[0px_0px_50px_-15px_rgba(186,230,253,0.4)] transition ease duration-700"
               href={"/portfolio"}
             >
-              Portfolio
+              <span>Portfolio</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width={"14"} height={"22"} viewBox="0 0 320 512"><path d="M0 55.2V426c0 12.2 9.9 22 22 22c6.3 0 12.4-2.7 16.6-7.5L121.2 346l58.1 116.3c7.9 15.8 27.1 22.2 42.9 14.3s22.2-27.1 14.3-42.9L179.8 320H297.9c12.2 0 22.1-9.9 22.1-22.1c0-6.3-2.7-12.3-7.4-16.5L38.6 37.9C34.3 34.1 28.9 32 23.2 32C10.4 32 0 42.4 0 55.2z"/></svg>
             </Link>
           </div>
         </animated.div>

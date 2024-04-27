@@ -11,11 +11,12 @@ const Footer: React.FC = () => {
           <p className="">&copy; {currentYear} XICKO.</p>
         </div>
 
-        <div className="flex flex-row gap-4">
+        <div className="flex flex-row md:gap-6 gap-4">
           <Link
             target="_blank"
             aria-label="Instagram"
             href="https://www.instagram.com/dashnyima"
+            className='ease transform duration-150 scale-[1.08] hover:scale-[1.25]'
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -31,6 +32,7 @@ const Footer: React.FC = () => {
             target="_blank"
             aria-label="Facebook"
             href="https://www.facebook.com/xicko"
+            className='ease transform duration-150 scale-[1.08] hover:scale-[1.25]'
           >
             <svg
               width="35"
@@ -48,6 +50,7 @@ const Footer: React.FC = () => {
             target="_blank"
             aria-label="LinkedIn"
             href="https://www.linkedin.com/in/dashnyam"
+            className='ease transform duration-150 scale-[1.08] hover:scale-[1.25]'
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
