@@ -22,18 +22,18 @@ const customers: Customer[] = [
 const Customers: React.FC = () => {
   return (
     <section className="flex justify-center overflow-x-visible">
-      <div className="mb-8 md:mx-[140px] mx-[30px] bg-white text-black bg-opacity-100 rounded-3xl md:p-20 p-8 md:w-[1200px] ">
-        <p className="customfonttitle md:text-3xl text-xl font-bold text-center flex justify-center  mb-4 mt-2">
+      <div className="mb-8 md:mx-[140px] mx-[30px] bg-white text-black bg-opacity-100 rounded-3xl md:w-[1200px] ">
+        <p className="tracking-[0.015em] customfonttitle md:text-3xl text-xl md:px-20 md:pt-20 px-8 pt-8 font-bold text-center flex justify-center  mb-4 mt-2">
           I&apos;ve helped some of Mongolia&apos;s most innovative and
           forward-thinking companies to develop stronger bonds with their
           audiences.
         </p>
-        <div className="grid grid-cols-2 md:gap-y-8 gap-4 md:grid-cols-5 md:mt-10">
+        <div className="grid grid-cols-2 md:gap-y-8 gap-4 md:grid-cols-5 md:mt-10 md:px-20 md:pb-20 px-4 pb-8">
           {customers.map((customer) => (
             <div
               key={customer.name}
               className="flex items-center flex-col justify-center">
-              <div className="md:w-[150px] md:h-[150px] w-[120px] h-[120px]">
+              <div className="md:w-[150px] md:h-[150px] w-[130px] h-[130px]">
                 <Image
                   src={customer.logo}
                   alt={customer.name}

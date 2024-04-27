@@ -40,7 +40,7 @@ const NavBar: React.FC = () => {
 
   return (
     <animated.nav
-      className="bg-[#121212] fixed backdrop-blur-[10px] z-50 backdrop-filter bg-opacity-25 md:p-6 p-4 w-full top-0"
+      className="from-[#121212] to-transparent bg-gradient-to-b fixed backdrop-blur-[10px] z-50 backdrop-filter bg-opacity-25 md:p-6 p-4 w-full top-0"
       style={navSpring}
       ref={navRef}
     >

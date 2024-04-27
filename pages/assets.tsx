@@ -138,7 +138,7 @@ const GraphicAssetsPage: React.FC = () => {
 
       <div className="container md:mx-auto pt-[128px]">
         <AnimatedComponent>
-          <h1 className="customfonttitle text-3xl font-bold ml-10 mb-8 animate-glow">
+          <h1 className="tracking-wide customfonttitle text-3xl font-bold ml-10 mb-8 animate-glow">
             Graphic Assets
           </h1>
         </AnimatedComponent>
@@ -165,7 +165,7 @@ const GraphicAssetsPage: React.FC = () => {
                   />
                 </div>
 
-                <h2 className="customfonttitle md:text-[26px] text-xl text-black font-bold md:mt-4 mt-3 md:px-6 px-5">
+                <h2 className="tracking-[0.015em] customfonttitle md:text-[26px] text-xl text-black font-bold md:mt-4 mt-3 md:px-6 px-5">
                   {asset.title}
                 </h2>
 

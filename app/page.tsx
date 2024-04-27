@@ -9,6 +9,7 @@ import Hero from "@components/Hero";
 import dynamic from "next/dynamic";
 import AnimatedComponent from "@components/AnimatedComponent";
 import PhotoCarousel from "@components/PhotoCarousel";
+import FaqComponent1 from "@components/FaqComponent1";
 
 const CustomScroll = dynamic(() => import("@components/CustomScroll"), { ssr: false });
 
@@ -118,13 +119,13 @@ export default function Home() {
       <WhyAR />
 
       <AnimatedComponent>
-        <p className="customfonttitle md:text-[46px] text-[34px] mx-[30px] text-center animate-glow font-bold mb-10 mt-14">
+        <p className="tracking-[0.015em] customfonttitle md:text-[46px] text-[34px] mx-[30px] text-center animate-glow font-bold mb-10 mt-14">
           Are we going to work together?
         </p>
         <div className="flex md:flex-row flex-col place-content-center mt-8 md:mb-20">
           <WorkTogether />
           <div>
-            <FaqComponent />
+            <FaqComponent1 />
           </div>
         </div>
       </AnimatedComponent>
