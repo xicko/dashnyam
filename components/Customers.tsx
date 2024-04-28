@@ -16,6 +16,7 @@ const customers: Customer[] = [
   { name: 'Burger King', logo: '/customers/webp/burgerking.webp' },
   { name: 'Artisty', logo: '/customers/webp/artisty.webp' },
   { name: 'Max Group', logo: '/customers/webp/maks.webp' },
+  { name: 'Khan Bank', logo: '/customers/webp/khanbank.webp' },
 ];
 
 const Customers: React.FC = () => {
