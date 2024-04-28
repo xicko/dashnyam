@@ -166,19 +166,21 @@ const GraphicAssetsPage: React.FC = () => {
                   <Image
                     src={asset.previewImg}
                     alt={asset.title}
-                    layout="fill"
+                    layout='fill'
                     quality={80}
                     draggable={false}
-                    objectFit="cover"
-                    className="rounded-t-3xl"
+                    placeholder='blur'
+                    blurDataURL={asset.previewImg}
+                    objectFit='cover'
+                    className='rounded-t-3xl'
                   />
                 </div>
 
-                <h2 className="tracking-[0.015em] customfonttitle md:text-[26px] text-xl text-black font-bold md:mt-4 mt-3 md:px-6 px-5">
+                <h2 className='tracking-[0.015em] customfonttitle md:text-[26px] text-xl text-black font-bold md:mt-4 mt-3 md:px-6 px-5'>
                   {asset.title}
                 </h2>
 
-                <p className="text-gray-800 md:text-lg md:px-6 px-5">{asset.shortDescription}</p>
+                <p className='text-gray-800 md:text-lg md:px-6 px-5'>{asset.shortDescription}</p>
               </div>
             </div>
             </AnimatedComponent>
@@ -188,13 +190,13 @@ const GraphicAssetsPage: React.FC = () => {
         <Modal
           isOpen={modalIsOpen}
           onRequestClose={closeModal}
-          className="fixed inset-0 flex items-center justify-center z-[999] font-[Manrope]"
+          className='fixed inset-0 flex items-center justify-center z-[999] customfontbase'
           overlayClassName="fixed inset-0 bg-black bg-opacity-70 transition-opacity ease duration-300"
         >
           {selectedAsset && (
-            <div className="bg-white px-8 py-8 rounded-3xl shadow-md md:max-w-screen-xl md:max-h-[800px] max-w-md mx-4 overflow-y-hidden">
-              <div className="flex flex-col h-full max-h-[70vh]">
-                <div className="flex md:flex-row flex-col overflow-y-auto overscroll-auto">
+            <div className='bg-white px-8 py-8 rounded-3xl shadow-md md:max-w-screen-xl md:max-h-[800px] max-w-md mx-4 overflow-y-hidden'>
+              <div className='flex flex-col h-full max-h-[70vh]'>
+                <div className='flex md:flex-row flex-col overflow-y-auto overscroll-auto'>
                   <h2 hidden>{selectedAsset.title}</h2>
 
                   <Image
@@ -202,28 +204,30 @@ const GraphicAssetsPage: React.FC = () => {
                     alt={selectedAsset.title}
                     draggable={false}
                     width={480}
-                    height={480}
-                    className="mb-4 rounded-xl md:w-[480px] md:h-fit"
+                    height={320}
+                    placeholder='blur'
+                    blurDataURL={selectedAsset.fullImg}
+                    className='mb-4 rounded-xl md:w-[480px] md:h-fit'
                   />
 
                   <div className='flex flex-col'>
-                    <p className="text-gray-900 font-semibold mb-4 md:mx-8 md:text-[24px]">
+                    <p className='text-gray-900 font-semibold mb-4 md:mx-8 md:text-[24px]'>
                       {selectedAsset.fullDescription}
                     </p>
 
-                    <p className="text-gray-900 mb-4 md:mx-8 md:text-[24px]">
+                    <p className='text-gray-900 mb-4 md:mx-8 md:text-[24px]'>
                       {selectedAsset.howToUse}
                     </p>
                   </div>
                 </div>
 
-                <div className="flex justify-center md:text-2xl text-xl text-black space-x-[3px] select-none cursor-pointer font-medium mb-[-32px] mx-[-32px]">
+                <div className='flex justify-center md:text-2xl text-xl text-black space-x-[3px] select-none cursor-pointer font-medium mb-[-32px] mx-[-32px]'>
                   <a className='w-1/2 flex justify-center bg-sky-300 hover:bg-sky-400 transition duration-500 ease py-3 rounded-[6px_6px_6px_24px] border-t-[3px] border-b-[3px] border-l-[3px] border-white' download href={selectedAsset.downloadUrl}>
                     <span>Download</span>
                     <svg xmlns="http://www.w3.org/2000/svg" className='md:w-[50px] md:h-[28px] w-[30px] h-[20px] md:mt-[2px] mt-1 md:mr-0 mr-[-8px]' fill="black" viewBox="0 0 512 512"><path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"/></svg>
                   </a>
 
-                  <a className="w-1/2 flex justify-center bg-zinc-300 hover:bg-zinc-400 transition duration-500 ease py-3 rounded-[6px_6px_24px_6px] border-t-[3px] border-b-[3px] border-r-[3px] border-white outline-none" onClick={closeModal}>
+                  <a className='w-1/2 flex justify-center bg-zinc-300 hover:bg-zinc-400 transition duration-500 ease py-3 rounded-[6px_6px_24px_6px] border-t-[3px] border-b-[3px] border-r-[3px] border-white outline-none' onClick={closeModal}>
                     <span>Close</span>
                   </a>
                 </div>
