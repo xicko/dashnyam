@@ -197,10 +197,12 @@ const GraphicAssetsPage: React.FC = () => {
                 <div className="flex md:flex-row flex-col overflow-y-auto overscroll-auto">
                   <h2 hidden>{selectedAsset.title}</h2>
 
-                  <img
+                  <Image
                     src={selectedAsset.fullImg}
                     alt={selectedAsset.title}
                     draggable={false}
+                    width={480}
+                    height={480}
                     className="mb-4 rounded-xl md:w-[480px] md:h-fit"
                   />
 
