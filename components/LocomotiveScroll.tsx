@@ -1,14 +1,14 @@
-"use client";
+'use client';
 
-import React, { useEffect, useRef, ReactNode } from "react";
-import locomotiveScroll from "locomotive-scroll";
-import "/app/locomotive-scroll.css";
+import React, { useEffect, useRef, ReactNode } from 'react';
+import locomotiveScroll from 'locomotive-scroll';
+import '/app/locomotive-scroll.css';
 
-interface CustomScrollProps {
+interface LocomotiveScrollProps {
   children: ReactNode;
 }
 
-const CustomScroll: React.FC<CustomScrollProps> = ({ children }) => {
+const LocomotiveScroll: React.FC<LocomotiveScrollProps> = ({ children }) => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   // Scroll update all pages
@@ -20,7 +20,7 @@ const CustomScroll: React.FC<CustomScrollProps> = ({ children }) => {
         smooth: true,
       });
       
-      const element = document.querySelector("html");
+      const element = document.querySelector('html');
       if (element !== null) {
         new ResizeObserver(() => scroll.update()).observe(element);
       } else {
@@ -42,4 +42,4 @@ const CustomScroll: React.FC<CustomScrollProps> = ({ children }) => {
   );
 };
 
-export default CustomScroll;
+export default LocomotiveScroll;

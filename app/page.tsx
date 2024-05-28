@@ -1,16 +1,15 @@
-
 import WhyAR from "@components/WhyAR";
 import Footer from "@components/Footer";
-import React, { ReactNode } from "react";
+import React from "react";
 import Customers from "@components/Customers";
 import WorkTogether from "@components/WorkTogether";
 import Hero from "@components/Hero";
 import dynamic from "next/dynamic";
 import AnimatedComponent from "@components/AnimatedComponent";
 import PhotoCarousel from "@components/PhotoCarousel";
-import FaqComponent1 from "@components/FaqComponent1";
+import FAQs from "@components/FAQs";
 
-const CustomScroll = dynamic(() => import("@components/CustomScroll"), { ssr: false });
+const CustomScroll = dynamic(() => import("@components/LocomotiveScroll"), { ssr: false });
 
 export default function Home() {
 
@@ -103,7 +102,7 @@ export default function Home() {
   ];
 
   return (
-    <main className="scroll-smooth ">
+    <main className='scroll-smooth'>
 
       <Hero />
 
@@ -118,13 +117,13 @@ export default function Home() {
       <WhyAR />
 
       <AnimatedComponent>
-        <p className="tracking-[0.015em] customfonttitle md:text-[46px] text-[34px] mx-[30px] text-center animate-glow font-bold mb-10 mt-14">
+        <p className='tracking-[0.015em] customfonttitle md:text-[46px] text-[34px] mx-[30px] text-center animate-glow font-bold mb-10 mt-14'>
           Are we going to work together?
         </p>
-        <div className="flex md:flex-row flex-col place-content-center mt-8 md:mb-20">
+        <div className='flex md:flex-row flex-col place-content-center mt-8 md:mb-20'>
           <WorkTogether />
           <div>
-            <FaqComponent1 />
+            <FAQs />
           </div>
         </div>
       </AnimatedComponent>

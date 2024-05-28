@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FaqComponent1 = () => {
+const FAQs = () => {
   return (
     <section className='md:w-[460px] md:mx-10 bg-black md:bg-opacity-20 bg-opacity-0 md:rounded-3xl p-10 md:mt-4 md:mb-0 mb-14 space-y-6'>
         <div className='space-y-2'>
@@ -29,4 +29,4 @@ const FaqComponent1 = () => {
   )
 }
 
-export default FaqComponent1
+export default FAQs

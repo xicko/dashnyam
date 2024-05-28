@@ -8,7 +8,7 @@ import dynamic from "next/dynamic";
 import NavBar from '@components/NavBar';
 import ParticlesContainer from '@components/ParticlesContainer';
 
-const CustomScroll = dynamic(() => import("@components/CustomScroll"), { ssr: false });
+const CustomScroll = dynamic(() => import("@components/LocomotiveScroll"), { ssr: false });
 
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {

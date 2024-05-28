@@ -47,14 +47,14 @@ const VideoPlayer = ({ videoSource, subText, topText, placeHolder }: VideoPlayer
   }, [isHovered]);
 
   return (
-    <div className="relative md:w-[250px] w-full max-w-[300px] md:mx-auto mx-10 my-0 md:rounded-[0px] rounded-[15px] overflow-hidden aspect-[9/16 shadow-[0_0px_60px_-15px_rgba(0,0,0,0.35)]">
-      <div className="absolute mt-[300px] inset-0 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black md:rounded-none rounded-[15px] opacity-20"></div>
+    <div className='relative md:w-[250px] w-full max-w-[300px] md:mx-auto mx-10 my-0 md:rounded-[0px] rounded-[15px] overflow-hidden aspect-[9/16 shadow-[0_0px_60px_-15px_rgba(0,0,0,0.35)]'>
+      <div className='absolute mt-[300px] inset-0 overflow-hidden'>
+        <div className='absolute inset-0 bg-gradient-to-b from-transparent to-black md:rounded-none rounded-[15px] opacity-20'></div>
       </div>
 
-      <div className="absolute bottom-4 left-5 text-white">
-        <p className="text-md font-normal drop-shadow-md">{subText}</p>
-        <p className="text-lg font-semibold drop-shadow-md">{topText}</p>
+      <div className='absolute bottom-4 left-5 text-white'>
+        <p className='text-md font-normal drop-shadow-md'>{subText}</p>
+        <p className='text-lg font-semibold drop-shadow-md'>{topText}</p>
       </div>
 
       <video
@@ -64,15 +64,15 @@ const VideoPlayer = ({ videoSource, subText, topText, placeHolder }: VideoPlayer
         loop
         muted
         playsInline
-        preload="none"
-        className=""
+        preload='none'
+        className=''
         style={{
           width: '100%',
           height: '100%',
           objectFit: 'cover',
         }}
       >
-        <source src={videoSource} type="video/mp4" />
+        <source src={videoSource} type='video/mp4' />
       </video>
     </div>
   );
