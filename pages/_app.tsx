@@ -1,14 +1,15 @@
-import { useEffect } from 'react';
-import { AppProps } from 'next/app';
-import { initGA, logPageView } from '../utils/analytics';
-import 'app/globals.css';
-import '@app/locomotive-scroll.css';
+import { useEffect } from "react";
+import { AppProps } from "next/app";
+import { initGA, logPageView } from "../utils/analytics";
 import dynamic from "next/dynamic";
+import NavBar from "@components/NavBar";
+import ParticlesContainer from "@components/ParticlesContainer";
+import "app/globals.css";
+import "@app/locomotive-scroll.css";
 
-import NavBar from '@components/NavBar';
-import ParticlesContainer from '@components/ParticlesContainer';
-
-const CustomScroll = dynamic(() => import("@components/LocomotiveScroll"), { ssr: false });
+const Locomotive = dynamic(() => import("@components/LocomotiveScroll"), {
+  ssr: false,
+});
 
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
@@ -19,15 +20,17 @@ function MyApp({ Component, pageProps }: AppProps) {
     logPageView();
   }, []);
 
-  return <div>
-          <NavBar/>
-          
-          <ParticlesContainer/>
+  return (
+    <div>
+      <NavBar />
 
-          <CustomScroll>
-            <Component {...pageProps}/>
-          </CustomScroll>
-        </div>;
+      <ParticlesContainer />
+
+      <Locomotive>
+        <Component {...pageProps} />
+      </Locomotive>
+    </div>
+  );
 }
 
 export default MyApp;

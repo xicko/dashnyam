@@ -6,12 +6,13 @@ import { useInView } from "react-intersection-observer"; // Importing hook to de
 interface StatsCounterProps {
   from: number; // Starting value for the counter
   to: number; // Ending value for the counter
+  duration: number;
   textprefix?: string;
   textsuffix?: string;
 }
 
 // Functional component for displaying a counter with animation
-const StatsCounter: React.FC<StatsCounterProps> = ({ from, to, textprefix, textsuffix }) => {
+const StatsCounter: React.FC<StatsCounterProps> = ({ from, to, duration, textprefix, textsuffix }) => {
   // Creating a reference for the span element that will display the counter value
   const nodeRef = useRef<HTMLSpanElement | null>(null);
 
@@ -30,7 +31,7 @@ const StatsCounter: React.FC<StatsCounterProps> = ({ from, to, textprefix, texts
 
       // Start an animation from the 'from' value to the 'to' value using Framer Motion
       const controls = animate(from, to, {
-        duration: 2.5, // Animation duration in seconds
+        duration: duration, // Animation duration in seconds
         onUpdate: (value) => {
           // Update the text content of the span element with the current animated value
           if (node) {

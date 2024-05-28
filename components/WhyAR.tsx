@@ -85,23 +85,23 @@ const WhyAR = () => {
 
             <div className='grid grid-rows-2 grid-cols-2 pb-8 gap-y-6 md:text-2xl'>
               <div className=' font-medium px-10'>
-                Clients<br></br>
-                <StatsCounter from={0} to={25}/>
+                Clients<br/>
+                <StatsCounter from={0} to={25} duration={3}/>
               </div>
 
               <div className='font-medium md:px-10 px-4'>
-                Impressions<br></br>
-                <StatsCounter from={0} to={16} textprefix="+" textsuffix='Billion'/>
+                Impressions<br/>
+                <StatsCounter from={0} to={16} duration={3} textprefix="+" textsuffix='Billion'/>
               </div>
 
               <div className='font-medium pl-10'>
-                AR Effects<br></br>
-                <StatsCounter from={0} to={135} />
+                AR Effects<br/>
+                <StatsCounter from={0} to={135} duration={2.5}/>
               </div>
 
               <div className='font-medium md:px-10 px-4'>
-                Experience<br></br>
-                <StatsCounter from={0} to={4} textsuffix='Years'/>
+                Experience<br/>
+                <StatsCounter from={0} to={4} duration={3.5} textsuffix='Years'/>
               </div>
             </div>
           </div>

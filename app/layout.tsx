@@ -15,11 +15,7 @@ export const metadata: Metadata = {
     'Dashnyam Batbayar is a developer who operates worldwide creating unforgettable experiences in Augmented Reality.',
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode; }) {
   return (
     <html lang='en'>
       <head>
