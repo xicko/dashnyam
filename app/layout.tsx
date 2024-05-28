@@ -7,7 +7,7 @@ import dynamic from 'next/dynamic';
 import SplashScreen from '@components/SplashScreen';
 import ParticlesContainer from '@components/ParticlesContainer';
 
-const CustomScroll = dynamic(() => import('@components/LocomotiveScroll'), { ssr: false });
+const LocomotiveScroll = dynamic(() => import('@components/LocomotiveScroll'), { ssr: false });
 
 export const metadata: Metadata = {
   title: 'Dashnyam Batbayar',
@@ -32,11 +32,11 @@ export default function RootLayout({
 
         <Navbar />
 
-        <CustomScroll>
+        <LocomotiveScroll>
           {children}
           <Analytics />
           <SpeedInsights />
-        </CustomScroll>
+        </LocomotiveScroll>
       </body>
     </html>
   );
