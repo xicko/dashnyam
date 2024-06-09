@@ -117,7 +117,7 @@ export default function Home() {
       <WhyAR />
 
       <AnimatedComponent>
-        <p className='tracking-[0.015em] customfonttitle md:text-[46px] text-[34px] mx-[30px] text-center animate-glow font-bold mb-10 mt-14'>
+        <p id='contactform' className='tracking-[0.015em] customfonttitle md:text-[46px] text-[34px] mx-[30px] text-center animate-glow font-bold mb-10 mt-14'>
           Are we going to work together?
         </p>
         <div className='flex md:flex-row flex-col place-content-center mt-8 md:mb-20'>

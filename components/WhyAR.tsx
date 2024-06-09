@@ -145,7 +145,7 @@ const WhyAR = () => {
             </div>
             <div className='md:text-2xl font-semibold pb-4'>
               Instagram is growing steadily and is expected to reach 2.5 billion
-              active users by 2025.
+              active users by 2026.
             </div>
             <div className='md:text-2xl'>
               Augmented reality on social platforms is reshaping sales and
