@@ -19,8 +19,6 @@
 
 body {
   color: #fff;/* rgb(var(--foreground-rgb)); */
-  
-  
 }
 
 
@@ -43,7 +41,12 @@ body {
 }
 
 
-
+/* Contact Anchor Link Top Spacing */
+#contactform {
+  padding-top: 90px;
+  margin-top: -90px;
+}
+/* Contact Anchor Link Top Spacing */
 
 
 
