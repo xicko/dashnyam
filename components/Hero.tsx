@@ -118,7 +118,7 @@ const Hero = () => {
         >
           <div className='mt-[25px] mb-0 flex flex-wrap md:justify-center justify-start md:mx-0 mx-[30px] md:gap-x-6 md:gap-0 gap-x-6 gap-y-6'>
             <Link
-              className='flex items-center space-x-[7px] w-fit h-fit bg-slate-200 text-slate-800 font-semibold border-1 p-[15px] rounded-lg text-[20px] border-slate-200 hover:shadow-[0_5px_60px_-15px_rgba(186,230,253,1)] shadow-[0px_0px_50px_-15px_rgba(186,230,253,0.4)] transition ease duration-700'
+              className='flex items-center space-x-[7px] w-fit h-fit bg-slate-200 text-slate-800 font-semibold border-1 md:py-[15px] py-[10px] md:px-[15px] px-[14px] rounded-lg text-[20px] border-slate-200 hover:shadow-[0_5px_60px_-15px_rgba(186,230,253,1)] shadow-[0px_0px_50px_-15px_rgba(186,230,253,0.4)] transition ease duration-700'
               href={'#contactform'}
               data-scroll-to
             >
@@ -127,7 +127,7 @@ const Hero = () => {
             </Link>
 
             <Link
-              className='flex items-center space-x-[6px] w-fit h-fit bg-slate-200 text-slate-800 font-semibold border-1 p-[15px] rounded-lg text-[20px] border-slate-200 hover:shadow-[0_5px_60px_-15px_rgba(186,230,253,1)] shadow-[0px_0px_50px_-15px_rgba(186,230,253,0.4)] transition ease duration-700'
+              className='flex items-center space-x-[6px] w-fit h-fit bg-slate-200 text-slate-800 font-semibold border-1 md:py-[15px] py-[10px] md:px-[15px] px-[14px] rounded-lg text-[20px] border-slate-200 hover:shadow-[0_5px_60px_-15px_rgba(186,230,253,1)] shadow-[0px_0px_50px_-15px_rgba(186,230,253,0.4)] transition ease duration-700'
               href={'/portfolio'}
             >
               <span>Portfolio</span>
@@ -135,7 +135,7 @@ const Hero = () => {
             </Link>
 
             <Link
-              className='flex items-center space-x-[6px] w-fit h-fit bg-slate-200 text-slate-800 font-semibold border-1 p-[15px] rounded-lg text-[20px] border-slate-200 hover:shadow-[0_5px_60px_-15px_rgba(186,230,253,1)] shadow-[0px_0px_50px_-15px_rgba(186,230,253,0.4)] transition ease duration-700'
+              className='flex items-center space-x-[6px] w-fit h-fit bg-slate-200 text-slate-800 font-semibold border-1 md:py-[15px] py-[10px] md:px-[15px] px-[14px] rounded-lg text-[20px] border-slate-200 hover:shadow-[0_5px_60px_-15px_rgba(186,230,253,1)] shadow-[0px_0px_50px_-15px_rgba(186,230,253,0.4)] transition ease duration-700'
               href={'/assets'}
             >
               <span>Browse Assets</span>
