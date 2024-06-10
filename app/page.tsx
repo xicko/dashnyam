@@ -106,7 +106,9 @@ export default function Home() {
 
       <Hero />
 
-      
+      <FadeIn>
+        <PhotoCarousel photos={photos} />
+      </FadeIn>
 
       <FadeIn>
         <Customers />

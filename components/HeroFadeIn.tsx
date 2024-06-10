@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useRef, useState, useEffect, ComponentClass } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { useSpring, animated } from 'react-spring';
 
 interface HeroFadeInProps {
