@@ -4,8 +4,8 @@ import { initGA, logPageView } from "../utils/analytics";
 import dynamic from "next/dynamic";
 import "app/globals.css";
 import "@app/locomotive-scroll.css";
+import ParticlesContainer from "@components/ParticlesContainer";
 
-const ParticlesContainer = dynamic(() => import("@components/ParticlesContainer"), { ssr: false });
 const NavBar = dynamic(() => import("@components/NavBar"), { ssr: false });
 const Locomotive = dynamic(() => import("@components/LocomotiveScroll"), {
   ssr: false,
