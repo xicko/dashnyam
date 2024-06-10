@@ -1,12 +1,12 @@
 import type { Metadata } from 'next';
-import NavBar from '@components/NavBar';
 import './globals.css';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import dynamic from 'next/dynamic';
-import SplashScreen from '@components/SplashScreen';
-import ParticlesContainer from '@components/ParticlesContainer';
 
+const SplashScreen = dynamic(() => import("@components/SplashScreen"), { ssr: false });
+const ParticlesContainer = dynamic(() => import("@components/ParticlesContainer"), { ssr: false });
+const NavBar = dynamic(() => import("@components/NavBar"), { ssr: false });
 const LocomotiveScroll = dynamic(() => import('@components/LocomotiveScroll'), { ssr: false });
 
 export const metadata: Metadata = {

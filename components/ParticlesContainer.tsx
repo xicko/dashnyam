@@ -1,8 +1,9 @@
 'use client';
 
+import dynamic from 'next/dynamic';
 import React from 'react'
-import Particles from './particles';
 import { useMediaQuery } from 'react-responsive';
+const Particles = dynamic(() => import("@components/Particles"), { ssr: false });
 
 const ParticlesContainer = () => {
     const isMobile = useMediaQuery({ query: '(max-width: 768px)' });

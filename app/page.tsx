@@ -1,15 +1,14 @@
-import WhyAR from "@components/WhyAR";
-import Footer from "@components/Footer";
 import React from "react";
-import Customers from "@components/Customers";
-import WorkTogether from "@components/WorkTogether";
-import Hero from "@components/Hero";
 import dynamic from "next/dynamic";
-import PhotoCarousel from "@components/PhotoCarousel";
-import FAQs from "@components/FAQs";
-import FadeIn from "@components/FadeIn";
 
-const CustomScroll = dynamic(() => import("@components/LocomotiveScroll"), { ssr: false });
+const FadeIn = dynamic(() => import("@components/FadeIn"), { ssr: false });
+const Hero = dynamic(() => import("@components/Hero"), { ssr: true });
+const PhotoCarousel = dynamic(() => import("@components/PhotoCarousel"), { ssr: false });
+const Footer = dynamic(() => import("@components/Footer"), { ssr: true });
+const FAQs = dynamic(() => import("@components/FAQs"), { ssr: true });
+const Customers = dynamic(() => import("@components/Customers"), { ssr: true });
+const WhyAR = dynamic(() => import("@components/WhyAR"), { ssr: true });
+const WorkTogether = dynamic(() => import("@components/WorkTogether"), { ssr: true });
 
 export default function Home() {
 

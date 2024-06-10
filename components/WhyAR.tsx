@@ -4,7 +4,9 @@ import React from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
-import StatsCounter from './StatsCounter';
+import dynamic from 'next/dynamic';
+
+const StatsCounter = dynamic(() => import("@components/StatsCounter"), { ssr: false });
 
 const WhyAR = () => {
   const isMobile = () =>

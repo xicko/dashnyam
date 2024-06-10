@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import type { Metadata } from 'next';
 import Modal from 'react-modal';
 import Image from 'next/image';
-import Footer from '@components/Footer';
 import Head from 'next/head';
-import FadeIn from '@components/FadeIn';
+import dynamic from 'next/dynamic';
+
+const FadeIn = dynamic(() => import("@components/FadeIn"), { ssr: false });
+const Footer = dynamic(() => import("@components/Footer"), { ssr: true });
 
 export const metadata: Metadata = {
   title: 'Assets - Dashnyam Batbayar',

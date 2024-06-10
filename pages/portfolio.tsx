@@ -1,9 +1,11 @@
 import React from 'react';
-import Footer from '@components/Footer';
 import 'app/globals.css';
 import Head from 'next/head';
-import FiltersShowcase from '@components/FiltersShowcase';
-import FadeIn from '@components/FadeIn';
+import dynamic from 'next/dynamic';
+
+const FadeIn = dynamic(() => import("@components/FadeIn"), { ssr: false });
+const Footer = dynamic(() => import("@components/Footer"), { ssr: true });
+const FiltersShowcase = dynamic(() => import("@components/FiltersShowcase"), { ssr: true });
 
 const portfolio = () => {
   const handleContextMenu = (e: React.MouseEvent) => {
