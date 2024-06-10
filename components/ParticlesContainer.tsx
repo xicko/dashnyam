@@ -3,7 +3,7 @@
 import dynamic from 'next/dynamic';
 import React from 'react'
 import { useMediaQuery } from 'react-responsive';
-const Particles = dynamic(() => import("@components/Particles"), { ssr: false });
+const Particles = dynamic(() => import("./Particles"), { ssr: false });
 
 const ParticlesContainer = () => {
     const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
