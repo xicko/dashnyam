@@ -33,6 +33,7 @@ const FiltersShowcase: React.FC<FiltersShowcaseProps> = ({ videoSource,subText,t
             </p>
             <Link
               href={buttonLink}
+              target='_blank'
               className='flex items-center space-x-[6px] w-fit bg-[#88d0ff] text-black font-semibold px-4 py-2 rounded-md hover:bg-[#5fbfff] transition-colors'
             >
               <span>Try Effect</span>

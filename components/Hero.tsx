@@ -4,6 +4,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { useSpring, animated } from 'react-spring';
 import Image from 'next/image';
 import Link from 'next/link';
+import Button1 from './Button1';
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -117,32 +118,20 @@ const Hero = () => {
           ref={imageRef}
         >
           <div className='mt-[25px] mb-0 flex flex-wrap md:justify-center justify-start md:mx-0 mx-[30px] md:gap-x-6 md:gap-0 gap-x-6 gap-y-6'>
-            <Link
-              className='flex items-center space-x-[7px] w-fit h-fit bg-slate-200 text-slate-800 font-semibold border-1 md:py-[15px] py-[10px] md:px-[15px] px-[14px] rounded-lg text-[20px] border-slate-200 hover:shadow-[0_5px_60px_-15px_rgba(186,230,253,1)] shadow-[0px_0px_50px_-15px_rgba(186,230,253,0.4)] transition ease duration-700'
-              href={'#contactform'}
-              data-scroll-to
-            >
+            <Button1 link={'#contactform'} anchor={true}>
               <span>Contact</span>
               <svg xmlns="http://www.w3.org/2000/svg" width={'18'} height={'22'} viewBox="0 0 512 512"><path d="M64 0C28.7 0 0 28.7 0 64V352c0 35.3 28.7 64 64 64h96v80c0 6.1 3.4 11.6 8.8 14.3s11.9 2.1 16.8-1.5L309.3 416H448c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H64z"/></svg>
-            </Link>
+            </Button1>
 
-            <Link
-              className='flex items-center space-x-[6px] w-fit h-fit bg-slate-200 text-slate-800 font-semibold border-1 md:py-[15px] py-[10px] md:px-[15px] px-[14px] rounded-lg text-[20px] border-slate-200 hover:shadow-[0_5px_60px_-15px_rgba(186,230,253,1)] shadow-[0px_0px_50px_-15px_rgba(186,230,253,0.4)] transition ease duration-700'
-              href={'/portfolio'}
-            >
+            <Button1 link={'/portfolio'} anchor={false}>
               <span>Portfolio</span>
               <svg xmlns='http://www.w3.org/2000/svg' width={'14'} height={'22'} viewBox='0 0 320 512'><path d='M0 55.2V426c0 12.2 9.9 22 22 22c6.3 0 12.4-2.7 16.6-7.5L121.2 346l58.1 116.3c7.9 15.8 27.1 22.2 42.9 14.3s22.2-27.1 14.3-42.9L179.8 320H297.9c12.2 0 22.1-9.9 22.1-22.1c0-6.3-2.7-12.3-7.4-16.5L38.6 37.9C34.3 34.1 28.9 32 23.2 32C10.4 32 0 42.4 0 55.2z'/></svg>
-            </Link>
+            </Button1>
 
-            <Link
-              className='flex items-center space-x-[6px] w-fit h-fit bg-slate-200 text-slate-800 font-semibold border-1 md:py-[15px] py-[10px] md:px-[15px] px-[14px] rounded-lg text-[20px] border-slate-200 hover:shadow-[0_5px_60px_-15px_rgba(186,230,253,1)] shadow-[0px_0px_50px_-15px_rgba(186,230,253,0.4)] transition ease duration-700'
-              href={'/assets'}
-            >
+            <Button1 link={'/assets'} anchor={false}>
               <span>Browse Assets</span>
               <svg xmlns="http://www.w3.org/2000/svg" width={'22'} height={'22'} viewBox="0 0 512 512"><path d="M234.5 5.7c13.9-5 29.1-5 43.1 0l192 68.6C495 83.4 512 107.5 512 134.6V377.4c0 27-17 51.2-42.5 60.3l-192 68.6c-13.9 5-29.1 5-43.1 0l-192-68.6C17 428.6 0 404.5 0 377.4V134.6c0-27 17-51.2 42.5-60.3l192-68.6zM256 66L82.3 128 256 190l173.7-62L256 66zm32 368.6l160-57.1v-188L288 246.6v188z"/></svg>
-            </Link>
-
-            
+            </Button1>
           </div>
         </animated.div>
       </div>

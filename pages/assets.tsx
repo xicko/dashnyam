@@ -138,7 +138,7 @@ const GraphicAssetsPage: React.FC = () => {
         <title>Assets - Dashnyam Batbayar</title>
       </Head>
 
-      <div className='container md:mx-auto pt-[128px]'>
+      <section className='container md:mx-auto pt-[128px]'>
         <AnimatedComponent>
           <h1 className='tracking-wide customfonttitle text-3xl font-bold ml-10 mb-8 animate-glow'>
             Graphic Assets
@@ -228,7 +228,7 @@ const GraphicAssetsPage: React.FC = () => {
             </div>
           )}
         </Modal>
-      </div>
+      </section>
 
       <Footer />
     </main>
