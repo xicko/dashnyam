@@ -3,7 +3,7 @@
 import React, { useRef, useEffect } from 'react';
 import { useMousePosition } from '@utils/mouse';
 
-interface ParticlesProps {
+interface ParticleProps {
 	className?: string;
 	quantity?: number;
 	staticity?: number;
@@ -11,13 +11,13 @@ interface ParticlesProps {
 	refresh?: boolean;
 }
 
-export default function Particles({
+export default function Particle({
 	className = '',
 	quantity = 30,
 	staticity = 30,
 	ease = 50,
 	refresh = false,
-}: ParticlesProps) {
+}: ParticleProps) {
 	const canvasRef = useRef<HTMLCanvasElement>(null);
 	const canvasContainerRef = useRef<HTMLDivElement>(null);
 	const context = useRef<CanvasRenderingContext2D | null>(null);
