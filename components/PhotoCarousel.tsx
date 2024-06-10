@@ -1,10 +1,10 @@
 'use client';
 
 import React, { useEffect, useRef, useState } from 'react';
-import CarouselPhoto, { CarouselPhotoProps } from './CarouselPhoto';
+import CarouselPhotos, { CarouselPhotosProps } from './CarouselPhotos';
 
 interface PhotoCarouselProps {
-  photos: CarouselPhotoProps[];
+  photos: CarouselPhotosProps[];
 }
 
 const PhotoCarousel: React.FC<PhotoCarouselProps> = ({ photos }) => {
@@ -74,7 +74,7 @@ const PhotoCarousel: React.FC<PhotoCarouselProps> = ({ photos }) => {
       onMouseLeave={handleMouseUp}
       style={{ cursor: isDragging ? 'grabbing' : 'grab', userSelect: 'none' }}
     >
-      <div className='flex md:gap-12 gap-[0px] md:space-x-4 space-x-[2px] md:mx-[150px] mx-[50px]'>
+      <div className='flex md:gap-12 gap-[0px] md:space-x-4 space-x-[2px] md:mx-[300px] mx-[50px]'>
         {duplicatedPhotos.map((photo, index) => (
           <div
             key={index}
@@ -82,7 +82,7 @@ const PhotoCarousel: React.FC<PhotoCarouselProps> = ({ photos }) => {
             onMouseEnter={() => handleMouseEnter(index)}
             onMouseLeave={handleMouseLeave}
           >
-            <CarouselPhoto {...photo} />
+            <CarouselPhotos {...photo} />
           </div>
         ))}
       </div>

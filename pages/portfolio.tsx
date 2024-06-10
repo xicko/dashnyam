@@ -3,7 +3,7 @@ import Footer from '@components/Footer';
 import 'app/globals.css';
 import Head from 'next/head';
 import FiltersShowcase from '@components/FiltersShowcase';
-import AnimatedComponent from '@components/AnimatedComponent';
+import FadeIn from '@components/FadeIn';
 
 const portfolio = () => {
   const handleContextMenu = (e: React.MouseEvent) => {
@@ -20,7 +20,7 @@ const portfolio = () => {
         
 
         <div className=' grid sm:grid-cols-1 md:grid-cols-1 lg_md:grid-cols-2 xl:grid-cols-2 md:gap-x-20 md:gap-y-20 gap-y-20 pt-28 md:my-10'>
-        <AnimatedComponent>
+        <FadeIn>
           <FiltersShowcase
             title={'This Or That?'}
             description={
@@ -32,9 +32,9 @@ const portfolio = () => {
             topText={'Burger King Mongolia'}
             placeHolder={'/thumbnails/webp/burgerking.webp'}
           />
-        </AnimatedComponent>
+        </FadeIn>
 
-        <AnimatedComponent>
+        <FadeIn>
           <FiltersShowcase
             title={'Lightning Halo'}
             description={
@@ -46,9 +46,9 @@ const portfolio = () => {
             topText={''}
             placeHolder={'/thumbnails/webp/lightninghalo.webp'}
           />
-        </AnimatedComponent>
+        </FadeIn>
 
-        <AnimatedComponent>
+        <FadeIn>
           <FiltersShowcase
             title={'Unitel Green Dot'}
             description={
@@ -60,9 +60,9 @@ const portfolio = () => {
             topText={'Unitel'}
             placeHolder={'/thumbnails/webp/unitel.webp'}
           />
-        </AnimatedComponent>
+        </FadeIn>
 
-        <AnimatedComponent>
+        <FadeIn>
           <FiltersShowcase
             title={'Why Naadam'}
             description={
@@ -74,9 +74,9 @@ const portfolio = () => {
             topText={'Next Electronics'}
             placeHolder={'/thumbnails/webp/whynaadam.webp'}
           />
-        </AnimatedComponent>
+        </FadeIn>
 
-        <AnimatedComponent>
+        <FadeIn>
           <FiltersShowcase
             title={'DevSummit 2022'}
             description={
@@ -88,9 +88,9 @@ const portfolio = () => {
             topText={'Artisty'}
             placeHolder={'/thumbnails/webp/devsummit.webp'}
           />
-        </AnimatedComponent>
+        </FadeIn>
 
-        <AnimatedComponent>
+        <FadeIn>
           <FiltersShowcase
             title={'Korean Food'}
             description={
@@ -102,9 +102,9 @@ const portfolio = () => {
             topText={'Korean Travel Org'}
             placeHolder={'/thumbnails/webp/koreanfood.webp'}
           />
-        </AnimatedComponent>
+        </FadeIn>
 
-        <AnimatedComponent>
+        <FadeIn>
           <FiltersShowcase
             title={'Hanbok'}
             description={
@@ -116,9 +116,9 @@ const portfolio = () => {
             topText={'Korean Travel Org'}
             placeHolder={'/thumbnails/webp/hanbok.webp'}
           />
-        </AnimatedComponent>
+        </FadeIn>
 
-        <AnimatedComponent>
+        <FadeIn>
           <FiltersShowcase
             title={'Berserk'}
             description={
@@ -130,9 +130,9 @@ const portfolio = () => {
             topText={''}
             placeHolder={'/thumbnails/webp/berserk.webp'}
           />
-        </AnimatedComponent>
+        </FadeIn>
 
-        <AnimatedComponent>
+        <FadeIn>
           <FiltersShowcase
             title={'Haaya ch gesen'}
             description={
@@ -144,9 +144,9 @@ const portfolio = () => {
             topText={'EMPR'}
             placeHolder={'/thumbnails/webp/haayachgesen.webp'}
           />
-        </AnimatedComponent>
+        </FadeIn>
 
-        <AnimatedComponent>
+        <FadeIn>
           <FiltersShowcase
             title={'Tengri'}
             description={
@@ -158,9 +158,9 @@ const portfolio = () => {
             topText={''}
             placeHolder={'/thumbnails/webp/tengri.webp'}
           />
-        </AnimatedComponent>
+        </FadeIn>
 
-        <AnimatedComponent>
+        <FadeIn>
           <FiltersShowcase
             title={'Next Group'}
             description={
@@ -172,9 +172,9 @@ const portfolio = () => {
             topText={'Next Group'}
             placeHolder={'/thumbnails/webp/nextgroup.webp'}
           />
-        </AnimatedComponent>
+        </FadeIn>
 
-        <AnimatedComponent>
+        <FadeIn>
           <FiltersShowcase
             title={'Christmas Hat'}
             description={
@@ -186,9 +186,9 @@ const portfolio = () => {
             topText={''}
             placeHolder={'/thumbnails/webp/christmashat.webp'}
           />
-        </AnimatedComponent>
+        </FadeIn>
 
-        <AnimatedComponent>
+        <FadeIn>
           <FiltersShowcase
             title={'XICKO MODE'}
             description={
@@ -200,9 +200,9 @@ const portfolio = () => {
             topText={''}
             placeHolder={'/thumbnails/webp/xickomode.webp'}
           />
-        </AnimatedComponent>
+        </FadeIn>
 
-        <AnimatedComponent>
+        <FadeIn>
           <FiltersShowcase
             title={'Blinding Lights'}
             description={
@@ -214,7 +214,7 @@ const portfolio = () => {
             topText={''}
             placeHolder={'/thumbnails/webp/blindinglights.webp'}
           />
-        </AnimatedComponent>
+        </FadeIn>
         </div>
       </section>
 

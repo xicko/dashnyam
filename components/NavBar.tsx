@@ -1,48 +1,14 @@
-'use client';
-
-import React, { useState, useRef, useEffect } from 'react';
-import { useSpring, animated } from 'react-spring';
+import React from 'react';
 import Link from 'next/link';
+import HeroFadeIn from './HeroFadeIn';
 
 const NavBar: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const navRef = useRef(null);
-
-  useEffect(() => {
-    const navObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      });
-    });
-
-    if (navRef.current) {
-      navObserver.observe(navRef.current);
-    }
-
-    return () => {
-      if (navRef.current) {
-        navObserver.unobserve(navRef.current);
-      }
-    };
-  }, [navRef]);
-
-  const navSpring = useSpring({
-    opacity: isVisible ? 1 : 0,
-    transform: isVisible ? 'translateY(0)' : 'translateY(-20px)',
-    width: '100vw',
-    config: {
-      tension: 250, // Adjust the tension for the desired speed
-      friction: 120, // Adjust the friction for the desired speed
-    },
-  });
-
   return (
-    <animated.nav
+    <HeroFadeIn
       className='from-[#121212] to-transparent bg-gradient-to-b fixed backdrop-blur-[10px] z-50 backdrop-filter bg-opacity-25 md:p-6 p-4 w-full top-0'
-      style={navSpring}
-      ref={navRef}
+      tension={250}
+      friction={120}
+      direction='top'
     >
       <section className='container mx-auto'>
         <div className='flex items-center justify-center font-medium text-xl'>
@@ -89,7 +55,7 @@ const NavBar: React.FC = () => {
           </div>
         </div>
       </section>
-    </animated.nav>
+    </HeroFadeIn>
   );
 };
 

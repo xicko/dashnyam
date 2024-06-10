@@ -3,11 +3,11 @@
 import React, { useState, useRef, useEffect, ReactNode } from "react";
 import { useSpring, animated } from "react-spring";
 
-interface AnimatedComponentProps {
+interface FadeInProps {
   children: ReactNode;
 }
 
-const AnimatedComponent: React.FC<AnimatedComponentProps> = ({ children }) => {
+const FadeIn: React.FC<FadeInProps> = ({ children }) => {
   const [isVisible, setIsVisible] = useState(false);
   const componentRef = useRef<HTMLDivElement>(null);
 
@@ -54,4 +54,4 @@ const AnimatedComponent: React.FC<AnimatedComponentProps> = ({ children }) => {
   );
 };
 
-export default AnimatedComponent;
+export default FadeIn;

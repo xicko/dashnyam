@@ -5,9 +5,9 @@ import Customers from "@components/Customers";
 import WorkTogether from "@components/WorkTogether";
 import Hero from "@components/Hero";
 import dynamic from "next/dynamic";
-import AnimatedComponent from "@components/AnimatedComponent";
 import PhotoCarousel from "@components/PhotoCarousel";
 import FAQs from "@components/FAQs";
+import FadeIn from "@components/FadeIn";
 
 const CustomScroll = dynamic(() => import("@components/LocomotiveScroll"), { ssr: false });
 
@@ -106,17 +106,17 @@ export default function Home() {
 
       <Hero />
 
-      <AnimatedComponent>
+      <FadeIn>
         <PhotoCarousel photos={photos} />
-      </AnimatedComponent>
+      </FadeIn>
 
-      <AnimatedComponent>
+      <FadeIn>
         <Customers />
-      </AnimatedComponent>
+      </FadeIn>
 
       <WhyAR />
 
-      <AnimatedComponent>
+      <FadeIn>
         <p id='contactform' className='tracking-[0.015em] customfonttitle md:text-[46px] text-[34px] mx-[30px] text-center animate-glow font-bold mb-10 mt-14'>
           Are we going to work together?
         </p>
@@ -126,7 +126,7 @@ export default function Home() {
             <FAQs />
           </div>
         </div>
-      </AnimatedComponent>
+      </FadeIn>
 
       <Footer />
     </main>

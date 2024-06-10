@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import Navbar from '@components/NavBar';
+import NavBar from '@components/NavBar';
 import './globals.css';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
@@ -26,7 +26,7 @@ export default function RootLayout({ children }: { children: React.ReactNode; })
 
         <ParticlesContainer/>
 
-        <Navbar />
+        <NavBar />
 
         <LocomotiveScroll>
           {children}

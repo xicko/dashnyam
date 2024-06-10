@@ -53,20 +53,20 @@ const WhyAR = () => {
           transition={{ duration: 0.7, ease: "easeOut" }}
           className='bg-[#e8f4fc] bg-opacity-100 bg-cover md:w-[700px] rounded-3xl text-black p-10 mt-10'
         >
-          <div>
-            <div className='customfonttitle md:text-[54px] text-[44px] font-semibold'>
+          <>
+            <p className='customfonttitle md:text-[54px] text-[44px] font-semibold'>
               Why AR?
-            </div>
-            <div className='md:text-2xl py-4'>
+            </p>
+            <p className='md:text-2xl py-4'>
               AR brings brands to life with strategy and design.
-            </div>
-            <div className='md:text-2xl'>
+            </p>
+            <p className='md:text-2xl'>
               AR enhances engagement, boosts interaction, and elevates user
               experiences. Studies reveal heightened perceived value for
               products and brands with AR. Well-executed AR initiatives signal
               innovation and responsiveness from forward-thinking brands.
-            </div>
-          </div>
+            </p>
+          </>
         </motion.div>
 
         <motion.div
@@ -76,12 +76,12 @@ const WhyAR = () => {
           transition={{ duration: 0.7, ease: "easeOut" }}
           className='bg-lime-100 bg-opacity-100 bg-cover md:w-[450px] rounded-3xl mt-10 text-black'
         >
-          <div>
-            <div className='md:text-2xl pt-8 px-10 pb-6'>
+          <>
+            <p className='md:text-2xl pt-8 px-10 pb-6'>
               The effects created for my customers are shared millions of times,
               resulting in billions of monthly impressions and thousands of
               user-generated content.
-            </div>
+            </p>
 
             <div className='grid grid-rows-2 grid-cols-2 pb-8 gap-y-6 md:text-2xl'>
               <div className=' font-medium px-10'>
@@ -104,7 +104,7 @@ const WhyAR = () => {
                 <StatsCounter from={0} to={4} duration={3.5} textsuffix='Years'/>
               </div>
             </div>
-          </div>
+          </>
         </motion.div>
       </div>
 
@@ -119,14 +119,14 @@ const WhyAR = () => {
           transition={{ duration: 0.7, ease: "easeOut" }}
           className='bg-orange-100 bg-opacity-100 md:w-[450px] rounded-3xl text-black mt-10'
         >
-          <div>
-            <div className='md:text-2xl pt-8 px-10 pb-6'>
+          <>
+            <p className='md:text-2xl pt-8 px-10 pb-6'>
               It all starts with an idea. Maybe you want to sell a product. You
               may have a creative project to share with the world. Or maybe you
               want to present your audience. Whatever it is, the way you tell
               your story online can make all the difference.
-            </div>
-          </div>
+            </p>
+          </>
         </motion.div>
 
         <motion.div
@@ -139,21 +139,18 @@ const WhyAR = () => {
           transition={{ duration: 0.7, ease: "easeOut" }}
           className='bg-[#ffd4e4] bg-opacity-100 md:w-[700px] rounded-3xl text-black p-10 mt-10'
         >
-          <div>
-            <div hidden className='text-[40px] font-semibold'>
-              Why AR?
-            </div>
-            <div className='md:text-2xl font-semibold pb-4'>
+          <>
+            <p className='md:text-2xl font-semibold pb-4'>
               Instagram is growing steadily and is expected to reach 2.5 billion
               active users by 2026.
-            </div>
-            <div className='md:text-2xl'>
+            </p>
+            <p className='md:text-2xl'>
               Augmented reality on social platforms is reshaping sales and
               marketing. Forward-thinking companies using AR enhance customer
               experiences, driving business opportunities, sales, and brand
               awareness.
-            </div>
-          </div>
+            </p>
+          </>
         </motion.div>
       </div>
     </section>

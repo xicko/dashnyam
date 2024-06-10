@@ -4,7 +4,7 @@ import Modal from 'react-modal';
 import Image from 'next/image';
 import Footer from '@components/Footer';
 import Head from 'next/head';
-import AnimatedComponent from '@components/AnimatedComponent';
+import FadeIn from '@components/FadeIn';
 
 export const metadata: Metadata = {
   title: 'Assets - Dashnyam Batbayar',
@@ -139,15 +139,15 @@ const GraphicAssetsPage: React.FC = () => {
       </Head>
 
       <section className='container md:mx-auto pt-[128px]'>
-        <AnimatedComponent>
+        <FadeIn>
           <h1 className='tracking-wide customfonttitle text-3xl font-bold ml-10 mb-8 animate-glow'>
             Graphic Assets
           </h1>
-        </AnimatedComponent>
+        </FadeIn>
 
         <div className='grid grid-cols-1 mx-10 md:grid-cols-2 lg:grid-cols-3 gap-12 md:mb-[128px] mb-[128px]'>
           {graphicAssets.map((asset) => (
-            <AnimatedComponent key={asset.id}>
+            <FadeIn key={asset.id}>
             <div
               key={asset.id}
               className='ease-in-out duration-300 md:transform scale-100 md:hover:scale-[1.06] bg-white bg-opacity-[0.9]  pb-4 rounded-3xl shadow-md hover:cursor-pointer'>
@@ -176,7 +176,7 @@ const GraphicAssetsPage: React.FC = () => {
                 <p className='text-gray-800 md:text-lg md:px-6 px-5'>{asset.shortDescription}</p>
               </div>
             </div>
-            </AnimatedComponent>
+            </FadeIn>
           ))}
         </div>
 

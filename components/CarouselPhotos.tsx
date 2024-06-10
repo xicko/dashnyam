@@ -1,14 +1,14 @@
 import React from 'react';
 import Image from 'next/image';
 
-export interface CarouselPhotoProps {
+export interface CarouselPhotosProps {
   photoSource: string;
   subText: string;
   topText: string;
   altText: string;
 }
 
-const CarouselPhoto = ({ photoSource, subText, topText, altText }: CarouselPhotoProps) => {
+const CarouselPhotos = ({ photoSource, subText, topText, altText }: CarouselPhotosProps) => {
   return (
     <div className='relative md:w-[250px] w-full max-w-[300px] mx-auto my-10 rounded-[15px] overflow-hidden aspect-[9/16 shadow-[0_0px_60px_-15px_rgba(0,0,0,0.5)]'>
       <div className='absolute mt-[300px] inset-0 overflow-hidden'>
@@ -40,4 +40,4 @@ const CarouselPhoto = ({ photoSource, subText, topText, altText }: CarouselPhoto
   )
 }
 
-export default CarouselPhoto
+export default CarouselPhotos
