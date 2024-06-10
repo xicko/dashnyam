@@ -3,7 +3,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { useSpring, animated } from 'react-spring';
 
-interface HeroFadeInProps {
+interface CustomFadeInProps {
   tension?: number;
   friction?: number;
   direction?: 'top' | 'bottom' | 'left' | 'right';
@@ -11,7 +11,7 @@ interface HeroFadeInProps {
   className?: string;
 }
 
-const HeroFadeIn: React.FC<HeroFadeInProps> = ({ 
+const CustomFadeIn: React.FC<CustomFadeInProps> = ({ 
   tension, 
   friction, 
   direction, 
@@ -72,4 +72,4 @@ const HeroFadeIn: React.FC<HeroFadeInProps> = ({
   );
 };
 
-export default HeroFadeIn;
+export default CustomFadeIn;

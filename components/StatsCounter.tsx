@@ -47,7 +47,7 @@ const StatsCounter: React.FC<StatsCounterProps> = ({ from, to, duration, textpre
 
   // Render the component
   return (
-    <div>
+    <>
       {textprefix}
       <span
         className='whitespace-nowrap'
@@ -62,8 +62,8 @@ const StatsCounter: React.FC<StatsCounterProps> = ({ from, to, duration, textpre
         */}
         {inView ? <span ref={nodeRef}>{from}</span> : null}
       </span> {textsuffix}
-    </div>
+    </>
   );
 };
 
-export default StatsCounter; // Export the StatsCounter component
+export default StatsCounter

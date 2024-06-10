@@ -1,17 +1,17 @@
 import React from 'react';
 import Image from 'next/image';
 import Button1 from './Button1';
-import HeroFadeIn from './HeroFadeIn';
+import CustomFadeIn from './CustomFadeIn';
 
 const Hero = () => {
   return (
     <section className='flex justify-center'>
       <div className='flex justify-center flex-col md:w-[1400px] md:pt-[168px] pt-[60px] md:pb-[85px] pb-[0px]'>
-        <HeroFadeIn
+        <CustomFadeIn
           className='md:ml-[140px] mx-[30px] mt-6 md:mr-[300px] flex md:flex-row flex-col-reverse'
+          direction='top'
           tension={250}
           friction={40}
-          direction='top'
         >
           <h1 className='customfonttitle md:text-[60px] text-[36px] font-medium text-start animate-glow md:mt-0 mt-4'>
             HIGH END <br></br>
@@ -34,9 +34,9 @@ const Hero = () => {
               className='fixed md:scale-100 scale-[0.7] left-1/2 transform -translate-x-1/2  md:translate-x-[320px] md:translate-y-0 md:-right-[190px]'
             />
           </div>
-        </HeroFadeIn>
+        </CustomFadeIn>
 
-        <HeroFadeIn tension={250} friction={40} direction='bottom'>
+        <CustomFadeIn direction='bottom' tension={250} friction={40}>
           <div className='md:mx-[140px] mx-[30px] mt-6'>
             <h1 className='md:text-[24px] text-[18px] font-normal text-start animate-glow'>
               Comprehensive AR solutions that help fashion, lifestyle, and
@@ -47,7 +47,7 @@ const Hero = () => {
 
           <div className='flex justify-center'>
             <div className='mt-[25px] mb-0 flex flex-wrap md:justify-center justify-start md:mx-0 mx-[30px] md:gap-x-6 md:gap-0 gap-x-6 gap-y-6'>
-              <Button1 link={'#contactform'} anchor={true}>
+              <Button1 link={'#contact'} anchor={true}>
                 <span>Contact</span>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
@@ -84,7 +84,7 @@ const Hero = () => {
               </Button1>
             </div>
           </div>
-        </HeroFadeIn>
+        </CustomFadeIn>
       </div>
     </section>
   );

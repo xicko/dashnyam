@@ -9,7 +9,7 @@ const SplashScreen = () => {
     // Set a timeout to hide splash after a delay
     const splashTimeout = setTimeout(() => {
       setShowSplash(false);
-    }, 300); // 3000 milliseconds = 3 seconds
+    }, 350); // duration
 
     // Cleanup function to clear timeout
     return () => {
@@ -24,11 +24,7 @@ const SplashScreen = () => {
       }`}
       style={{ backgroundColor: '#0f0f11', zIndex: 9999 }}
     >
-      <div hidden className='text-white'>
-        {/* Your splash screen content goes here */}
-        <h1 className='text-4xl font-bold'>Welcome to My Website</h1>
-        <p className='text-lg'>Loading...</p>
-      </div>
+      
     </div>
   );
 };

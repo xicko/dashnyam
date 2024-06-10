@@ -44,7 +44,6 @@ const Customers: React.FC = () => {
                   blurDataURL={customer.logo}
                   draggable={false}
                   priority={false}
-                  className=''
                 />
               </div>
               <p className='text-center mt-2'>{customer.name}</p>

@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import type { Metadata } from 'next';
-import Modal from 'react-modal';
 import Image from 'next/image';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
 
+const Modal = dynamic(() => import("react-modal"), { ssr: false });
 const FadeIn = dynamic(() => import("@components/FadeIn"), { ssr: false });
 const Footer = dynamic(() => import("@components/Footer"), { ssr: true });
 
@@ -14,9 +14,8 @@ export const metadata: Metadata = {
     'Dashnyam Batbayar is a developer who operates worldwide creating unforgettable experiences in Augmented Reality.',
 };
 
-// Define the GraphicAssetsPage component
 const GraphicAssetsPage: React.FC = () => {
-  // Sample data for graphic assets
+  // data for graphic assets
   const graphicAssets = [
     {
       id: '7',
@@ -97,9 +96,7 @@ const GraphicAssetsPage: React.FC = () => {
     },
   ];
 
-  // State to manage modal visibility
-  const [modalIsOpen, setModalIsOpen] = useState(false);
-  // State to manage selected asset for the modal
+  const [modalIsOpen, setModalIsOpen] = useState(false); // State to manage modal visibility
   const [selectedAsset, setSelectedAsset] = useState<{
     id: string;
     title: string;
@@ -109,7 +106,7 @@ const GraphicAssetsPage: React.FC = () => {
     fullDescription: string;
     howToUse: string;
     downloadUrl: string;
-  } | null>(null);
+  } | null>(null); // State to manage selected asset for the modal
 
   // Function to open the modal
   const openModal = (asset: {

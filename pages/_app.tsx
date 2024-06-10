@@ -7,9 +7,7 @@ import "@app/locomotive-scroll.css";
 
 const ParticlesContainer = dynamic(() => import("@components/ParticlesContainer"), { ssr: false });
 const NavBar = dynamic(() => import("@components/NavBar"), { ssr: false });
-const Locomotive = dynamic(() => import("@components/LocomotiveScroll"), {
-  ssr: false,
-});
+const Locomotive = dynamic(() => import("@components/LocomotiveScroll"), { ssr: false });
 
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
@@ -21,7 +19,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   }, []);
 
   return (
-    <div>
+    <>
       <NavBar />
 
       <ParticlesContainer />
@@ -29,7 +27,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Locomotive>
         <Component {...pageProps} />
       </Locomotive>
-    </div>
+    </>
   );
 }
 

@@ -1,8 +1,8 @@
 import React from "react";
 import dynamic from "next/dynamic";
+import Hero from "@components/Hero";
 
 const FadeIn = dynamic(() => import("@components/FadeIn"), { ssr: false });
-const Hero = dynamic(() => import("@components/Hero"), { ssr: true });
 const PhotoCarousel = dynamic(() => import("@components/PhotoCarousel"), { ssr: false });
 const Footer = dynamic(() => import("@components/Footer"), { ssr: true });
 const FAQs = dynamic(() => import("@components/FAQs"), { ssr: true });
@@ -116,15 +116,14 @@ export default function Home() {
       <WhyAR />
 
       <FadeIn>
-        <p id='contactform' className='tracking-[0.015em] customfonttitle md:text-[46px] text-[34px] mx-[30px] text-center animate-glow font-bold mb-10 mt-14'>
+        <p id='contact' className='tracking-[0.015em] customfonttitle md:text-[46px] text-[34px] mx-[30px] text-center animate-glow font-bold mb-10 mt-14'>
           Are we going to work together?
         </p>
-        <div className='flex md:flex-row flex-col place-content-center mt-8 md:mb-20'>
+
+        <section className='flex md:flex-row flex-col place-content-center mt-8 md:mb-20'>
           <WorkTogether />
-          <div>
-            <FAQs />
-          </div>
-        </div>
+          <FAQs />
+        </section>
       </FadeIn>
 
       <Footer />
