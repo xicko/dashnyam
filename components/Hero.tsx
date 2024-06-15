@@ -47,8 +47,8 @@ const Hero = () => {
 
           <div className='flex justify-center'>
             <div className='mt-[25px] mb-0 flex flex-wrap md:justify-center justify-start md:mx-0 mx-[30px] md:gap-x-6 md:gap-0 gap-x-6 gap-y-6'>
-              <Button1 link={'#contact'} anchor={true}>
-                <span>Contact</span>
+              <Button1 link={'#contact'} anchor={true} bg='bg-cyan-200 border-zinc-100 text-black scale-[100%] hover:scale-[110%]'>
+                <span>Get a quote</span>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
                   width={'18'}
@@ -59,7 +59,7 @@ const Hero = () => {
                 </svg>
               </Button1>
 
-              <Button1 link={'/portfolio'} anchor={false}>
+              <Button1 link={'/portfolio'} anchor={false} bg='bg-zinc-100 border-zinc-300 text-black scale-[100%] hover:scale-[110%]'>
                 <span>Portfolio</span>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
@@ -71,8 +71,8 @@ const Hero = () => {
                 </svg>
               </Button1>
 
-              <Button1 link={'/assets'} anchor={false}>
-                <span>Browse Assets</span>
+              <Button1 link={'/assets'} anchor={false} bg='bg-zinc-100 border-zinc-300 text-black scale-[100%] hover:scale-[110%]'>
+                <span>Assets</span>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
                   width={'22'}
