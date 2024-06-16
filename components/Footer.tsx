@@ -5,7 +5,7 @@ const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className='bg-[#121212] backdrop-blur-[10px] backdrop-filter bg-opacity-25 p-6 py-12 text-white font-medium'>
+    <footer className='bg-gradient-to-t from-[#1212120a] dark:bg-[#121212] backdrop-blur-sm dark:backdrop-blur-[10px] backdrop-filter dark:bg-opacity-25 p-6 py-12 text-black dark:text-white font-medium'>
       <div className='container mx-auto flex flex-col-reverse gap-4 md:flex-row justify-between items-center'>
         <div className='mb-4 md:mb-0'>
           <p className=''>&copy; {currentYear} XICKO.</p>

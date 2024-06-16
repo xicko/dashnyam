@@ -22,7 +22,7 @@ const customers: Customer[] = [
 const Customers: React.FC = () => {
   return (
     <section className='flex justify-center overflow-x-visible'>
-      <div className='md:mx-[140px] mx-[30px] bg-white text-black bg-opacity-100 rounded-3xl md:w-[1200px] '>
+      <div className='md:mx-[140px] mx-[30px] bg-zinc-100 dark:bg-white text-black bg-opacity-100 rounded-3xl md:w-[1200px] '>
         <p className='tracking-[0.015em] customfonttitle md:text-3xl text-xl md:px-20 md:pt-20 px-8 pt-8 font-bold text-center flex justify-center  mb-4 mt-2'>
           I&apos;ve helped some of Mongolia&apos;s most innovative and
           forward-thinking companies to develop stronger bonds with their

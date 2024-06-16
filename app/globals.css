@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 /*
 :root {
   --foreground-rgb: 255, 255, 255;
@@ -17,8 +19,23 @@
   }
 } */
 
-body {
-  color: #fff;/* rgb(var(--foreground-rgb)); */
+
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: white;
+    color: black;
+  }
+
+  .navbartextshadow {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 1);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #0f0f11;
+    color: white;
+  }
 }
 
 
@@ -362,7 +379,7 @@ mabry font */
 body {
   margin: 0;
   /*background: linear-gradient(to top, #0e1126, #1e2551);*/
-  background-color: #0f0f11;
+  
   background-attachment: fixed;
 }
 
@@ -467,7 +484,13 @@ body {
 /* Background */
 
 .svg-color {
-  fill: white;
+  fill: black;
+}
+
+@media (prefers-color-scheme: dark) {
+  .svg-color {
+    fill: white;
+  };
 }
 
 /* modal */

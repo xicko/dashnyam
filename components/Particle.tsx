@@ -118,21 +118,26 @@ export default function Particle({
 		};
 	};
 
-	const drawCircle = (circle: Circle, update = false) => {
+	const drawCircle = (circle, update = false) => {
 		if (context.current) {
-			const { x, y, translateX, translateY, size, alpha } = circle;
-			context.current.translate(translateX, translateY);
-			context.current.beginPath();
-			context.current.arc(x, y, size, 0, 2 * Math.PI);
-			context.current.fillStyle = `rgba(255, 255, 255, ${alpha})`;
-			context.current.fill();
-			context.current.setTransform(dpr, 0, 0, dpr, 0, 0);
-
-			if (!update) {
-				circles.current.push(circle);
-			}
+		  const { x, y, translateX, translateY, size, alpha } = circle;
+		  
+		  // Determine theme color
+		  const themeColor = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'rgba(255, 255, 255, ' : 'rgba(0, 0, 0, ';
+		  
+		  context.current.translate(translateX, translateY);
+		  context.current.beginPath();
+		  context.current.arc(x, y, size, 0, 2 * Math.PI);
+		  context.current.fillStyle = `${themeColor}${alpha})`;
+		  context.current.fill();
+		  context.current.setTransform(dpr, 0, 0, dpr, 0, 0);
+	  
+		  if (!update) {
+			circles.current.push(circle);
+		  }
 		}
-	};
+	  };
+	  
 
 	const clearContext = () => {
 		if (context.current) {

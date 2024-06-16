@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Button1 from './Button1';
 import CustomFadeIn from './CustomFadeIn';
 import ButtonSecondary1 from './ButtonSecondary1';
+import HeroImage from './HeroImage';
 
 const Hero = () => {
   return (
@@ -23,17 +24,7 @@ const Hero = () => {
           </h1>
 
           <div className='flex items-center justify-center md:justify-end w-[200px] md:h-[275px] h-[200px]'>
-            <Image
-              src={'/AR.webp'}
-              alt={'AR'}
-              width={'350'}
-              height={'350'}
-              draggable={false}
-              priority={true}
-              placeholder='blur'
-              blurDataURL={'/AR.webp'}
-              className='fixed md:scale-100 scale-[0.7] left-1/2 transform -translate-x-1/2  md:translate-x-[320px] md:translate-y-0 md:-right-[190px]'
-            />
+            <HeroImage/>
           </div>
         </CustomFadeIn>
 
@@ -60,7 +51,7 @@ const Hero = () => {
                 </svg>
               </Button1>
 
-              <ButtonSecondary1 link={'/portfolio'} anchor={false} bg='bg-transparent hover:bg-zinc-100 border-2 border-zinc-100 text-white hover:text-black fill-white hover:fill-black scale-[100%] hover:scale-[110%]'>
+              <ButtonSecondary1 link={'/portfolio'} anchor={false} bg='bg-transparent hover:bg-black dark:hover:bg-white border-2 border-zinc-800 dark:border-white text-black hover:text-white dark:text-white dark:hover:text-black fill-black hover:fill-white dark:fill-white dark:hover:fill-black scale-[100%] hover:scale-[110%]'>
                 <span>Portfolio</span>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
@@ -72,7 +63,7 @@ const Hero = () => {
                 </svg>
               </ButtonSecondary1>
 
-              <ButtonSecondary1 link={'/assets'} anchor={false} bg='bg-transparent hover:bg-zinc-100 border-2 border-zinc-100 text-white hover:text-black fill-white hover:fill-black scale-[100%] hover:scale-[110%]'>
+              <ButtonSecondary1 link={'/assets'} anchor={false} bg='bg-transparent hover:bg-black dark:hover:bg-white border-2 border-zinc-800 dark:border-white text-black hover:text-white dark:text-white dark:hover:text-black fill-black hover:fill-white dark:fill-white dark:hover:fill-black scale-[100%] hover:scale-[110%]'>
                 <span>Assets</span>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
