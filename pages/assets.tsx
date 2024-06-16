@@ -149,7 +149,7 @@ const GraphicAssetsPage: React.FC = () => {
             <FadeIn key={asset.id}>
             <div
               key={asset.id}
-              className='ease-in-out duration-300 md:transform scale-100 md:hover:scale-[1.06] bg-white bg-opacity-[0.9]  pb-4 rounded-3xl hover:cursor-pointer'>
+              className='ease-in-out duration-300 md:transform scale-100 md:hover:scale-[1.06] bg-gray-100 dark:bg-white bg-opacity-[0.9]  pb-4 rounded-3xl hover:cursor-pointer'>
               <div onClick={() => openModal(asset)}>
                 <div
                   onClick={() => openModal(asset)}

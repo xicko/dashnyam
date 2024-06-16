@@ -2,7 +2,7 @@ import React from 'react';
 
 const FAQs = () => {
   return (
-    <section className='md:w-[460px] md:mx-10 bg-zinc-100 dark:bg-black dark:md:bg-opacity-20 dark:bg-opacity-0 md:rounded-3xl p-10 md:mt-4 md:mb-0 mb-14 space-y-6'>
+    <section className='md:w-[460px] md:mx-10 bg-white md:bg-zinc-100 dark:bg-[#0f0f11] dark:md:bg-black dark:md:bg-opacity-20 bg-opacity-80 dark:bg-opacity-40 md:rounded-3xl p-10 md:mt-4 md:mb-0 mb-14 space-y-6'>
         <div className='space-y-2'>
             <p className='font-bold text-xl'>&#8226; What kind of filters do you create?</p>
             <p>I work with color grading, makeup, photo frames, product demonstration, target tracking, and a lot more!</p>

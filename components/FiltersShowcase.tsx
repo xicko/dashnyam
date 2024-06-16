@@ -14,7 +14,7 @@ const FiltersShowcase: React.FC<FiltersShowcaseProps> = ({ videoSource,subText,t
   return (
     <div className='shrink'>
       <div className='flex justify-center'>
-        <div className='sm:bg-transparent md:bg-white lg:bg-white xl:bg-white rounded-2xl flex lg:flex-row flex-col overflow-hidden md:max-w-[600px] md:min-w-[600px] 2xl:max-w-[700px] 2xl:min-w-[700px] h-auto'>
+        <div className='sm:bg-transparent md:bg-gray-100 lg:bg-gray-100 xl:bg-gray-100 dark:md:bg-white dark:lg:bg-white dark:xl:bg-white rounded-2xl flex lg:flex-row flex-col overflow-hidden md:max-w-[600px] md:min-w-[600px] 2xl:max-w-[700px] 2xl:min-w-[700px] h-auto'>
           <div className='md:pl-0 h-fit'>
             <VideoPlayer
               videoSource={videoSource}
