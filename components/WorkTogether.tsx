@@ -60,7 +60,7 @@ const WorkTogether = () => {
   };
 
   return (
-    <section className='flex justify-center mb-8 md:mt-8 mt-0'>
+    <section className='flex justify-center mb-8 md:mt-3 mt-0'>
       <div className='text-white md:px-20 px-8 my-[10px] font-semibold'>
         <form onSubmit={handleSubmit} className='mt-0'>
           <div className='flex justify-start space-x-8  mb-0'>
