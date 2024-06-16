@@ -118,7 +118,7 @@ export default function Particle({
 		};
 	};
 
-	const drawCircle = (circle, update = false) => {
+	const drawCircle = (circle: Circle, update = false) => {
 		if (context.current) {
 		  const { x, y, translateX, translateY, size, alpha } = circle;
 		  
