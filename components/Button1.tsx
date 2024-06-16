@@ -9,7 +9,7 @@ export interface Button1Props {
 }
 
 const Button1 = ({ children, link, anchor, bg }: Button1Props) => {
-    const AnchorBool = anchor ? {'data-scroll-to': ''} : {};
+  const AnchorBool = anchor ? {'data-scroll-to': ''} : {};
 
   return (
     <Link

@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Button1 from './Button1';
 import CustomFadeIn from './CustomFadeIn';
+import ButtonSecondary1 from './ButtonSecondary1';
 
 const Hero = () => {
   return (
@@ -59,7 +60,7 @@ const Hero = () => {
                 </svg>
               </Button1>
 
-              <Button1 link={'/portfolio'} anchor={false} bg='bg-zinc-100 border-zinc-300 text-black scale-[100%] hover:scale-[110%]'>
+              <ButtonSecondary1 link={'/portfolio'} anchor={false} bg='bg-transparent hover:bg-zinc-100 border-2 border-zinc-100 text-white hover:text-black fill-white hover:fill-black scale-[100%] hover:scale-[110%]'>
                 <span>Portfolio</span>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
@@ -69,9 +70,9 @@ const Hero = () => {
                 >
                   <path d='M0 55.2V426c0 12.2 9.9 22 22 22c6.3 0 12.4-2.7 16.6-7.5L121.2 346l58.1 116.3c7.9 15.8 27.1 22.2 42.9 14.3s22.2-27.1 14.3-42.9L179.8 320H297.9c12.2 0 22.1-9.9 22.1-22.1c0-6.3-2.7-12.3-7.4-16.5L38.6 37.9C34.3 34.1 28.9 32 23.2 32C10.4 32 0 42.4 0 55.2z' />
                 </svg>
-              </Button1>
+              </ButtonSecondary1>
 
-              <Button1 link={'/assets'} anchor={false} bg='bg-zinc-100 border-zinc-300 text-black scale-[100%] hover:scale-[110%]'>
+              <ButtonSecondary1 link={'/assets'} anchor={false} bg='bg-transparent hover:bg-zinc-100 border-2 border-zinc-100 text-white hover:text-black fill-white hover:fill-black scale-[100%] hover:scale-[110%]'>
                 <span>Assets</span>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
@@ -81,7 +82,7 @@ const Hero = () => {
                 >
                   <path d='M234.5 5.7c13.9-5 29.1-5 43.1 0l192 68.6C495 83.4 512 107.5 512 134.6V377.4c0 27-17 51.2-42.5 60.3l-192 68.6c-13.9 5-29.1 5-43.1 0l-192-68.6C17 428.6 0 404.5 0 377.4V134.6c0-27 17-51.2 42.5-60.3l192-68.6zM256 66L82.3 128 256 190l173.7-62L256 66zm32 368.6l160-57.1v-188L288 246.6v188z' />
                 </svg>
-              </Button1>
+              </ButtonSecondary1>
             </div>
           </div>
         </CustomFadeIn>
