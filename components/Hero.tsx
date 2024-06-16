@@ -37,7 +37,7 @@ const Hero = () => {
         </CustomFadeIn>
 
         <CustomFadeIn direction='bottom' tension={250} friction={40}>
-          <div className='md:mx-[140px] mx-[30px] mt-6'>
+          <div className='md:mx-[140px] mx-[30px] md:mt-6'>
             <h1 className='md:text-[24px] text-[18px] font-normal text-start animate-glow'>
               Comprehensive AR solutions that help fashion, lifestyle, and
               luxury brands connect with their target audience on retail and in
@@ -46,7 +46,7 @@ const Hero = () => {
           </div>
 
           <div className='flex justify-center'>
-            <div className='mt-[25px] mb-0 flex flex-wrap md:justify-center justify-start md:mx-0 mx-[30px] md:gap-x-6 md:gap-0 gap-x-6 gap-y-6'>
+            <div className='mt-[25px] mb-0 flex flex-wrap md:justify-center justify-start md:mx-0 mx-[30px] md:gap-x-6 md:gap-0 gap-x-4 gap-y-4'>
               <Button1 link={'#contact'} anchor={true} bg='bg-cyan-200 border-zinc-100 text-black scale-[100%] hover:scale-[110%]'>
                 <span>Get a quote</span>
                 <svg

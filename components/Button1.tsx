@@ -13,7 +13,7 @@ const Button1 = ({ children, link, anchor, bg }: Button1Props) => {
 
   return (
     <Link
-      className={bg + ` ` + `flex items-center space-x-[7px] w-fit h-fit font-semibold border-1 md:py-[15px] py-[10px] md:px-[24px] px-[14px] rounded-full text-[20px] transition ease duration-150`}
+      className={bg + ` ` + `flex items-center space-x-[7px] w-fit h-fit font-semibold border-1 md:py-[15px] py-[10px] md:px-[20px] px-[14px] rounded-lg text-[20px] transition ease duration-150`}
       href={link}
       {...AnchorBool}
     >
