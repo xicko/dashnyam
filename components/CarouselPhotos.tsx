@@ -10,7 +10,7 @@ export interface CarouselPhotosProps {
 
 const CarouselPhotos = ({ photoSource, subText, topText, altText }: CarouselPhotosProps) => {
   return (
-    <div className='relative md:w-[250px] w-full max-w-[300px] mx-auto my-10 rounded-[15px] overflow-hidden aspect-[9/16 shadow-[0_0px_60px_-15px_rgba(0,0,0,0.5)]'>
+    <div className='relative md:w-[250px] w-full max-w-[300px] mx-auto my-10 rounded-[15px] overflow-hidden aspect-[9/16 shadow-[0_0px_38px_-14px_rgba(0,0,0,0.6)]'>
       <div className='absolute mt-[300px] inset-0 overflow-hidden'>
         <div className='absolute inset-0 bg-gradient-to-b from-transparent to-black rounded-[15px] opacity-40'></div>
       </div>
