@@ -1,6 +1,7 @@
 import React from "react";
 import dynamic from "next/dynamic";
 import Hero from "@components/Hero";
+// import DarkModeToggle from "@components/DarkModeToggle";
 // import PhotoCarousel2 from "@components/PhotoCarousel2";
 
 const FadeIn = dynamic(() => import("@components/FadeIn"), { ssr: false });
@@ -108,7 +109,7 @@ export default function Home() {
       <FadeIn>
         <PhotoCarousel photos={photos} />
       </FadeIn>
-
+      
       <FadeIn>
         <Customers />
       </FadeIn>

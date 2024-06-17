@@ -2,24 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
-/*
-:root {
-  --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 0, 0, 0;
-  --background-end-rgb: 0, 0, 0;
+/* Default light mode styles */
+body {
+  background-color: white;
+  color: black;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-} */
+.navbartextshadow {
+  text-shadow: 0 0 20px rgba(255, 255, 255, 1);
+}
 
+.svg-color {
+  fill: black;
+}
 
+/* Media query for light mode */
 @media (prefers-color-scheme: light) {
   body {
     background-color: white;
@@ -29,14 +26,54 @@
   .navbartextshadow {
     text-shadow: 0 0 20px rgba(255, 255, 255, 1);
   }
+
+  .svg-color {
+    fill: black;
+  }
 }
 
+/* Media query for dark mode */
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #0f0f11;
     color: white;
   }
+
+  .navbartextshadow {
+    text-shadow: 0 0 20px rgba(0, 0, 0, 1);
+  }
+
+  .svg-color {
+    fill: white;
+  }
 }
+
+/* Dark mode styles using the html.dark selector */
+html.dark body {
+  background-color: #0f0f11;
+  color: white;
+}
+
+html.dark .navbartextshadow {
+  text-shadow: 0 0 20px rgba(0, 0, 0, 1);
+}
+
+html.dark .svg-color {
+  fill: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 body {
@@ -485,12 +522,6 @@ body {
 
 .svg-color {
   fill: black;
-}
-
-@media (prefers-color-scheme: dark) {
-  .svg-color {
-    fill: white;
-  };
 }
 
 /* modal */

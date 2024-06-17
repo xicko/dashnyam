@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import HeroFadeIn from './CustomFadeIn';
+import DarkModeToggle from './DarkModeToggle';
 
 const NavBar: React.FC = () => {
   return (
@@ -12,7 +13,7 @@ const NavBar: React.FC = () => {
     >
       <section className='container mx-auto'>
         <div className='flex items-center justify-center font-medium text-xl'>
-          <div className='flex md:space-x-12 space-x-8'>
+          <div className='flex md:space-x-12 space-x-8 mix-blend-luminosity'>
             <Link
               href='/'
               className='transform duration-500 hover:scale-[1.10] ease navbartextshadow'
@@ -33,6 +34,8 @@ const NavBar: React.FC = () => {
             >
               Assets
             </Link>
+
+            <DarkModeToggle />
           </div>
         </div>
       </section>
