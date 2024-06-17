@@ -25,7 +25,7 @@ const ThemeToggleButton: React.FC = () => {
   return (
     <button
       onClick={toggleTheme}
-      className="p-2 m-[-8px] bg-gray-200 dark:bg-gray-800 bg-opacity-40 dark:bg-opacity-20 rounded-lg focus:outline-none"
+      className="p-2 m-[-8px] bg-gray-200 dark:bg-gray-800 bg-opacity-20 dark:bg-opacity-20 rounded-lg focus:outline-none"
     >
       {theme === 'light' ? (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

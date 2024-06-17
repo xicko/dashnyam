@@ -6,7 +6,7 @@ import DarkModeToggle from './DarkModeToggle';
 const NavBar: React.FC = () => {
   return (
     <HeroFadeIn
-      className='from-[#e2e2e2] dark:from-[#121212] bg-gradient-to-b fixed backdrop-blur-[10px] z-50 backdrop-filter bg-opacity-25 md:p-6 p-4 w-full top-0'
+      className='from-[#e2e2e2e8] dark:from-[#121212] bg-gradient-to-b fixed backdrop-blur-[10px] z-50 backdrop-filter md:p-6 p-4 w-full top-0'
       direction='top'
       tension={250}
       friction={120}
