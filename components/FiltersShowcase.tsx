@@ -15,7 +15,7 @@ const FiltersShowcase: React.FC<FiltersShowcaseProps> = ({ videoSource,subText,t
     <div className='shrink'>
       <div className='flex justify-center'>
         <div className='sm:bg-transparent md:bg-gray-100 lg:bg-gray-100 xl:bg-gray-100 dark:md:bg-white dark:lg:bg-white dark:xl:bg-white rounded-2xl flex lg:flex-row flex-col overflow-hidden md:max-w-[600px] md:min-w-[600px] 2xl:max-w-[700px] 2xl:min-w-[700px] h-auto'>
-          <div className='md:pl-0 h-fit'>
+          <div className='h-fit'>
             <VideoPlayer
               videoSource={videoSource}
               subText={subText}
@@ -24,7 +24,7 @@ const FiltersShowcase: React.FC<FiltersShowcaseProps> = ({ videoSource,subText,t
             />
           </div>
 
-          <div className='p-10 sm:text-white md:text-black lg:text-black xl:text-black'>
+          <div className='p-10 md:bg-gray-100 bg-white dark:bg-[#0f0f11] md:dark:bg-white bg-opacity-80 dark:bg-opacity-80 md:bg-opacity-100 sm:text-white md:text-black lg:text-black xl:text-black'>
             <h2 className='customfonttitle tracking-[0.03em] text-3xl font-bold mb-2'>
               {title}
             </h2>

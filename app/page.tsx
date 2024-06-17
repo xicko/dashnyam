@@ -1,6 +1,7 @@
 import React from "react";
 import dynamic from "next/dynamic";
 import Hero from "@components/Hero";
+// import PhotoCarousel2 from "@components/PhotoCarousel2";
 
 const FadeIn = dynamic(() => import("@components/FadeIn"), { ssr: false });
 const PhotoCarousel = dynamic(() => import("@components/PhotoCarousel"), { ssr: false });
@@ -102,7 +103,6 @@ export default function Home() {
 
   return (
     <main className='scroll-smooth'>
-
       <Hero />
 
       <FadeIn>
