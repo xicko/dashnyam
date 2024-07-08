@@ -4,14 +4,17 @@
 import React, { useState, useEffect } from 'react';
 
 const ThemeToggleButton: React.FC = () => {
-  const [theme, setTheme] = useState<string | null>(null);
+  const [theme, setTheme] = useState<string>('light');
 
   useEffect(() => {
     const storedTheme = localStorage.getItem('theme');
-    const systemPreference = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    const initialTheme = storedTheme || systemPreference;
-    setTheme(initialTheme);
-    document.documentElement.classList.add(initialTheme);
+    if (storedTheme) {
+      setTheme(storedTheme);
+      document.documentElement.classList.add(storedTheme);
+    } else {
+      setTheme('light');
+      document.documentElement.classList.add('light');
+    }
   }, []);
 
   const toggleTheme = () => {
