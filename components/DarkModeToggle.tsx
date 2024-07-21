@@ -1,29 +1,16 @@
 'use client';
 
-// components/ThemeToggleButton.tsx
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 
-const ThemeToggleButton: React.FC = () => {
-  const [theme, setTheme] = useState<string>('light');
-
+const ThemeToggleButton: React.FC<{ theme: string; toggleTheme: () => void }> = ({ theme, toggleTheme }) => {
   useEffect(() => {
     const storedTheme = localStorage.getItem('theme');
     if (storedTheme) {
-      setTheme(storedTheme);
       document.documentElement.classList.add(storedTheme);
     } else {
-      setTheme('light');
       document.documentElement.classList.add('light');
     }
   }, []);
-
-  const toggleTheme = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light';
-    setTheme(newTheme);
-    localStorage.setItem('theme', newTheme);
-    document.documentElement.classList.remove('light', 'dark');
-    document.documentElement.classList.add(newTheme);
-  };
 
   return (
     <button

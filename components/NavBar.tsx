@@ -1,9 +1,14 @@
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
 import HeroFadeIn from './CustomFadeIn';
 import DarkModeToggle from './DarkModeToggle';
+import { useTheme } from './ThemeContext';
 
 const NavBar: React.FC = () => {
+  const { theme, toggleTheme } = useTheme();
+
   return (
     <HeroFadeIn
       className='from-[#e2e2e2e8] dark:from-[#121212] bg-gradient-to-b fixed backdrop-blur-[10px] z-50 backdrop-filter md:p-6 p-4 w-full top-0'
@@ -22,20 +27,20 @@ const NavBar: React.FC = () => {
             </Link>
 
             <Link
-              href='portfolio'
+              href='/portfolio'
               className='transform duration-500 hover:scale-[1.10] ease navbartextshadow'
             >
               Portfolio
             </Link>
 
             <Link
-              href='assets'
+              href='/assets'
               className='transform duration-500 hover:scale-[1.10] ease navbartextshadow'
             >
               Assets
             </Link>
 
-            <DarkModeToggle />
+            <DarkModeToggle theme={theme} toggleTheme={toggleTheme} />
           </div>
         </div>
       </section>

@@ -24,7 +24,7 @@ const Hero = () => {
           </h1>
 
           <div className='flex items-center justify-center md:justify-end w-[200px] md:h-[275px] h-[200px]'>
-            <HeroImage/>
+            <HeroImage />
           </div>
         </CustomFadeIn>
 

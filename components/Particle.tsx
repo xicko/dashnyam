@@ -2,6 +2,7 @@
 
 import React, { useRef, useEffect } from 'react';
 import { useMousePosition } from '@utils/mouse';
+import { useTheme } from '@components/ThemeContext';
 
 interface ParticleProps {
 	className?: string;
@@ -20,6 +21,7 @@ export default function Particle({
 }: ParticleProps) {
 	const canvasRef = useRef<HTMLCanvasElement>(null);
 	const canvasContainerRef = useRef<HTMLDivElement>(null);
+	const { theme } = useTheme();
 	const context = useRef<CanvasRenderingContext2D | null>(null);
 	const circles = useRef<any[]>([]);
 	const mousePosition = useMousePosition();
@@ -38,7 +40,7 @@ export default function Particle({
 		return () => {
 			window.removeEventListener('resize', initCanvas);
 		};
-	}, []);
+	}, [theme]);
 
 	useEffect(() => {
 		onMouseMove();
@@ -47,11 +49,11 @@ export default function Particle({
 	useEffect(() => {
 		initCanvas();
 	}, [refresh]);
-
 	const initCanvas = () => {
 		resizeCanvas();
 		drawParticles();
 	};
+
 
 	const onMouseMove = () => {
 		if (canvasRef.current) {
@@ -120,24 +122,23 @@ export default function Particle({
 
 	const drawCircle = (circle: Circle, update = false) => {
 		if (context.current) {
-		  const { x, y, translateX, translateY, size, alpha } = circle;
-		  
-		  // Determine theme color
-		  const themeColor = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'rgba(255, 255, 255, ' : 'rgba(0, 0, 0, ';
-		  
-		  context.current.translate(translateX, translateY);
-		  context.current.beginPath();
-		  context.current.arc(x, y, size, 0, 2 * Math.PI);
-		  context.current.fillStyle = `${themeColor}${alpha})`;
-		  context.current.fill();
-		  context.current.setTransform(dpr, 0, 0, dpr, 0, 0);
-	  
-		  if (!update) {
-			circles.current.push(circle);
-		  }
+			const { x, y, translateX, translateY, size, alpha } = circle;
+
+			const isDarkMode = document.documentElement.classList.contains('dark');
+			const themeColor = isDarkMode ? 'rgba(255, 255, 255, ' : 'rgba(0, 0, 0, ';
+
+			context.current.translate(translateX, translateY);
+			context.current.beginPath();
+			context.current.arc(x, y, size, 0, 2 * Math.PI);
+			context.current.fillStyle = `${themeColor}${alpha})`;
+			context.current.fill();
+			context.current.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+			if (!update) {
+				circles.current.push(circle);
+			}
 		}
-	  };
-	  
+	};
 
 	const clearContext = () => {
 		if (context.current) {

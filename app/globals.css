@@ -35,8 +35,8 @@ body {
 /* Media query for dark mode */
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: #0f0f11;
-    color: white;
+    background-color: white;
+    color: black;
   }
 
   .navbartextshadow {
@@ -62,20 +62,6 @@ html.dark .svg-color {
   fill: white;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 body {
   font-family: 'Manrope', sans-serif;
 }
@@ -94,7 +80,6 @@ body {
   font-size: 48px;
 }
 
-
 /* Contact Anchor Link Top Spacing */
 #contact {
   padding-top: 90px;
@@ -102,46 +87,25 @@ body {
 }
 /* Contact Anchor Link Top Spacing */
 
-
-
-
-
 ::-webkit-scrollbar {
   display: none;
 }
 
-
 .gridone {
-  display: grid; 
+  display: grid;
   grid-auto-flow: column;
   grid-template-rows: repeat(2, 2fr);
-  grid-template-columns: 1.3fr 0.7fr; 
-  gap: 20px 20px; 
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 20px 20px;
 }
 
 .gridtwo {
-  display: grid; 
+  display: grid;
   grid-auto-flow: column;
-  
-  grid-template-columns: 0.7fr 1.3fr; 
-  gap: 20px 20px; 
+
+  grid-template-columns: 0.7fr 1.3fr;
+  gap: 20px 20px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* manrope font */
 @font-face {
@@ -149,7 +113,7 @@ body {
   src: url('/fonts/manrope/Manrope-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
-  font-display: swap
+  font-display: swap;
 }
 
 @font-face {
@@ -157,7 +121,7 @@ body {
   src: url('/fonts/manrope/Manrope-ExtraLight.woff2') format('woff2');
   font-weight: 200;
   font-style: normal;
-  font-display: swap
+  font-display: swap;
 }
 
 @font-face {
@@ -165,7 +129,7 @@ body {
   src: url('/fonts/manrope/Manrope-Light.woff2') format('woff2');
   font-weight: 300;
   font-style: normal;
-  font-display: swap
+  font-display: swap;
 }
 
 @font-face {
@@ -173,7 +137,7 @@ body {
   src: url('/fonts/manrope/Manrope-Medium.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
-  font-display: swap
+  font-display: swap;
 }
 
 @font-face {
@@ -181,7 +145,7 @@ body {
   src: url('/fonts/manrope/Manrope-SemiBold.woff2') format('woff2');
   font-weight: 600;
   font-style: normal;
-  font-display: swap
+  font-display: swap;
 }
 
 @font-face {
@@ -189,7 +153,7 @@ body {
   src: url('/fonts/manrope/Manrope-Bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
-  font-display: swap
+  font-display: swap;
 }
 
 @font-face {
@@ -197,7 +161,7 @@ body {
   src: url('/fonts/manrope/Manrope-ExtraBold.woff2') format('woff2');
   font-weight: 800;
   font-style: normal;
-  font-display: swap
+  font-display: swap;
 }
 /* manrope font */
 
@@ -207,7 +171,7 @@ body {
   src: url('/fonts/CalSans/CalSans-SemiBold.woff2') format('woff2');
   font-weight: 600;
   font-style: normal;
-  font-display: swap
+  font-display: swap;
 }
 /* calsans font */
 
@@ -381,8 +345,6 @@ mabry font */
 }
  poppins fonts */
 
-
-
 /* glow for page title */
 @keyframes glowing {
   0% {
@@ -401,22 +363,20 @@ mabry font */
 }
 /* glow for page title */
 
-
 /* native text outline */
 :where(textarea),
-:where(input[type="text"],input[type="search"],input[type="password"],input[type="url"]){
+:where(input[type='text'], input[type='search'], input[type='password'], input[type='url']) {
   appearance: none;
   border-style: solid;
   outline: none;
 }
 /* native text outline */
 
-
 /* Background */
 body {
   margin: 0;
   /*background: linear-gradient(to top, #0e1126, #1e2551);*/
-  
+
   background-attachment: fixed;
 }
 
@@ -427,7 +387,7 @@ body {
   aspect-ratio: 1;
   width: calc(150% * var(--size));
   /*background: linear-gradient(259.53deg, #6052FF 6.53%, #52FFCE 95.34%);*/
-  
+
   filter: blur(10vw);
   border-radius: 50%;
   position: absolute;
@@ -437,69 +397,69 @@ body {
   animation-delay: var(--delay);
   transform-origin: 50% 50%;
   opacity: 0.4;
-  z-index:50;
+  z-index: 50;
 }
 @keyframes loop {
   0% {
-      transform: translate3D(0%, 51%, 0) rotate(0deg);
- }
+    transform: translate3D(0%, 51%, 0) rotate(0deg);
+  }
   5% {
-      transform: translate3D(8%, 31%, 0) rotate(18deg);
- }
+    transform: translate3D(8%, 31%, 0) rotate(18deg);
+  }
   10% {
-      transform: translate3D(22%, 13%, 0) rotate(36deg);
- }
+    transform: translate3D(22%, 13%, 0) rotate(36deg);
+  }
   15% {
-      transform: translate3D(40%, 2%, 0) rotate(54deg);
- }
+    transform: translate3D(40%, 2%, 0) rotate(54deg);
+  }
   20% {
-      transform: translate3D(46%, 21%, 0) rotate(72deg);
- }
+    transform: translate3D(46%, 21%, 0) rotate(72deg);
+  }
   25% {
-      transform: translate3D(50%, 47%, 0) rotate(90deg);
- }
+    transform: translate3D(50%, 47%, 0) rotate(90deg);
+  }
   30% {
-      transform: translate3D(53%, 80%, 0) rotate(108deg);
- }
+    transform: translate3D(53%, 80%, 0) rotate(108deg);
+  }
   35% {
-      transform: translate3D(59%, 98%, 0) rotate(125deg);
- }
+    transform: translate3D(59%, 98%, 0) rotate(125deg);
+  }
   40% {
-      transform: translate3D(84%, 89%, 0) rotate(144deg);
- }
+    transform: translate3D(84%, 89%, 0) rotate(144deg);
+  }
   45% {
-      transform: translate3D(92%, 68%, 0) rotate(162deg);
- }
+    transform: translate3D(92%, 68%, 0) rotate(162deg);
+  }
   50% {
-      transform: translate3D(99%, 47%, 0) rotate(180deg);
- }
+    transform: translate3D(99%, 47%, 0) rotate(180deg);
+  }
   55% {
-      transform: translate3D(97%, 21%, 0) rotate(198deg);
- }
+    transform: translate3D(97%, 21%, 0) rotate(198deg);
+  }
   60% {
-      transform: translate3D(80%, 7%, 0) rotate(216deg);
- }
+    transform: translate3D(80%, 7%, 0) rotate(216deg);
+  }
   65% {
-      transform: translate3D(68%, 25%, 0) rotate(234deg);
- }
+    transform: translate3D(68%, 25%, 0) rotate(234deg);
+  }
   70% {
-      transform: translate3D(59%, 41%, 0) rotate(251deg);
- }
+    transform: translate3D(59%, 41%, 0) rotate(251deg);
+  }
   75% {
-      transform: translate3D(50%, 63%, 0) rotate(270deg);
- }
+    transform: translate3D(50%, 63%, 0) rotate(270deg);
+  }
   80% {
-      transform: translate3D(38%, 78%, 0) rotate(288deg);
- }
+    transform: translate3D(38%, 78%, 0) rotate(288deg);
+  }
   85% {
-      transform: translate3D(21%, 92%, 0) rotate(306deg);
- }
+    transform: translate3D(21%, 92%, 0) rotate(306deg);
+  }
   90% {
-      transform: translate3D(3%, 79%, 0) rotate(324deg);
- }
+    transform: translate3D(3%, 79%, 0) rotate(324deg);
+  }
   100% {
-      transform: translate3D(0%, 51%, 0) rotate(360deg);
- }
+    transform: translate3D(0%, 51%, 0) rotate(360deg);
+  }
 }
 .glow-container {
   overflow-x: hidden;
@@ -510,13 +470,13 @@ body {
 }
 
 @media (max-width: 768px) {
-.ball {
-  --speed: 8s;
-}   
+  .ball {
+    --speed: 8s;
+  }
 
-.glow-container {
-  min-height: 100vh;
-}
+  .glow-container {
+    min-height: 100vh;
+  }
 }
 /* Background */
 
