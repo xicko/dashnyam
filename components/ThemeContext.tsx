@@ -1,4 +1,3 @@
-// components/ThemeContext.tsx
 'use client';
 
 import React, { createContext, useContext, ReactNode, useState, useEffect } from 'react';

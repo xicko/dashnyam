@@ -4,6 +4,7 @@ import { initGA, logPageView } from "../utils/analytics";
 import dynamic from "next/dynamic";
 import "app/globals.css";
 import "@app/locomotive-scroll.css";
+import { ThemeProvider } from "@components/ThemeContext";
 
 const ParticlesContainer = dynamic(() => import("@components/ParticlesContainer"), { ssr: false });
 const NavBar = dynamic(() => import("@components/NavBar"), { ssr: false });
@@ -20,13 +21,15 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <>
-      <NavBar />
+      <ThemeProvider>
+        <NavBar />
 
-      <ParticlesContainer />
+        <ParticlesContainer />
 
-      <Locomotive>
-        <Component {...pageProps} />
-      </Locomotive>
+        <Locomotive>
+          <Component {...pageProps} />
+        </Locomotive>
+      </ThemeProvider>
     </>
   );
 }
