@@ -34,7 +34,7 @@ const HeroImage: React.FC = () => {
         priority={true}
         placeholder="blur"
         blurDataURL={src}
-        className="fixed md:scale-100 scale-[0.7] left-1/2 transform -translate-x-1/2 md:translate-x-[320px] md:translate-y-0 md:-right-[190px] ball"
+        className="fixed md:scale-100 scale-[0.7] left-1/2 transform -translate-x-1/2 md:translate-x-[320px] md:translate-y-0 md:-right-[190px]"
       />
     </>
   );

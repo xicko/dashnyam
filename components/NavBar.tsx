@@ -21,21 +21,21 @@ const NavBar: React.FC = () => {
           <div className='flex md:space-x-12 space-x-8 mix-blend-luminosity'>
             <Link
               href='/'
-              className='transform duration-500 hover:scale-[1.10] ease navbartextshadow'
+              className='transform duration-500 hover:scale-[1.10] ease'
             >
               Home
             </Link>
 
             <Link
               href='/portfolio'
-              className='transform duration-500 hover:scale-[1.10] ease navbartextshadow'
+              className='transform duration-500 hover:scale-[1.10] ease'
             >
               Portfolio
             </Link>
 
             <Link
               href='/assets'
-              className='transform duration-500 hover:scale-[1.10] ease navbartextshadow'
+              className='transform duration-500 hover:scale-[1.10] ease'
             >
               Assets
             </Link>
