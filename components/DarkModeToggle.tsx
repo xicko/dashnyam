@@ -14,6 +14,7 @@ const ThemeToggleButton: React.FC<{ theme: string; toggleTheme: () => void }> = 
 
   return (
     <button
+      aria-label="Theme Toggle"
       onClick={toggleTheme}
       className="p-2 m-[-8px] bg-gray-200 dark:bg-gray-800 bg-opacity-20 dark:bg-opacity-20 rounded-lg focus:outline-none"
     >
