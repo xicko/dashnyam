@@ -46,14 +46,19 @@ const PhotoCarousel: React.FC<PhotoCarouselProps> = ({ photos }) => {
 
   const duplicatedPhotos = duplicatePhotos();
 
-  let autoplayStep = 1; // Adjust the scroll step as needed
+  let autoplayStep = 0.6; // Adjust the scroll step as needed
   if (typeof window !== 'undefined' && window.innerWidth <= 768) {
-    autoplayStep = 0.7; // Set a different step for mobile devices
+    autoplayStep = 0.8; // Set a different step for mobile devices
   }
 
+  let accumulatedScroll = 0;
+  
   const handleAutoplay = () => {
     if (!isDragging && carouselRef.current) {
-      carouselRef.current.scrollLeft += autoplayStep;
+      accumulatedScroll += autoplayStep;
+      const scrollAmount = Math.floor(accumulatedScroll);
+      accumulatedScroll -= scrollAmount;
+      carouselRef.current.scrollLeft += scrollAmount;
     }
     requestAnimationFrame(handleAutoplay);
   };
