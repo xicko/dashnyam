@@ -200,7 +200,7 @@ const GraphicAssetsPage: React.FC = () => {
           <div className="bg-white dark:bg-zinc-700 px-8 py-8 rounded-3xl shadow-md md:max-w-screen-xl md:max-h-[800px] max-w-md mx-4 overflow-y-hidden">
             <div className="flex flex-col h-full max-h-[70vh]">
               <div className="flex relative md:flex-row flex-col overflow-y-auto overscroll-auto">
-                <Image src={'/gray_placeholder.webp'} width={480} height={320} className='md:flex hidden mb-4 rounded-xl md:w-[480px] md:h-fit' alt={'placeholder'} draggable={false} quality={1}  />
+                <Image src={'/gray_placeholder.webp'} width={480} height={320} className='md:flex hidden mb-4 rounded-xl md:w-[480px] md:h-fit' alt={'placeholder'} draggable={false} quality={1} aria-hidden="true" priority={true}  />
 
                 <Image
                   src={selectedAsset.fullImg}
