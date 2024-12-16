@@ -22,6 +22,7 @@ const NavBar: React.FC = () => {
             <Link
               href='/'
               className='transform duration-500 hover:scale-[1.10] ease'
+              draggable={false}
             >
               Home
             </Link>
@@ -29,6 +30,7 @@ const NavBar: React.FC = () => {
             <Link
               href='/portfolio'
               className='transform duration-500 hover:scale-[1.10] ease'
+              draggable={false}
             >
               Portfolio
             </Link>
@@ -36,6 +38,7 @@ const NavBar: React.FC = () => {
             <Link
               href='/assets'
               className='transform duration-500 hover:scale-[1.10] ease'
+              draggable={false}
             >
               Assets
             </Link>

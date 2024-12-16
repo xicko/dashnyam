@@ -1,3 +1,4 @@
+'use client';
 
 import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
@@ -19,7 +20,7 @@ const aboutXvalue2 = isMobile ? '-6%' : '6%';
 const abouttext = isMobile ? 0.5 : 0;
 const abouttext2 = isMobile ? 0 : 0.5;
 
-const About = () => {
+const Page = () => {
   function Counter({ from, to }: CounterProps) {
     const nodeRef = useRef<HTMLSpanElement | null>(null);
 
@@ -299,4 +300,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Page;

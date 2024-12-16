@@ -1,108 +1,23 @@
+'use client';
+
 import React, { useState } from "react";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Head from "next/head";
 import dynamic from "next/dynamic";
+import Graphics from "public/data/graphics.json";
 
 const Modal = dynamic(() => import("react-modal"), { ssr: false });
 const FadeIn = dynamic(() => import("@components/FadeIn"), { ssr: false });
 const Footer = dynamic(() => import("@components/Footer"), { ssr: true });
 
-export const metadata: Metadata = {
+const metadata: Metadata = {
   title: "Assets - Dashnyam Batbayar",
   description:
     "Dashnyam Batbayar is a developer who operates worldwide creating unforgettable experiences in Augmented Reality.",
 };
 
-const GraphicAssetsPage: React.FC = () => {
-  // data for graphic assets
-  const graphicAssets = [
-    {
-      id: "7",
-      title: "Texture Distortion Template",
-      previewImg: "/assets/TextureDistortion.webp",
-      fullImg: "/assets/fullimg/texturedistortion.webp",
-      shortDescription: "Spark AR Template",
-      fullDescription:
-        "Contains 1x Texture Distortion Template for Spark AR, 1x Texture Distortion Patch, alongside with a Demo Texture.",
-      howToUse:
-        "How to Use: Download the .zip file, open the .arprojpkg file in Spark AR, and modify the template to your liking. Replace the demo texture (REPLACEME.png) with your own texture.",
-      downloadUrl: "https://dl.dashnyam.com/TextureDistortion-dashnyam.zip",
-    },
-    {
-      id: "6",
-      title: "Volumetric Light Template",
-      previewImg: "/assets/volumetriclight.webp",
-      fullImg: "/assets/fullimg/volumetriclight.webp",
-      shortDescription: "Spark AR Template",
-      fullDescription:
-        "Contains 1x Volumetric Light Template for Spark AR, and three variations of 3D plane model, each having different plane count.",
-      howToUse:
-        "How to Use: Download the .zip file, open the .arprojpkg file in Spark AR, and modify the template to your liking. The template includes three plane models with 32, 64, and 128 planes respectively. The quality of the volumetric light is better with more plane count, but comes at a cost of performance lag on low-end devices, therefore 64 planes is recommended.",
-      downloadUrl: "https://dl.dashnyam.com/VolumetricLight-dashnyam.zip",
-    },
-    {
-      id: "5",
-      title: "ColorLUTs Pack #3",
-      previewImg: "/assets/lutpack3.webp",
-      fullImg: "/assets/fullimg/lutpack3.webp",
-      shortDescription: "Color Look-Up Tables",
-      fullDescription:
-        "Contains 1x LUT Template for Spark AR, a shader patch, and 10x Color Look-up Table(LUT) Pack for color grading your AR effect.",
-      howToUse:
-        "How to Use: Extract all files and import to your Spark AR project, turn off compression and set texture filtering to none, create a rectangle that is stretched to fit the whole filter, drag the LUT shader and the ColorLUT of your choice into the patch editor, connect your camera texture and ColorLUT to the shader patch, then connect the output to the rectangle material.",
-      downloadUrl: "https://dl.dashnyam.com/lutpack3-dashnyam.zip",
-    },
-    {
-      id: "4",
-      title: "ColorLUTs Pack #2",
-      previewImg: "/assets/lutpack2.webp",
-      fullImg: "/assets/fullimg/lutpack2.webp",
-      shortDescription: "Color Look-Up Tables",
-      fullDescription:
-        "Contains 1x LUT Template for Spark AR, a shader patch, and 10x Color Look-up Table(LUT) Pack for color grading your AR effect.",
-      howToUse:
-        "How to Use: Extract all files and import to your Spark AR project, turn off compression and set texture filtering to none, create a rectangle that is stretched to fit the whole filter, drag the LUT shader and the ColorLUT of your choice into the patch editor, connect your camera texture and ColorLUT to the shader patch, then connect the output to the rectangle material.",
-      downloadUrl: "https://dl.dashnyam.com/lutpack2-dashnyam.zip",
-    },
-    {
-      id: "3",
-      title: "Face Deformation Pack #1",
-      previewImg: "/assets/deformationpack1.webp",
-      fullImg: "/assets/fullimg/deformationpack1.webp",
-      shortDescription: "Deformation 3D Models",
-      fullDescription:
-        "Contains 10x 3D Face Deformation Pack for achieving facial structure modifications on your AR effect.",
-      howToUse:
-        "How to Use: Extract and import to your Spark AR project, create a face mesh and choose your deformation model from the mesh properties, adjust the slider to your liking. Make sure to apply to all facemeshes.",
-      downloadUrl: "https://dl.dashnyam.com/deformationpack1-dashnyam.zip",
-    },
-    {
-      id: "2",
-      title: "ColorLUTs Pack #1",
-      previewImg: "/assets/lutpack1.webp",
-      fullImg: "/assets/fullimg/lutpack1.webp",
-      shortDescription: "Color Look-Up Tables",
-      fullDescription:
-        "Contains 1 shader patch and 10x Color Look-up Table(LUT) Pack for color grading your AR effect.",
-      howToUse:
-        "How to Use: Extract all files and import to your Spark AR project, turn off compression and set texture filtering to none, create a rectangle that is stretched to fit the whole filter, drag the LUT shader and the ColorLUT of your choice into the patch editor, connect your camera texture and ColorLUT to the shader patch, then connect the output to the rectangle material.",
-      downloadUrl: "https://dl.dashnyam.com/lutpack1-dashnyam.zip",
-    },
-    {
-      id: "1",
-      title: "Lightning Strike Sequence",
-      previewImg: "/assets/lightningsequence.webp",
-      fullImg: "/assets/fullimg/lightningsequence.webp",
-      shortDescription: "Animated Image Sequence",
-      fullDescription:
-        "Animated Image Sequence Pack from Lightning Halo Filter, contains a zip file with 13 .png files.",
-      howToUse:
-        "How to Use: Import assets to Meta Spark Hub, Select all and change the type to Texture Sequence, connect it to an animation sequence and then to your material. Once done, change material blend mode to either Add or Screen.",
-      downloadUrl: "https://dl.dashnyam.com/lightningsequence-dashnyam.zip",
-    },
-  ];
-
+const Page: React.FC = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false); // State to manage modal visibility
   const [selectedAsset, setSelectedAsset] = useState<{
     id: string;
@@ -152,7 +67,7 @@ const GraphicAssetsPage: React.FC = () => {
         </FadeIn>
 
         <div className="grid grid-cols-1 mx-10 md:grid-cols-2 lg:grid-cols-3 gap-12 md:mb-[128px] mb-[128px]">
-          {graphicAssets.map((asset) => (
+          {Graphics.map((asset) => (
             <FadeIn key={asset.id}>
               <div
                 key={asset.id}
@@ -192,6 +107,7 @@ const GraphicAssetsPage: React.FC = () => {
 
       <Modal
         isOpen={modalIsOpen}
+        ariaHideApp={false}
         onRequestClose={closeModal}
         className="fixed inset-0 flex items-center justify-center z-[100] customfontbase"
         overlayClassName="fixed inset-0 bg-black bg-opacity-70 z-[50] transition-opacity ease duration-300"
@@ -258,4 +174,4 @@ const GraphicAssetsPage: React.FC = () => {
   );
 };
 
-export default GraphicAssetsPage;
+export default Page;
