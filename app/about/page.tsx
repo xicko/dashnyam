@@ -8,6 +8,13 @@ import { isMobile } from 'react-device-detect';
 import Head from 'next/head';
 import Link from 'next/link';
 import Footer from '@components/Footer';
+import type { Metadata } from 'next';
+
+const metadata: Metadata = {
+  title: "About - Dashnyam Batbayar",
+  description:
+    "Dashnyam Batbayar is a developer who operates worldwide creating unforgettable experiences in Augmented Reality.",
+};
 
 interface CounterProps {
   from: number;
@@ -126,10 +133,6 @@ const Page = () => {
 
   return (
     <div className='customfontbase animate-glow'>
-      <Head>
-        <title>About - Dashnyam Batbayar</title>
-      </Head>
-
       <div className='flex justify-center '>
         <div className='flex md:flex-row flex-col-reverse justify-center grow shrink md:px-20 px-8 md:pt-[140px] pt-[85px] pb-[160px] md:max-w-[1496px] md:space-x-14'>
           <motion.div

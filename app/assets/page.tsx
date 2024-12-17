@@ -3,11 +3,9 @@
 import React, { useState } from "react";
 import type { Metadata } from "next";
 import Image from "next/image";
-import Head from "next/head";
 import dynamic from "next/dynamic";
 import Graphics from "public/data/graphics.json";
 
-const Modal = dynamic(() => import("react-modal"), { ssr: false });
 const FadeIn = dynamic(() => import("@components/FadeIn"), { ssr: false });
 const Footer = dynamic(() => import("@components/Footer"), { ssr: true });
 
@@ -28,7 +26,7 @@ const Page: React.FC = () => {
     fullDescription: string;
     howToUse: string;
     downloadUrl: string;
-  } | null>(null); // State to manage selected asset for the modal
+  } | null>(null); // State to manage selected asset for the modal (used optional chaining and type assertion to get around null issue for now)
 
   // Function to open the modal
   const openModal = (asset: {
@@ -55,9 +53,80 @@ const Page: React.FC = () => {
   // Render the component
   return (
     <main className="customfontbase">
-      <Head>
-        <title>Assets - Dashnyam Batbayar</title>
-      </Head>
+      {modalIsOpen && (
+        <div className='fixed z-50'>
+          <div
+            className="bg-black bg-opacity-70 transition-opacity ease duration-300"
+            onClick={closeModal}
+          />
+          <div className=" flex items-center justify-center customfontbase">
+            <div className="bg-white dark:bg-zinc-700 px-8 py-8 rounded-3xl shadow-md md:max-w-screen-xl md:max-h-[800px] max-w-md mx-4 overflow-y-hidden">
+              <div className="flex flex-col h-full max-h-[70vh]">
+                <div className="flex relative md:flex-row flex-col overflow-y-auto overscroll-auto">
+                  <Image
+                    src={'/gray_placeholder.webp'}
+                    width={480}
+                    height={320}
+                    className="md:flex hidden mb-4 rounded-xl md:w-[480px] md:h-fit"
+                    alt={'placeholder'}
+                    draggable={false}
+                    quality={1}
+                    aria-hidden="true"
+                    priority={true}
+                  />
+
+                  <Image
+                    src={selectedAsset!.fullImg}
+                    alt={selectedAsset!.title}
+                    draggable={false}
+                    width={480}
+                    unoptimized={true}
+                    height={320}
+                    placeholder="blur"
+                    blurDataURL={selectedAsset?.fullImg}
+                    className="md:absolute mb-4 rounded-xl md:w-[480px] md:h-fit"
+                  />
+
+                  <div className="flex flex-col">
+                    <p className="text-gray-900 dark:text-gray-100 font-semibold mb-4 md:mx-8 md:text-[24px]">
+                      {selectedAsset?.fullDescription}
+                    </p>
+
+                    <p className="text-gray-900 dark:text-gray-100 mb-4 md:mx-8 md:text-[24px]">
+                      {selectedAsset?.howToUse}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex justify-center md:text-2xl text-xl text-black space-x-[3px] select-none cursor-pointer font-medium mb-[-32px] mx-[-32px]">
+                  <a
+                    className="w-1/2 flex justify-center bg-sky-300 hover:bg-sky-400 transition duration-500 ease py-3 rounded-[6px_6px_6px_24px] border-t-[3px] border-b-[3px] border-l-[3px] border-white dark:border-zinc-700"
+                    download
+                    href={selectedAsset?.downloadUrl}
+                  >
+                    <span>Download</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="md:w-[50px] md:h-[28px] w-[30px] h-[20px] md:mt-[2px] mt-1 md:mr-0 mr-[-8px]"
+                      fill="black"
+                      viewBox="0 0 512 512"
+                    >
+                      <path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z" />
+                    </svg>
+                  </a>
+
+                  <a
+                    className="w-1/2 flex justify-center bg-zinc-300 hover:bg-zinc-400 transition duration-500 ease py-3 rounded-[6px_6px_24px_6px] border-t-[3px] border-b-[3px] border-r-[3px] border-white dark:border-zinc-700 outline-none"
+                    onClick={closeModal}
+                  >
+                    <span>Close</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       <section className="container md:mx-auto pt-[128px]">
         <FadeIn>
@@ -104,70 +173,6 @@ const Page: React.FC = () => {
           ))}
         </div>
       </section>
-
-      <Modal
-        isOpen={modalIsOpen}
-        ariaHideApp={false}
-        onRequestClose={closeModal}
-        className="fixed inset-0 flex items-center justify-center z-[100] customfontbase"
-        overlayClassName="fixed inset-0 bg-black bg-opacity-70 z-[50] transition-opacity ease duration-300"
-      >
-        {selectedAsset && (
-          <div className="bg-white dark:bg-zinc-700 px-8 py-8 rounded-3xl shadow-md md:max-w-screen-xl md:max-h-[800px] max-w-md mx-4 overflow-y-hidden">
-            <div className="flex flex-col h-full max-h-[70vh]">
-              <div className="flex relative md:flex-row flex-col overflow-y-auto overscroll-auto">
-                <Image src={'/gray_placeholder.webp'} width={480} height={320} className='md:flex hidden mb-4 rounded-xl md:w-[480px] md:h-fit' alt={'placeholder'} draggable={false} quality={1} aria-hidden="true" priority={true}  />
-
-                <Image
-                  src={selectedAsset.fullImg}
-                  alt={selectedAsset.title}
-                  draggable={false}
-                  width={480}
-                  height={320}
-                  placeholder="blur"
-                  blurDataURL={selectedAsset.fullImg}
-                  className="md:absolute mb-4 rounded-xl md:w-[480px] md:h-fit"
-                />
-
-                <div className="flex flex-col">
-                  <p className="text-gray-900 dark:text-gray-100 font-semibold mb-4 md:mx-8 md:text-[24px]">
-                    {selectedAsset.fullDescription}
-                  </p>
-
-                  <p className="text-gray-900 dark:text-gray-100 mb-4 md:mx-8 md:text-[24px]">
-                    {selectedAsset.howToUse}
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex justify-center md:text-2xl text-xl text-black space-x-[3px] select-none cursor-pointer font-medium mb-[-32px] mx-[-32px]">
-                <a
-                  className="w-1/2 flex justify-center bg-sky-300 hover:bg-sky-400 transition duration-500 ease py-3 rounded-[6px_6px_6px_24px] border-t-[3px] border-b-[3px] border-l-[3px] border-white dark:border-zinc-700"
-                  download
-                  href={selectedAsset.downloadUrl}
-                >
-                  <span>Download</span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="md:w-[50px] md:h-[28px] w-[30px] h-[20px] md:mt-[2px] mt-1 md:mr-0 mr-[-8px]"
-                    fill="black"
-                    viewBox="0 0 512 512"
-                  >
-                    <path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z" />
-                  </svg>
-                </a>
-
-                <a
-                  className="w-1/2 flex justify-center bg-zinc-300 hover:bg-zinc-400 transition duration-500 ease py-3 rounded-[6px_6px_24px_6px] border-t-[3px] border-b-[3px] border-r-[3px] border-white dark:border-zinc-700 outline-none"
-                  onClick={closeModal}
-                >
-                  <span>Close</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        )}
-      </Modal>
 
       <Footer />
     </main>
