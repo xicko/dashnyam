@@ -22,6 +22,7 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
   useEffect(() => {
     const storedTheme = localStorage.getItem('theme') || 'light';
     setTheme(storedTheme);
+    document.documentElement.classList.remove('light', 'dark');
     document.documentElement.classList.add(storedTheme);
   }, []);
 
@@ -29,7 +30,7 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
     const newTheme = theme === 'light' ? 'dark' : 'light';
     setTheme(newTheme);
     localStorage.setItem('theme', newTheme);
-    document.documentElement.classList.remove('light', 'dark');
+    document.documentElement.classList.remove('light', 'dark'); // Removes previously applied theme class from the <html> element, so that it won't conflict with theme changer.
     document.documentElement.classList.add(newTheme);
   };
 

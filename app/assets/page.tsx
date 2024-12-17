@@ -103,7 +103,7 @@ const Page: React.FC = () => {
           <DialogPanel>
             <DialogBackdrop className="fixed -z-30 inset-0 bg-black/50" />
             <div className=" flex items-center justify-center customfontbase">
-              <div className="bg-white dark:bg-zinc-700 px-8 py-8 rounded-3xl shadow-md md:max-w-screen-xl md:max-h-[800px] max-w-md mx-4 overflow-y-hidden">
+              <div className="bg-white dark:bg-neutral-700 px-8 py-8 rounded-3xl shadow-md md:max-w-screen-xl md:max-h-[800px] max-w-md mx-4 overflow-y-hidden">
                 <div className="flex flex-col h-full max-h-[70vh]">
                   <div className="flex relative md:flex-row flex-col overflow-y-auto overscroll-auto">
                     <Image
@@ -143,7 +143,7 @@ const Page: React.FC = () => {
 
                   <div className="flex justify-center md:text-2xl text-xl text-black space-x-[3px] select-none cursor-pointer font-medium mb-[-32px] mx-[-32px]">
                     <a
-                      className="w-1/2 flex justify-center bg-sky-300 hover:bg-sky-400 transition duration-500 ease py-3 rounded-[6px_6px_6px_24px] border-t-[3px] border-b-[3px] border-l-[3px] border-white dark:border-zinc-700"
+                      className="w-1/2 flex justify-center bg-sky-300 hover:bg-sky-400 transition duration-500 ease py-3 rounded-[6px_6px_6px_24px] border-t-[3px] border-b-[3px] border-l-[3px] border-white dark:border-neutral-700"
                       download
                       href={selectedAsset?.downloadUrl}
                     >
@@ -159,7 +159,7 @@ const Page: React.FC = () => {
                     </a>
 
                     <a
-                      className="w-1/2 flex justify-center bg-zinc-300 hover:bg-zinc-400 transition duration-500 ease py-3 rounded-[6px_6px_24px_6px] border-t-[3px] border-b-[3px] border-r-[3px] border-white dark:border-zinc-700 outline-none"
+                      className="w-1/2 flex justify-center bg-zinc-300 hover:bg-zinc-400 transition duration-500 ease py-3 rounded-[6px_6px_24px_6px] border-t-[3px] border-b-[3px] border-r-[3px] border-white dark:border-neutral-700 outline-none"
                       onClick={closeModal}
                     >
                       <span>Close</span>
