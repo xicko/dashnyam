@@ -11,7 +11,9 @@ const NavBar = dynamic(() => import("@components/NavBar"), { ssr: false });
 const LocomotiveScroll = dynamic(() => import('@components/LocomotiveScroll'), { ssr: false });
 
 export const metadata: Metadata = {
-  title: 'Dashnyam Batbayar',
+  title: {
+    default:'Dashnyam Batbayar',
+    template: '%s - Dashnyam Batbayar'},
   description: 'Dashnyam Batbayar is a developer who operates worldwide creating unforgettable experiences in Augmented Reality.',
 };
 
@@ -36,8 +38,11 @@ export default function RootLayout({ children }: { children: React.ReactNode; })
       <body className='customfontbase'>
         <ThemeProvider>
           <SplashScreen />
+
           <ParticlesContainer />
+
           <NavBar />
+          
           <LocomotiveScroll>
             {children}
             <Analytics />

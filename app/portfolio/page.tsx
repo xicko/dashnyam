@@ -1,20 +1,11 @@
 import React from "react";
-import type { Metadata } from "next";
 import "app/globals.css";
-import Head from "next/head";
 import dynamic from "next/dynamic";
 import Filters from "public/data/filters.json";
 import FiltersShowcase from "@components/FiltersShowcase";
 
-
 const FadeIn = dynamic(() => import("@components/FadeIn"), { ssr: false });
 const Footer = dynamic(() => import("@components/Footer"), { ssr: true });
-
-const metadata: Metadata = {
-  title: "Portfolio - Dashnyam Batbayar",
-  description:
-    "Dashnyam Batbayar is a developer who operates worldwide creating unforgettable experiences in Augmented Reality.",
-};
 
 const Page = () => {
    return (

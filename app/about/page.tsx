@@ -5,16 +5,8 @@ import Image from 'next/image';
 import { useInView } from 'react-intersection-observer';
 import { animate, motion, useAnimation } from 'framer-motion';
 import { isMobile } from 'react-device-detect';
-import Head from 'next/head';
 import Link from 'next/link';
 import Footer from '@components/Footer';
-import type { Metadata } from 'next';
-
-const metadata: Metadata = {
-  title: "About - Dashnyam Batbayar",
-  description:
-    "Dashnyam Batbayar is a developer who operates worldwide creating unforgettable experiences in Augmented Reality.",
-};
 
 interface CounterProps {
   from: number;

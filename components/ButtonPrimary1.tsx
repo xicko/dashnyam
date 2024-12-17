@@ -8,7 +8,7 @@ export interface Button1Props {
     bg: string;
 }
 
-const Button1 = ({ children, link, anchor, bg }: Button1Props) => {
+const ButtonPrimary1 = ({ children, link, anchor, bg }: Button1Props) => {
   const AnchorBool = anchor ? {'data-scroll-to': ''} : {};
 
   return (
@@ -22,4 +22,4 @@ const Button1 = ({ children, link, anchor, bg }: Button1Props) => {
   );
 };
 
-export default Button1;
+export default ButtonPrimary1;
