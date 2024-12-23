@@ -65,7 +65,7 @@ const WorkTogether = () => {
         <form onSubmit={handleSubmit} className='mt-0'>
           <div className='flex justify-start space-x-8  mb-0'>
             <div className='md:w-[200px] w-[145px] mb-4 md:mb-4'>
-              <label className='block text-xl text-zinc-700 dark:text-gray-200 mb-2'>Name</label>
+              <label className='block text-xl text-zinc-800 dark:text-gray-200 mb-2'>Name</label>
               <input
                 type='text'
                 name='name'
@@ -78,7 +78,7 @@ const WorkTogether = () => {
             </div>
 
             <div className='md:w-[200px] w-[145px]'>
-              <label className='block text-xl text-zinc-700 dark:text-gray-200 mb-2'>
+              <label className='block text-xl text-zinc-800 dark:text-gray-200 mb-2'>
                 Organization
               </label>
               <input
@@ -92,7 +92,7 @@ const WorkTogether = () => {
             </div>
           </div>
 
-          <label className='flex items-center space-x-[6px] w-fit text-xl text-zinc-700 dark:text-gray-200 mb-2'>
+          <label className='flex items-center space-x-[6px] w-fit text-xl text-zinc-800 dark:text-gray-200 mb-2'>
             Ideas
             <svg xmlns='http://www.w3.org/2000/svg' className='opacity-[0.8]' fill='white' width={30} height={20} viewBox='0 0 384 512'><path d='M272 384c9.6-31.9 29.5-59.1 49.2-86.2l0 0c5.2-7.1 10.4-14.2 15.4-21.4c19.8-28.5 31.4-63 31.4-100.3C368 78.8 289.2 0 192 0S16 78.8 16 176c0 37.3 11.6 71.9 31.4 100.3c5 7.2 10.2 14.3 15.4 21.4l0 0c19.8 27.1 39.7 54.4 49.2 86.2H272zM192 512c44.2 0 80-35.8 80-80V416H112v16c0 44.2 35.8 80 80 80zM112 176c0 8.8-7.2 16-16 16s-16-7.2-16-16c0-61.9 50.1-112 112-112c8.8 0 16 7.2 16 16s-7.2 16-16 16c-44.2 0-80 35.8-80 80z'/></svg>
           </label>
@@ -105,7 +105,7 @@ const WorkTogether = () => {
             placeholder="Describe your ideas"
           ></textarea>
 
-          <label className='flex items-center space-x-[6px] w-fit  text-xl text-zinc-700 dark:text-gray-200 mb-2'>
+          <label className='flex items-center space-x-[6px] w-fit  text-xl text-zinc-800 dark:text-gray-200 mb-2'>
             Budget
             <svg xmlns='http://www.w3.org/2000/svg' className='opacity-[0.8]' fill='white' width={40} height={19} viewBox='0 0 576 512'><path d='M64 32C28.7 32 0 60.7 0 96v32H576V96c0-35.3-28.7-64-64-64H64zM576 224H0V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V224zM112 352h64c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16zm112 16c0-8.8 7.2-16 16-16H368c8.8 0 16 7.2 16 16s-7.2 16-16 16H240c-8.8 0-16-7.2-16-16z'/></svg>
           </label>
@@ -118,7 +118,7 @@ const WorkTogether = () => {
             placeholder="What's your budget?"
           />
 
-          <label className='block text-xl text-zinc-700 dark:text-gray-200 mb-2'>
+          <label className='block text-xl text-zinc-800 dark:text-gray-200 mb-2'>
             What is the filter for?
           </label>
           <select
@@ -150,7 +150,7 @@ const WorkTogether = () => {
             </>
           )}
 
-          <label className='flex items-center space-x-[6px] w-fit text-xl text-zinc-700 dark:text-gray-200 mb-2'>
+          <label className='flex items-center space-x-[6px] w-fit text-xl text-zinc-800 dark:text-gray-200 mb-2'>
             Email Address
             <svg xmlns='http://www.w3.org/2000/svg' className='opacity-[0.8]' fill='white' width={36} height={19} viewBox='0 0 512 512'><path d="M256 64C150 64 64 150 64 256s86 192 192 192c17.7 0 32 14.3 32 32s-14.3 32-32 32C114.6 512 0 397.4 0 256S114.6 0 256 0S512 114.6 512 256v32c0 53-43 96-96 96c-29.3 0-55.6-13.2-73.2-33.9C320 371.1 289.5 384 256 384c-70.7 0-128-57.3-128-128s57.3-128 128-128c27.9 0 53.7 8.9 74.7 24.1c5.7-5 13.1-8.1 21.3-8.1c17.7 0 32 14.3 32 32v80 32c0 17.7 14.3 32 32 32s32-14.3 32-32V256c0-106-86-192-192-192zm64 192a64 64 0 1 0 -128 0 64 64 0 1 0 128 0z"/></svg>
           </label>

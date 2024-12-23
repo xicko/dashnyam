@@ -1,10 +1,9 @@
 import React from "react";
 import dynamic from "next/dynamic";
 import Hero from "@components/Hero";
-import photos from 'public/data/carouselphotos.json';
 
 const FadeIn = dynamic(() => import("@components/FadeIn"), { ssr: false });
-const PhotoCarousel = dynamic(() => import("@components/PhotoCarousel"), { ssr: false });
+const PhotoCarousel = dynamic(() => import("@components/PhotoCarousel"), { ssr: true });
 const Footer = dynamic(() => import("@components/Footer"), { ssr: true });
 const FAQs = dynamic(() => import("@components/FAQs"), { ssr: true });
 const Customers = dynamic(() => import("@components/Customers"), { ssr: true });
@@ -17,7 +16,7 @@ export default function Home() {
       <Hero />
 
       <FadeIn>
-        <PhotoCarousel photos={photos} />
+        <PhotoCarousel />
       </FadeIn>
 
       <FadeIn>
@@ -36,6 +35,8 @@ export default function Home() {
           <FAQs />
         </section>
       </FadeIn>
+
+      
 
       <Footer />
     </main>

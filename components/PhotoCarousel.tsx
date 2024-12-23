@@ -1,97 +1,55 @@
-'use client';
+"use client";
 
-import React, { useEffect, useRef, useState } from 'react';
-import CarouselPhotos, { CarouselPhotosProps } from './CarouselPhotos';
+import React from "react";
+import CarouselPhotos from "./CarouselPhotos";
+import Autoplay from "embla-carousel-autoplay";
+import photos from "public/data/carouselphotos.json";
+import { isMobile } from "react-device-detect";
+import { Carousel, CarouselContent, CarouselItem } from "@components/ui/carousel";
 
-interface PhotoCarouselProps {
-  photos: CarouselPhotosProps[];
-}
+const PhotoCarousel = () => {
+  const plugin = React.useRef(
+    isMobile // for setting different delay values and controlling stopOnInteraction
+      ? Autoplay({ delay: 3000, stopOnInteraction: false })
+      : Autoplay({ delay: 2800, stopOnInteraction: true })
+  );
 
-const PhotoCarousel: React.FC<PhotoCarouselProps> = ({ photos }) => {
-  const carouselRef = useRef<HTMLDivElement>(null);
-  const [isDragging, setIsDragging] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-
-  const handleMouseDown = (event: React.MouseEvent<HTMLDivElement>) => {
-    setIsDragging(true);
-    setStartX(event.clientX);
-  };
-
-  const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
-    if (isDragging && carouselRef.current) {
-      const deltaX = event.clientX - startX;
-      carouselRef.current.scrollLeft -= deltaX;
-      setStartX(event.clientX);
-    }
-  };
-
-  const handleMouseUp = () => {
-    setIsDragging(false);
-  };
-
-  const handleMouseEnter = (index: number) => {
-    setHoveredIndex(index);
+  const handleMouseEnter = () => {
+    plugin.current.stop();
   };
 
   const handleMouseLeave = () => {
-    setHoveredIndex(null);
+    plugin.current.play();
   };
-
-  const isClient = typeof window !== 'undefined'; // Check if running on the client side
-
-  const duplicatePhotos = () => {
-    return photos.concat(photos, photos, photos, photos);
-  };
-
-  const duplicatedPhotos = duplicatePhotos();
-
-  let autoplayStep = 0.6; // Adjust the scroll step as needed
-  if (typeof window !== 'undefined' && window.innerWidth <= 768) {
-    autoplayStep = 0.8; // Set a different step for mobile devices
-  }
-
-  let accumulatedScroll = 0;
-  
-  const handleAutoplay = () => {
-    if (!isDragging && carouselRef.current) {
-      accumulatedScroll += autoplayStep;
-      const scrollAmount = Math.floor(accumulatedScroll);
-      accumulatedScroll -= scrollAmount;
-      carouselRef.current.scrollLeft += scrollAmount;
-    }
-    requestAnimationFrame(handleAutoplay);
-  };
-  
-  useEffect(() => {
-    const autoplayId = requestAnimationFrame(handleAutoplay);
-  
-    return () => cancelAnimationFrame(autoplayId);
-  }, []);
 
   return (
-    <section
-      className='relative md:mb-10 mb-0 overflow-x-auto overflow-y-hidden'
-      ref={carouselRef}
-      onMouseDown={handleMouseDown}
-      onMouseMove={handleMouseMove}
-      onMouseUp={handleMouseUp}
-      onMouseLeave={handleMouseUp}
-      style={{ cursor: isDragging ? 'grabbing' : 'grab', userSelect: 'none' }}
+    <Carousel
+      plugins={[plugin.current]}
+      className="relative flex justify-center md:mb-10 mb-0 overflow-x-auto overflow-y-hidden select-none"
+      opts={{
+        align: "start",
+        loop: true,
+      }}
     >
-      <div className='flex md:gap-12 gap-[0px] md:space-x-4 space-x-[2px] md:mx-[300px] mx-[50px]'>
-        {duplicatedPhotos.map((photo, index) => (
-          <div
-            key={index}
-            className={`flex-none transform transition-transform md:scale-100 scale-[0.88]`}
-            onMouseEnter={() => handleMouseEnter(index)}
-            onMouseLeave={handleMouseLeave}
-          >
-            <CarouselPhotos {...photo} />
-          </div>
-        ))}
-      </div>
-    </section>
+      <CarouselContent
+        className="md:w-[1264px] cursor-grab overflow-visible"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
+        {photos.map(function (photo, index) {
+          return (
+            <CarouselItem key={index} className="md:basis-1/4">
+              <CarouselPhotos
+                photoSource={photo.photoSource}
+                subText={photo.subText}
+                topText={photo.topText}
+                altText={photo.altText}
+              />
+            </CarouselItem>
+          );
+        })}
+      </CarouselContent>
+    </Carousel>
   );
 };
 

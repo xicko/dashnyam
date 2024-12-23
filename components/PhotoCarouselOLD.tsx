@@ -11,24 +11,7 @@ const PhotoCarousel: React.FC<PhotoCarouselProps> = ({ photos }) => {
   const carouselRef = useRef<HTMLDivElement>(null);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
-  const [autoplayStep, setAutoplayStep] = useState(1); // Initial autoplay step for desktop
-
-  useEffect(() => {
-    const updateAutoplayStep = () => {
-      if (typeof window !== 'undefined' && window.innerWidth <= 768) {
-        setAutoplayStep(0.7); // Mobile step
-      } else {
-        setAutoplayStep(1); // Desktop step
-      }
-    };
-
-    updateAutoplayStep();
-    window.addEventListener('resize', updateAutoplayStep);
-
-    return () => {
-      window.removeEventListener('resize', updateAutoplayStep);
-    };
-  }, []);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const handleMouseDown = (event: React.MouseEvent<HTMLDivElement>) => {
     setIsDragging(true);
@@ -47,27 +30,44 @@ const PhotoCarousel: React.FC<PhotoCarouselProps> = ({ photos }) => {
     setIsDragging(false);
   };
 
+  const handleMouseEnter = (index: number) => {
+    setHoveredIndex(index);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredIndex(null);
+  };
+
   const isClient = typeof window !== 'undefined'; // Check if running on the client side
 
-  const duplicatedPhotos = photos.concat(photos);
+  const duplicatePhotos = () => {
+    return photos.concat(photos, photos, photos, photos);
+  };
 
+  const duplicatedPhotos = duplicatePhotos();
+
+  let autoplayStep = 0.6; // Adjust the scroll step as needed
+  if (typeof window !== 'undefined' && window.innerWidth <= 768) {
+    autoplayStep = 0.8; // Set a different step for mobile devices
+  }
+
+  let accumulatedScroll = 0;
+  
   const handleAutoplay = () => {
     if (!isDragging && carouselRef.current) {
-      if (carouselRef.current.scrollLeft >= carouselRef.current.scrollWidth / 2) {
-        carouselRef.current.style.scrollBehavior = 'auto';
-        carouselRef.current.scrollLeft = 0;
-        carouselRef.current.style.scrollBehavior = 'smooth';
-      } else {
-        carouselRef.current.scrollLeft += autoplayStep;
-      }
+      accumulatedScroll += autoplayStep;
+      const scrollAmount = Math.floor(accumulatedScroll);
+      accumulatedScroll -= scrollAmount;
+      carouselRef.current.scrollLeft += scrollAmount;
     }
     requestAnimationFrame(handleAutoplay);
   };
-
+  
   useEffect(() => {
     const autoplayId = requestAnimationFrame(handleAutoplay);
+  
     return () => cancelAnimationFrame(autoplayId);
-  }, [autoplayStep]);
+  }, []);
 
   return (
     <section
@@ -84,6 +84,8 @@ const PhotoCarousel: React.FC<PhotoCarouselProps> = ({ photos }) => {
           <div
             key={index}
             className={`flex-none transform transition-transform md:scale-100 scale-[0.88]`}
+            onMouseEnter={() => handleMouseEnter(index)}
+            onMouseLeave={handleMouseLeave}
           >
             <CarouselPhotos {...photo} />
           </div>
