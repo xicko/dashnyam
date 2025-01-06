@@ -93,7 +93,7 @@ const WhyAR = () => {
 
               <div className='font-medium md:px-10 px-4'>
                 Impressions<br/>
-                <StatsCounter from={0} to={16} duration={3} textprefix="+" textsuffix='Billion'/>
+                <StatsCounter from={0} to={18} duration={3} textprefix="+" textsuffix='Billion'/>
               </div>
 
               <div className='font-medium pl-10'>
