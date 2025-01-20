@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import React, { useEffect, useRef, useState } from 'react';
-import CarouselPhotos, { CarouselPhotosProps } from './CarouselPhotos';
+import React, { useEffect, useRef, useState } from "react";
+import CarouselPhotos, { CarouselPhotosProps } from "./CarouselPhotos";
 
 interface PhotoCarouselProps {
   photos: CarouselPhotosProps[];
@@ -38,7 +38,7 @@ const PhotoCarousel: React.FC<PhotoCarouselProps> = ({ photos }) => {
     setHoveredIndex(null);
   };
 
-  const isClient = typeof window !== 'undefined'; // Check if running on the client side
+  const isClient = typeof window !== "undefined"; // Check if running on the client side
 
   const duplicatePhotos = () => {
     return photos.concat(photos, photos, photos, photos);
@@ -47,12 +47,12 @@ const PhotoCarousel: React.FC<PhotoCarouselProps> = ({ photos }) => {
   const duplicatedPhotos = duplicatePhotos();
 
   let autoplayStep = 0.6; // Adjust the scroll step as needed
-  if (typeof window !== 'undefined' && window.innerWidth <= 768) {
+  if (typeof window !== "undefined" && window.innerWidth <= 768) {
     autoplayStep = 0.8; // Set a different step for mobile devices
   }
 
   let accumulatedScroll = 0;
-  
+
   const handleAutoplay = () => {
     if (!isDragging && carouselRef.current) {
       accumulatedScroll += autoplayStep;
@@ -62,24 +62,24 @@ const PhotoCarousel: React.FC<PhotoCarouselProps> = ({ photos }) => {
     }
     requestAnimationFrame(handleAutoplay);
   };
-  
+
   useEffect(() => {
     const autoplayId = requestAnimationFrame(handleAutoplay);
-  
+
     return () => cancelAnimationFrame(autoplayId);
-  }, []);
+  });
 
   return (
     <section
-      className='relative md:mb-10 mb-0 overflow-x-auto overflow-y-hidden'
+      className="relative md:mb-10 mb-0 overflow-x-auto overflow-y-hidden"
       ref={carouselRef}
       onMouseDown={handleMouseDown}
       onMouseMove={handleMouseMove}
       onMouseUp={handleMouseUp}
       onMouseLeave={handleMouseUp}
-      style={{ cursor: isDragging ? 'grabbing' : 'grab', userSelect: 'none' }}
+      style={{ cursor: isDragging ? "grabbing" : "grab", userSelect: "none" }}
     >
-      <div className='flex md:gap-12 gap-[0px] md:space-x-4 space-x-[2px] md:mx-[300px] mx-[50px]'>
+      <div className="flex md:gap-12 gap-[0px] md:space-x-4 space-x-[2px] md:mx-[300px] mx-[50px]">
         {duplicatedPhotos.map((photo, index) => (
           <div
             key={index}

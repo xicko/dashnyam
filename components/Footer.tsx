@@ -31,7 +31,7 @@ const Footer: React.FC = () => {
           <Link
             target="_blank"
             aria-label="Instagram"
-            href="https://www.instagram.com/ulziity"
+            href="https://www.instagram.com/thexicko"
             className="ease transform duration-150 scale-[1.08] hover:scale-[1.25]"
           >
             <svg

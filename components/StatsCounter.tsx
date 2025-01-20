@@ -12,7 +12,13 @@ interface StatsCounterProps {
 }
 
 // Functional component for displaying a counter with animation
-const StatsCounter: React.FC<StatsCounterProps> = ({ from, to, duration, textprefix, textsuffix }) => {
+const StatsCounter: React.FC<StatsCounterProps> = ({
+  from,
+  to,
+  duration,
+  textprefix,
+  textsuffix,
+}) => {
   // Creating a reference for the span element that will display the counter value
   const nodeRef = useRef<HTMLSpanElement | null>(null);
 
@@ -43,14 +49,14 @@ const StatsCounter: React.FC<StatsCounterProps> = ({ from, to, duration, textpre
       // Return a cleanup function to stop the animation when component unmounts or animation is no longer needed
       return () => controls.stop();
     }
-  }, [from, to, inView]); // Depend on 'from', 'to', and 'inView' to trigger useEffect when they change
+  }, [duration, from, to, inView]); // Depend on 'from', 'to', and 'inView' to trigger useEffect when they change
 
   // Render the component
   return (
     <>
       {textprefix}
       <span
-        className='whitespace-nowrap'
+        className="whitespace-nowrap"
         ref={(el) => {
           ref(el); // Set the intersection observer reference
           nodeRef.current = el; // Set the counter value reference
@@ -61,9 +67,10 @@ const StatsCounter: React.FC<StatsCounterProps> = ({ from, to, duration, textpre
           This allows the initial value to be displayed before the component enters view
         */}
         {inView ? <span ref={nodeRef}>{from}</span> : null}
-      </span> {textsuffix}
+      </span>{" "}
+      {textsuffix}
     </>
   );
 };
 
-export default StatsCounter
+export default StatsCounter;
