@@ -8,7 +8,7 @@ const ServiceAlert = () => {
       <div className="md:w-[900px] bg-white dark:bg-opacity-0 bg-opacity-100 text-black dark:text-white md:rounded-3xl rounded-lg flex flex-col gap-y-4 md:px-8 py-6">
         <p className="flex flex-row justify-start items-center gap-x-2 font-semibold text-3xl customfonttitle text-zinc-800 dark:text-zinc-100">
           <span>An important update</span>
-          <FaExclamationTriangle className="mb-1 text-2xl font-normal" />
+          <FaExclamationTriangle className="hidden mb-1 text-2xl font-normal" />
         </p>
         <p>
           Due to the{" "}
