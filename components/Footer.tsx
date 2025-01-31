@@ -81,9 +81,6 @@ const Footer: React.FC = () => {
         <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4">
           <div className="text-center md:text-right">
             <p>
-              Contact: <Link href="tel:97699778030">+976 99778030</Link>
-            </p>
-            <p>
               <Link href="mailto:hello@dashnyam.com">hello@dashnyam.com</Link>
             </p>
           </div>
