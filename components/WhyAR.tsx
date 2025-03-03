@@ -18,32 +18,72 @@ const WhyAR = () => {
   const controls3 = useAnimation();
   const controls4 = useAnimation();
 
-  const [ref1, inView1] = useInView({ triggerOnce: true });
-  const [ref2, inView2] = useInView({ triggerOnce: true });
-  const [ref3, inView3] = useInView({ triggerOnce: true });
-  const [ref4, inView4] = useInView({ triggerOnce: true });
+  const [ref1, inView1] = useInView({ triggerOnce: false });
+  const [ref2, inView2] = useInView({ triggerOnce: false });
+  const [ref3, inView3] = useInView({ triggerOnce: false });
+  const [ref4, inView4] = useInView({ triggerOnce: false });
 
   useEffect(() => {
     if (inView1) {
-      controls1.start({ opacity: 1, transform: "translateX(0%)" });
+      controls1.start({
+        opacity: 1,
+        transform: "translateX(0%)",
+        transition: { ease: "easeOut", duration: "1" },
+      });
+    } else {
+      controls1.start({
+        opacity: 0,
+        transform: "translateX(-7%)",
+        transition: { ease: "easeOut", duration: "1" },
+      });
     }
   }, [controls1, inView1]);
 
   useEffect(() => {
     if (inView2) {
-      controls2.start({ opacity: 1, transform: "translateX(0%)" });
+      controls2.start({
+        opacity: 1,
+        transform: "translateX(0%)",
+        transition: { ease: "easeOut", duration: "1" },
+      });
+    } else {
+      controls2.start({
+        opacity: 0,
+        transform: "translateX(12%)",
+        transition: { ease: "easeOut", duration: "1" },
+      });
     }
   }, [controls2, inView2]);
 
   useEffect(() => {
     if (inView3) {
-      controls3.start({ opacity: 1, transform: "translateX(0%)" });
+      controls3.start({
+        opacity: 1,
+        transform: "translateX(0%)",
+        transition: { ease: "easeOut", duration: "1" },
+      });
+    } else {
+      controls3.start({
+        opacity: 0,
+        transform: "translateX(-12%)",
+        transition: { ease: "easeOut", duration: "1" },
+      });
     }
   }, [controls3, inView3]);
 
   useEffect(() => {
     if (inView4) {
-      controls4.start({ opacity: 1, transform: "translateX(0%)" });
+      controls4.start({
+        opacity: 1,
+        transform: "translateX(0%)",
+        transition: { ease: "easeOut", duration: "1" },
+      });
+    } else {
+      controls4.start({
+        opacity: 0,
+        transform: "translateX(7%)",
+        transition: { ease: "easeOut", duration: "1" },
+      });
     }
   }, [controls4, inView4]);
 

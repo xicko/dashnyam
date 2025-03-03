@@ -1,22 +1,22 @@
-'use client';
+"use client";
 
-import React, { useRef, useState, useEffect } from 'react';
-import { useSpring, animated } from 'react-spring';
+import React, { useRef, useState, useEffect } from "react";
+import { useSpring, animated } from "react-spring";
 
 interface CustomFadeInProps {
   tension?: number;
   friction?: number;
-  direction?: 'top' | 'bottom' | 'left' | 'right';
+  direction?: "top" | "bottom" | "left" | "right";
   children: React.ReactNode;
   className?: string;
 }
 
-const CustomFadeIn: React.FC<CustomFadeInProps> = ({ 
-  tension, 
-  friction, 
-  direction, 
+const CustomFadeIn: React.FC<CustomFadeInProps> = ({
+  tension,
+  friction,
+  direction,
   children,
-  className
+  className,
 }) => {
   const [isVisible, setIsVisible] = useState(false);
   const elementRef = useRef(null);
@@ -26,6 +26,8 @@ const CustomFadeIn: React.FC<CustomFadeInProps> = ({
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
+        } else {
+          setIsVisible(false);
         }
       });
     });
@@ -43,22 +45,22 @@ const CustomFadeIn: React.FC<CustomFadeInProps> = ({
 
   const getTransformValue = () => {
     switch (direction) {
-      case 'top':
-        return 'translateY(-20px)';
-      case 'bottom':
-        return 'translateY(20px)';
-      case 'left':
-        return 'translateX(-20px)';
-      case 'right':
-        return 'translateX(20px)';
+      case "top":
+        return "translateY(-20px)";
+      case "bottom":
+        return "translateY(20px)";
+      case "left":
+        return "translateX(-20px)";
+      case "right":
+        return "translateX(20px)";
       default:
-        return 'translateY(0)';
+        return "translateY(0)";
     }
   };
 
   const springProps = useSpring({
     opacity: isVisible ? 1 : 0,
-    transform: isVisible ? 'translateY(0)' : getTransformValue(),
+    transform: isVisible ? "translateY(0)" : getTransformValue(),
     config: {
       tension: tension,
       friction: friction,

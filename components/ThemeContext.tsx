@@ -1,6 +1,12 @@
-'use client';
+"use client";
 
-import React, { createContext, useContext, ReactNode, useState, useEffect } from 'react';
+import React, {
+  createContext,
+  useContext,
+  ReactNode,
+  useState,
+  useEffect,
+} from "react";
 
 interface ThemeContextType {
   theme: string;
@@ -8,8 +14,8 @@ interface ThemeContextType {
 }
 
 const defaultState = {
-  theme: 'light',
-  toggleTheme: () => { },
+  theme: "light",
+  toggleTheme: () => {},
 };
 
 const ThemeContext = createContext<ThemeContextType>(defaultState);
@@ -17,20 +23,29 @@ const ThemeContext = createContext<ThemeContextType>(defaultState);
 export const useTheme = () => useContext(ThemeContext);
 
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState("light");
+
+  // Set locomotive scrollbar color
+  useEffect(() => {
+    if (theme === "light") {
+      document.body.classList.add("scrollbar-black");
+    } else {
+      document.body.classList.remove("scrollbar-black");
+    }
+  });
 
   useEffect(() => {
-    const storedTheme = localStorage.getItem('theme') || 'light';
+    const storedTheme = localStorage.getItem("theme") || "light";
     setTheme(storedTheme);
-    document.documentElement.classList.remove('light', 'dark');
+    document.documentElement.classList.remove("light", "dark");
     document.documentElement.classList.add(storedTheme);
   }, []);
 
   const toggleTheme = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light';
+    const newTheme = theme === "light" ? "dark" : "light";
     setTheme(newTheme);
-    localStorage.setItem('theme', newTheme);
-    document.documentElement.classList.remove('light', 'dark'); // Removes previously applied theme class from the <html> element, so that it won't conflict with theme changer.
+    localStorage.setItem("theme", newTheme);
+    document.documentElement.classList.remove("light", "dark"); // Removes previously applied theme class from the <html> element, so that it won't conflict with theme changer.
     document.documentElement.classList.add(newTheme);
   };
 
