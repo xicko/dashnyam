@@ -1,27 +1,42 @@
-import type { Metadata } from 'next';
-import './globals.css';
-import { Analytics } from '@vercel/analytics/react';
-import { SpeedInsights } from '@vercel/speed-insights/next';
-import dynamic from 'next/dynamic';
-import SplashScreen from '@components/SplashScreen';
-import { ThemeProvider } from '@components/ThemeContext';
+import type { Metadata } from "next";
+import "./globals.css";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import dynamic from "next/dynamic";
+import SplashScreen from "@components/SplashScreen";
+import { ThemeProvider } from "@components/ThemeContext";
 
-const ParticlesContainer = dynamic(() => import("@components/ParticlesContainer"), { ssr: false });
+const GrabberContext = dynamic(() => import("@components/Grabber"), {
+  ssr: false,
+});
+
+const ParticlesContainer = dynamic(
+  () => import("@components/ParticlesContainer"),
+  { ssr: false }
+);
 const NavBar = dynamic(() => import("@components/NavBar"), { ssr: false });
-const LocomotiveScroll = dynamic(() => import('@components/LocomotiveScroll'), { ssr: false });
+const LocomotiveScroll = dynamic(() => import("@components/LocomotiveScroll"), {
+  ssr: false,
+});
 
 export const metadata: Metadata = {
   title: {
-    default:'Dashnyam Batbayar',
-    template: '%s - Dashnyam Batbayar'},
-  description: 'Dashnyam Batbayar is a developer who operates worldwide creating unforgettable experiences in Augmented Reality.',
+    default: "Dashnyam Batbayar",
+    template: "%s - Dashnyam Batbayar",
+  },
+  description:
+    "Dashnyam Batbayar is a developer who operates worldwide creating unforgettable experiences in Augmented Reality.",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode; }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html lang='en'>
+    <html lang="en">
       <head>
-        <meta property='og:image' content='/ogimage.jpg' />
+        <meta property="og:image" content="/ogimage.jpg" />
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -35,16 +50,16 @@ export default function RootLayout({ children }: { children: React.ReactNode; })
           }}
         />
       </head>
-      <body className='customfontbase'>
+      <body className="customfontbase">
         <ThemeProvider>
           <SplashScreen />
 
           <ParticlesContainer />
 
           <NavBar />
-          
+
           <LocomotiveScroll>
-            {children}
+            <GrabberContext>{children}</GrabberContext>
             <Analytics />
             <SpeedInsights />
           </LocomotiveScroll>
